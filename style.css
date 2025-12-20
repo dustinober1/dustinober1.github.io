@@ -407,3 +407,136 @@ footer {
     text-align: center;
     /* Centered text */
 }
+/* Flip Card Styles */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 400px; /* Fixed height for the flip effect */
+    perspective: 1000px; /* Remove if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--border);
+}
+
+.flip-card-front {
+    background-color: var(--card-bg);
+}
+
+.flip-card-back {
+    background-color: var(--card-bg); /* Or a slightly different shade/gradient */
+    transform: rotateY(180deg);
+    text-align: left;
+    align-items: flex-start;
+    overflow-y: auto; /* In case content overflows */
+    background: linear-gradient(145deg, var(--card-bg), #1c2128);
+}
+
+/* Custom scrollbar for card back if needed */
+.flip-card-back::-webkit-scrollbar {
+    width: 6px;
+}
+.flip-card-back::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+    border-radius: 3px;
+}
+
+.flip-card-front img {
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.flip-card-front h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.flip-card-front .category {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.flip-card-back h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.flip-card-back p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.flip-card-back ul {
+    list-style: none; /* Removing default bullets for cleaner look */
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.flip-card-back li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+    padding-bottom: 0.25rem;
+}
+
+.flip-card-back li:last-child {
+    border-bottom: none;
+}
+
+.view-btn {
+    margin-top: auto;
+    background: var(--accent);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    align-self: center;
+    transition: background 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.view-btn:hover {
+    background: var(--accent-hover);
+    text-decoration: none;
+}
