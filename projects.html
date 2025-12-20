@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Dustin J. Ober</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Dustin J. Ober</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" style="color: var(--accent);">Projects</a></li>
+                    <li><a href="ebooks.html">Ebooks</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="padding: 4rem 0;">
+            <div class="container">
+                <h1>Technical Projects</h1>
+                <p>A showcase of engineering solutions, AI models, and data pipelines.</p>
+            </div>
+        </section>
+
+        <section id="projects-list">
+            <div class="container">
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Custom Named Entity Recognition (NER) Model</div>
+                            <div class="company">NLP & Machine Learning</div>
+                        </div>
+                        <div class="date">Production Deployed</div>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        Designed and engineered a bespoke NER model tailored to specific customer data requirements
+                        where off-the-shelf models failed.
+                    </p>
+                    <ul style="color: var(--text-secondary); margin-left: 20px;">
+                        <li><strong>Tech Stack:</strong> Python, SpaCy/Transformers, PyTorch.</li>
+                        <li><strong>Impact:</strong> Delivered precision comparable to industry standards on highly
+                            specialized unstructured text.</li>
+                        <li><strong>Outcome:</strong> successfully deployed to production to automate data extraction
+                            workflows.</li>
+                    </ul>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Enterprise Data Pipelines & ETL</div>
+                            <div class="company">Data Engineering</div>
+                        </div>
+                        <div class="date">Infrastructure</div>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        Built robust, automated data pipelines to ingest, clean, and normalize data from complex,
+                        disparate sources.
+                    </p>
+                    <ul style="color: var(--text-secondary); margin-left: 20px;">
+                        <li><strong>Sources:</strong> SharePoint, Oracle Databases, Unstructured Documents.</li>
+                        <li><strong>Tech Stack:</strong> Python, SQL, Pandas, Custom Scrapers.</li>
+                        <li><strong>Result:</strong> Created a high-quality "Gold Standard" dataset used for training
+                            30+ downstream machine learning models.</li>
+                    </ul>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Secure RESTful API Architecture</div>
+                            <div class="company">Backend Development</div>
+                        </div>
+                        <div class="date">System Architecture</div>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        Designed and deployed the backend infrastructure for AI-driven applications.
+                    </p>
+                    <ul style="color: var(--text-secondary); margin-left: 20px;">
+                        <li><strong>Tech Stack:</strong> FastAPI, Docker, JWT Authentication.</li>
+                        <li><strong>Security:</strong> Implemented robust authentication and authorization protocols.
+                        </li>
+                        <li><strong>Scalability:</strong> Containerized entire application stack for consistent
+                            deployment across dev, test, and production environments.</li>
+                    </ul>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Instructional Data Science Curriculum</div>
+                            <div class="company">Education & Strategy</div>
+                        </div>
+                        <div class="date">Internal Training</div>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        Bridge the gap between technical data science teams and non-technical stakeholders.
+                    </p>
+                    <ul style="color: var(--text-secondary); margin-left: 20px;">
+                        <li><strong>Deliverable:</strong> Designed a comprehensive course to educate non-Data Scientists
+                            on data science applications.</li>
+                        <li><strong>Outcome:</strong> Promoted a data-driven culture within the organization and
+                            improved cross-functional collaboration.</li>
+                        <li><strong>Tools:</strong> Python (Jupyter), Pandas, Matplotlib for interactive demonstrations.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dustin J. Ober. Built with HTML & CSS.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
