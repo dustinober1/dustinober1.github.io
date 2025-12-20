@@ -300,10 +300,16 @@ section h2::after {
 }
 
 .edu-card img {
-    height: 100px;
+    height: auto;
+    max-height: 100px;
+    max-width: 100%;
     width: auto;
     object-fit: contain;
     margin-bottom: 1rem;
+}
+
+.invert-dark-logo {
+    filter: brightness(0) invert(1);
 }
 
 .edu-card h3 {
