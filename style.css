@@ -96,6 +96,7 @@ nav {
     margin-bottom: 1rem;
     background: linear-gradient(45deg, #fff, #8b949e);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: fadeInDown 0.8s ease-out;
 }
@@ -310,6 +311,10 @@ section h2::after {
 
 .invert-dark-logo {
     filter: brightness(0) invert(1);
+}
+
+.dark-bg-icon {
+    mix-blend-mode: screen;
 }
 
 .edu-card h3 {
