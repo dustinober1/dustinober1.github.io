@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Dustin J. Ober</title>
+    <title>About | Dustin J. Ober</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         <div class="container">
             <nav>
                 <div class="logo">Dustin J. Ober</div>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="ebooks.html">Ebooks</a></li>
@@ -26,64 +26,85 @@
                     <li><a href="about.html" style="color: var(--accent);">About Me</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero" style="padding: 4rem 0;">
+        <section class="hero" style="padding: 6rem 0 3rem;">
             <div class="container">
-                <h1>More Than Just Code</h1>
-                <p>Father, Educator, and Lifelong Learner</p>
+                <h1>Beyond the Code</h1>
+                <p>Strategist, Developer, and Lifelong Learner</p>
             </div>
         </section>
 
-        <section id="bio">
+        <section id="career-narrative">
             <div class="container">
-                <div class="about-text">
+                <div class="about-text" style="text-align: left; max-width: 900px; margin-bottom: 4rem;">
+                    <h2 style="left: 0; transform: none; margin-bottom: 2rem;">The Intersection of Strategy & Science
+                    </h2>
                     <p>
-                        While my career is defined by data pipelines and instructional design, my life is defined by
-                        curiosity and connection.
-                        I believe that the best solutions come from understanding not just the <em>how</em>, but the
-                        <em>why</em>—whether that's
-                        optimizing a machine learning model or teaching a student how to manage their first project.
+                        My career has been a deliberate journey from high-stakes training environments to the cutting
+                        edge of AI development. Starting as an instructor in the U.S. Air Force, I learned the critical
+                        importance of effective communication and structured knowledge transfer. This foundation led me
+                        to master <strong>Instructional Systems Design (ISD)</strong>, where I spent years developing
+                        curricula for federal agencies like the DEA.
                     </p>
                     <br>
                     <p>
-                        When I'm not coding or teaching, I'm spending quality time with my family. They are my constant
-                        inspiration
-                        to build better, think deeper, and leave a positive impact on the world.
+                        However, I saw a gap: traditional training often lacked the agility and data-driven precision
+                        needed in the modern tech landscape. This realization drove me to pivot into <strong>Full Stack
+                            Development and Data Science</strong>.
+                    </p>
+                    <br>
+                    <p>
+                        Today, I bridge these worlds. At Leidos, I don't just build data pipelines; I architect
+                        intelligent systems that empower users to learn and act more effectively. Whether I'm
+                        fine-tuning a Named Entity Recognition (NER) model or automating complex workflows with DSPy, my
+                        goal is always the same: <strong>to transform complex data into actionable intelligence and
+                            impactful learning experiences.</strong>
                     </p>
                 </div>
 
-                <h2>Family & Moments</h2>
-                <div class="photo-grid">
-                    <!-- Displaying a selection of family photos -->
-                    <div class="photo-card">
-                        <img src="images/DSC04258-43.jpg" alt="Family Moment 1" loading="lazy">
+                <div class="skills-grid" style="margin-top: 4rem;">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-mountain"></i> Professional Interests</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            I am deeply interested in <strong>Neuro-symbolic AI</strong> and its application in
+                            automated tutoring systems. I believe the future of education lies in hyper-personalized
+                            learning paths powered by Large Language Models.
+                        </p>
                     </div>
-                    <div class="photo-card">
-                        <img src="images/DSC04283-59.jpg" alt="Family Moment 2" loading="lazy">
-                    </div>
-                    <div class="photo-card">
-                        <img src="images/DSC04363-103.jpg" alt="Family Moment 3" loading="lazy">
-                    </div>
-                    <div class="photo-card">
-                        <img src="images/DSC04480-155.jpg" alt="Family Moment 4" loading="lazy">
-                    </div>
-                    <div class="photo-card">
-                        <img src="images/DSC04539-181.jpg" alt="Family Moment 5" loading="lazy">
-                    </div>
-                    <div class="photo-card">
-                        <img src="images/DSC04625-226.jpg" alt="Family Moment 6" loading="lazy">
-                    </div>
-                    <div class="photo-card">
-                        <img src="images/DSC04297-66.jpg" alt="Family Moment 7" loading="lazy">
-                    </div>
-                    <div class="photo-card">
-                        <img src="images/DSC04345-93.jpg" alt="Family Moment 8" loading="lazy">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-running"></i> Outside the Office</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">
+                            When I'm not behind a keyboard, I'm likely exploring new technologies, contributing to
+                            open-source projects, or staying active through obstacle course racing and endurance
+                            training. I apply the same discipline and grit to my technical work as I do to a Spartan
+                            race.
+                        </p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="cta" style="text-align: center; background: rgba(47, 129, 247, 0.05); padding: 5rem 0;">
+            <div class="container">
+                <h2>Looking for a technical partner?</h2>
+                <p
+                    style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    I thrive on solving complex problems at the intersection of data and design. Let's build something
+                    impactful together.
+                </p>
+                <a href="mailto:dustinober@me.com" class="view-btn"
+                    style="width: auto; padding: 1rem 3rem; border-radius: 50px;">
+                    Get in Touch
+                </a>
             </div>
         </section>
     </main>
@@ -94,6 +115,15 @@
         </div>
     </footer>
 
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

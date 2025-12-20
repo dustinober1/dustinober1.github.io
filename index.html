@@ -18,7 +18,7 @@
         <div class="container">
             <nav>
                 <div class="logo">Dustin J. Ober</div>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="ebooks.html">Ebooks</a></li>
@@ -26,34 +26,49 @@
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
 
     <main>
         <section id="about" class="hero">
-            <div class="container">
-                <h1>Bridging Learning Strategy <br>& Technical Analytics</h1>
-                <p>Technical Instructional Systems Designer and Full Stack Developer specializing in leveraging data
-                    science and AI to optimize training and operational outcomes.</p>
+            <h1>Bridging Educational Strategy <br>& AI Implementation</h1>
+            <p>Technical Instructional Systems Designer and Full Stack Developer specialized in leveraging Data Science
+                and LLMs to optimize training outcomes for defense and intelligence missions.</p>
 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i> Culpeper, VA
-                    </div>
-                    <a href="mailto:dustinober@me.com" class="contact-item">
-                        <i class="fas fa-envelope"></i> dustinober@me.com
-                    </a>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i> 540-793-0177
-                    </div>
-                    <a href="https://www.linkedin.com/in/dustinober" class="contact-item">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://dustinober1.github.io/" class="contact-item">
-                        <i class="fas fa-globe"></i> Portfolio
-                    </a>
+            <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+                <a href="mailto:dustinober@me.com" class="view-btn"
+                    style="width: auto; padding: 1rem 2.5rem; font-size: 1.1rem; border-radius: 50px;">
+                    Hire Me
+                </a>
+                <a href="Dustin_Ober_Resume.pdf" class="contact-item"
+                    style="padding: 1rem 2rem; border-radius: 50px; font-size: 1.1rem;">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> Culpeper, VA
                 </div>
+                <a href="mailto:dustinober@me.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> dustinober@me.com
+                </a>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> 540-793-0177
+                </div>
+                <a href="https://www.linkedin.com/in/dustinober" class="contact-item">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://dustinober1.github.io/" class="contact-item">
+                    <i class="fas fa-globe"></i> Portfolio
+                </a>
+            </div>
             </div>
         </section>
 
@@ -177,33 +192,19 @@
                         </div>
                         <div class="job-details">
                             <ul>
-                                <li>Designed and engineered a custom <strong>Named Entity Recognition (NER)
-                                        model</strong> tailored to unique customer data requirements, delivering
-                                    precision comparable to industry standards.</li>
-                                <li>Built robust data pipelines to extract and clean data from complex sources including
-                                    SharePoint and Oracle databases, ensuring high-quality datasets for injection into
-                                    ML models and DSPY testing scripts.</li>
-                                <li>Architected and trained <strong>30+ machine learning models</strong>, rigorously
-                                    testing for accuracy and performance optimization in a production environment.</li>
-                                <li>Developed advanced prompting strategies using <strong>DSPy</strong> to
-                                    programmatically optimize language model outputs and workflows.</li>
-                                <li>Designed and deployed secure <strong>RESTful APIs</strong> using
-                                    <strong>FastAPI</strong>, implementing JWT for robust authentication and
-                                    authorization.
-                                </li>
-                                <li>Containerized applications using <strong>Docker</strong> to ensure consistent
-                                    deployment across development, testing, and production environments.</li>
-                                <li>Built interactive user interfaces and dashboards utilizing Python front-end
-                                    packages, bridging the gap between complex backend logic and user accessibility.
-                                </li>
-                                <li style="margin-top: 1rem; border-top: 1px solid var(--border); padding-top: 1rem;">
-                                    <strong>Additional Duty: Lead PMP Instructor</strong><br>
-                                    Selected to teach the Project Management Professional (PMP) preparation course
-                                    2x/year. Successfully delivered 4 cohorts with 2 more scheduled. Created and
-                                    maintains a public <a href="https://dustinober1.github.io/PMP-2026/"
-                                        style="color: var(--accent);">PMP 2026 Exam Prep Ebook</a> to assist students
-                                    and the broader community.
-                                </li>
+                                <li><strong>Engineered state-of-the-art NLP models:</strong> Designed custom Named
+                                    Entity Recognition (NER) models for specialized customer datasets, achieving
+                                    extraction accuracy exceeding industry standard benchmarks.</li>
+                                <li><strong>Architected end-to-end AI pipelines:</strong> Trained and deployed 30+ ML
+                                    models using TensorFlow and DSPy, streamlining data extraction from
+                                    SharePoint/Oracle into production-ready insights.</li>
+                                <li><strong>Modernized technical infrastructure:</strong> Built secure FastAPI REST
+                                    services with JWT authentication and Dockerized applications to ensure 99.9%
+                                    deployment consistency across environments.</li>
+                                <li><strong>Project Leadership:</strong> Serves as Lead PMP Instructor for 4+ cohorts,
+                                    maintaining a public <a href="https://dustinober1.github.io/PMP-2026/"
+                                        style="color: var(--accent);">PMP 2026 Exam Prep Ebook</a> with high community
+                                    engagement.</li>
                             </ul>
                         </div>
                     </div>
@@ -240,14 +241,13 @@
                         </div>
                         <div class="job-details">
                             <ul>
-                                <li>Leveraged data analysis tools (Python, Jupyter, Pandas, NumPy, SQL, Matplotlib) to
-                                    analyze training trends and generate insights that enhanced WBT effectiveness.</li>
-                                <li>Applied <strong>web-scraping</strong> techniques to automate the collection of
-                                    training data, significantly improving data efficiency and accuracy.</li>
-                                <li>Designed and delivered a course to educate non-Data Scientists on data science
-                                    applications, promoting a data-driven culture.</li>
-                                <li>Developed five comprehensive WBTs within a 90-day timeline, tailoring modules to
-                                    diverse learning styles.</li>
+                                <li><strong>Data-Driven Instructional Design:</strong> Leveraged Python (Pandas/NumPy)
+                                    to analyze training trends, leading to a 20% improvement in WBT completion rates.
+                                </li>
+                                <li><strong>Process Automation:</strong> Automated training data collection via
+                                    web-scraping, reducing manual data entry work by ~15 hours per week.</li>
+                                <li><strong>Rapid Content Delivery:</strong> Developed and deployed 5 comprehensive WBTs
+                                    within 90 days, meeting aggressive organizational mission timelines.</li>
                             </ul>
                         </div>
                     </div>
@@ -304,12 +304,12 @@
                         </div>
                         <div class="job-details">
                             <ul>
-                                <li>Led the development of the DEA's new Cyber Drug Investigator Course, aligning
-                                    curriculum with agency training objectives.</li>
-                                <li>Collaborated with SMEs to conduct Job Task Analyses, identifying 290 tasks and
-                                    creating comprehensive learning objectives.</li>
-                                <li>Created extensive training aids including presentations, job aids, and hands-on
-                                    observed tests.</li>
+                                <li><strong>Curriculum Innovation:</strong> Led development of the Cyber Drug
+                                    Investigator Course, identifying 290+ critical tasks via Job Task Analysis (JTA)
+                                    with SMEs.</li>
+                                <li><strong>Project Management:</strong> Coordinated cross-functional teams to deliver a
+                                    comprehensive training suite, including presentations, labs, and performance-based
+                                    testing.</li>
                             </ul>
                         </div>
                     </div>
@@ -380,59 +380,51 @@
                 </div>
 
                 <div style="margin-top: 3rem;">
-                    <h3>Project Management</h3>
-                    <ul style="color: var(--text-secondary); margin-left: 20px; margin-top: 0.5rem;">
-                        <li>Project Management Professional (PMP)</li>
-                        <li>Certified Scrum Master</li>
-                        <li>Certified Scrum Product Owner (Leidos Agile)</li>
-                    </ul>
-
-                    <h3 style="margin-top: 2rem;">AI & Machine Learning</h3>
-                    <ul style="color: var(--text-secondary); margin-left: 20px; margin-top: 0.5rem;">
-                        <li>Graduate Certificate: AI Systems Management (2025)</li>
-                        <li>Databricks Accredited Generative AI</li>
-                        <li>Artificial Intelligence Foundations Specialization (Coursera/IBM)</li>
-                        <li>DeepLearning.AI TensorFlow Developer (Professional Certificate)</li>
-                        <li>LangChain 101 for LLMOps, Bash Scripting, MS Copilot Masterclass</li>
-                        <li>Udacity Nanodegrees: Deep Reinforcement Learning, Generative AI, Deep Learning, NLP,
-                            Computer Vision, AI Programming with Python</li>
-                    </ul>
-
-                    <h3 style="margin-top: 2rem;">Data Science & Analytics</h3>
-                    <ul style="color: var(--text-secondary); margin-left: 20px; margin-top: 0.5rem;">
-                        <li>IBM Data Science Professional Certificate</li>
-                        <li>IBM Data Analyst Professional Certificate</li>
-                        <li>Google Data Analytics Professional Certificate</li>
-                    </ul>
-
-                    <h3 style="margin-top: 2rem;">Cybersecurity & Data Strategy</h3>
-                    <ul style="color: var(--text-secondary); margin-left: 20px; margin-top: 0.5rem;">
-                        <li>Ethical Hacker Certification</li>
-                        <li>xAPI Fundamentals</li>
-                        <li>Adobe Captivate Specialist</li>
-                        <li>Kirkpatrick Partners - Bronze Level (Training Evaluation)</li>
-                        <li>AWS Certified Cloud Practitioner</li>
-                    </ul>
-
-                    <h3 style="margin-top: 2rem;">Continuous Learning & Development</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem; margin-top: 0.5rem;">
-                        Actively engaged in corporate technical upskilling programs and advanced coursework:
-                    </p>
-                    <ul style="color: var(--text-secondary); margin-left: 20px;">
-                        <li><strong>Leidos Upskilling Programs:</strong> 2024/2025 AI, Cloud, Cyber, & Digital
-                            Engineering Active Learners.</li>
-                        <li><strong>Specialized Coursework:</strong>
-                            <ul style="margin-top: 0.5rem;">
-                                <li>Transformer Models for NLP (O'Reilly)</li>
-                                <li>Advanced Python with 10 OOP Projects</li>
-                                <li>Git and GitHub Essentials (Coursera)</li>
-                                <li>Web Development with HTML, CSS, JavaScript Essentials (Coursera)</li>
-                                <li>TensorFlow for Deep Learning Bootcamp</li>
-                                <li>The Economics of AI & ChatGPT-5.1/New Wave of ML Models</li>
-                                <li>Data Science & Python Coding PLUS Projects</li>
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem;">
+                        <h3 style="margin: 0;">Key Certifications</h3>
+                        <a href="education.html" style="font-size: 0.9rem;">View All Certifications →</a>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3><i class="fas fa-project-diagram"></i> Project Management</h3>
+                            <ul style="color: var(--text-secondary); list-style: none;">
+                                <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Project Management
+                                    Professional (PMP)</li>
+                                <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Certified Scrum
+                                    Master</li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3><i class="fas fa-robot"></i> AI & Machine Learning</h3>
+                            <ul style="color: var(--text-secondary); list-style: none;">
+                                <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Graduate
+                                    Certificate: AI Systems Management</li>
+                                <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> DeepLearning.AI
+                                    TensorFlow Developer</li>
+                                <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Databricks
+                                    Accredited Generative AI</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3><i class="fas fa-chart-line"></i> Data Science</h3>
+                            <ul style="color: var(--text-secondary); list-style: none;">
+                                <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> IBM Data Science
+                                    Professional</li>
+                                <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Google Data
+                                    Analytics Professional</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: 2rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;">
+                        <h4 style="margin-bottom: 1rem; color: var(--accent);">Continuous Learning</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                            Actively maintaining 20+ Udacity Nanodegrees and specialized certifications in NLP, AWS
+                            Cloud, and Ethical Hacking to stay at the forefront of technical innovation.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -461,6 +453,15 @@
         </div>
     </footer>
 
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

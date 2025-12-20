@@ -18,7 +18,7 @@
         <div class="container">
             <nav>
                 <div class="logo">Dustin J. Ober</div>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="ebooks.html" style="color: var(--accent);">Ebooks</a></li>
@@ -26,15 +26,20 @@
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero" style="padding: 4rem 0;">
+        <section class="hero" style="padding: 6rem 0 3rem;">
             <div class="container">
                 <h1>Published Ebooks</h1>
-                <p>Comprehensive guides and educational resources authored for the community.</p>
+                <p>Comprehensive guides and educational resources authored for the technical community.</p>
             </div>
         </section>
 
@@ -45,7 +50,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="images/pmp_ebook_logo.png" alt="PMP Logo"
+                                <img src="images/pmp-ebook-logo.png" alt="PMP Logo"
                                     style="width: 150px; height: 150px; object-fit: contain;">
                                 <h3>PMP Exam Prep</h3>
                                 <span class="category">Project Management</span>
@@ -69,7 +74,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="images/ai_id_ebook_logo.png" alt="AI ID Logo"
+                                <img src="images/ai-id-ebook-logo.png" alt="AI ID Logo"
                                     style="width: 150px; height: 150px; object-fit: contain;">
                                 <h3>AI-Powered ID</h3>
                                 <span class="category">Instructional Design</span>
@@ -93,7 +98,7 @@
                     <div class="flip-card">
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
-                                <img src="images/dspy_ebook_logo.png" alt="DSPy Logo"
+                                <img src="images/dspy-ebook-logo.png" alt="DSPy Logo"
                                     style="width: 150px; height: 150px; object-fit: contain;">
                                 <h3>DSPy Guide</h3>
                                 <span class="category">AI Engineering</span>
@@ -123,6 +128,15 @@
         </div>
     </footer>
 
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>

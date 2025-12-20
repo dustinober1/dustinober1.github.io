@@ -1,15 +1,15 @@
 :root {
     --bg-color: #0d1117;
-    --card-bg: #161b22;
+    --card-bg: rgba(22, 27, 34, 0.7);
     --text-primary: #e6edf3;
     --text-secondary: #8b949e;
     --accent: #2f81f7;
-    /* GitHub blue/standard tech blue */
     --accent-hover: #58a6ff;
-    --border: #30363d;
+    --border: rgba(48, 54, 61, 0.8);
     --hero-gradient: linear-gradient(135deg, #1f2937 0%, #0d1117 100%);
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-    --transition: all 0.3s ease;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --glass-bg: rgba(22, 27, 34, 0.6);
 }
 
 * {
@@ -76,10 +76,28 @@ nav {
     color: var(--text-secondary);
     font-weight: 500;
     text-decoration: none;
+    transition: var(--transition);
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--accent);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    transition: var(--transition);
 }
 
 /* Hero Section */
@@ -91,14 +109,16 @@ nav {
 }
 
 .hero h1 {
-    font-size: 4rem;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    background: linear-gradient(45deg, #fff, #8b949e);
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(180deg, #fff 0%, #8b949e 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: fadeInDown 0.8s ease-out;
+    animation: fadeInDown 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    letter-spacing: -2px;
 }
 
 .hero p {
@@ -170,17 +190,37 @@ section h2::after {
 }
 
 .skill-category {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 12px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 16px;
     border: 1px solid var(--border);
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
 }
 
 .skill-category:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: var(--accent);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.skill-category:hover::before {
+    transform: scaleX(1);
 }
 
 .skill-category h3 {
@@ -221,10 +261,11 @@ section h2::after {
 }
 
 .job-card {
-    background: var(--card-bg);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2rem;
+    border-radius: 16px;
+    padding: 2.5rem;
     margin-bottom: 2rem;
     position: relative;
     transition: var(--transition);
@@ -289,15 +330,23 @@ section h2::after {
 }
 
 .edu-card {
-    background: var(--card-bg);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 2rem;
+    border-radius: 16px;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
     text-align: center;
+    transition: var(--transition);
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .edu-card img {
@@ -362,9 +411,29 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
     .nav-links {
         display: none;
-        /* Simple hide for mobile for now, or could implement hamburger */
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background: var(--bg-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        border-left: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .hero h1 {
@@ -379,6 +448,33 @@ footer {
 
     .job-card::before {
         display: none;
+    }
+
+    .flip-card {
+        height: auto;
+        perspective: none;
+    }
+
+    .flip-card-inner {
+        transform: none !important;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: relative;
+        width: 100%;
+        height: auto;
+        backface-visibility: visible;
+        transform: none !important;
+        padding: 1.5rem;
+    }
+
+    .flip-card-back {
+        border-top: none;
+        margin-top: -1px;
     }
 }
 
