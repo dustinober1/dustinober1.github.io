@@ -134,6 +134,7 @@ nav {
     justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: 3.5rem;
     animation: fadeInUp 0.8s ease-out 0.4s backwards;
 }
 
