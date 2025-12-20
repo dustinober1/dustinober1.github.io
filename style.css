@@ -3,7 +3,8 @@
     --card-bg: #161b22;
     --text-primary: #e6edf3;
     --text-secondary: #8b949e;
-    --accent: #2f81f7; /* GitHub blue/standard tech blue */
+    --accent: #2f81f7;
+    /* GitHub blue/standard tech blue */
     --accent-hover: #58a6ff;
     --border: #30363d;
     --hero-gradient: linear-gradient(135deg, #1f2937 0%, #0d1117 100%);
@@ -86,7 +87,7 @@ nav {
     padding: 8rem 0 4rem;
     text-align: center;
     background: radial-gradient(circle at top right, #1f293722, transparent 40%),
-                radial-gradient(circle at bottom left, #2f81f711, transparent 40%);
+        radial-gradient(circle at bottom left, #2f81f711, transparent 40%);
 }
 
 .hero h1 {
@@ -178,7 +179,7 @@ section h2::after {
 .skill-category:hover {
     transform: translateY(-5px);
     border-color: var(--accent);
-    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
 .skill-category h3 {
@@ -320,6 +321,7 @@ footer {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -331,6 +333,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -340,19 +343,20 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Simple hide for mobile for now, or could implement hamburger */
+        display: none;
+        /* Simple hide for mobile for now, or could implement hamburger */
     }
-    
+
     .hero h1 {
         font-size: 2.5rem;
     }
-    
+
     .timeline {
         margin-left: 0;
         padding-left: 0;
         border-left: none;
     }
-    
+
     .job-card::before {
         display: none;
     }
@@ -370,9 +374,10 @@ footer {
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
-    height: 300px; /* Fixed height for uniformity */
+    height: 300px;
+    /* Fixed height for uniformity */
 }
 
 .photo-card img {
@@ -384,7 +389,7 @@ footer {
 
 .photo-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .photo-card:hover img {
@@ -395,7 +400,10 @@ footer {
 .about-text {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin: 0 auto 3rem;
+    /* Centered block with bottom margin */
     max-width: 800px;
     line-height: 1.8;
+    text-align: center;
+    /* Centered text */
 }
