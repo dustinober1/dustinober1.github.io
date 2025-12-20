@@ -295,14 +295,15 @@ section h2::after {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    align-items: center;
+    text-align: center;
 }
 
 .edu-card img {
-    height: 60px;
+    height: 100px;
     width: auto;
     object-fit: contain;
     margin-bottom: 1rem;
-    align-self: flex-start;
 }
 
 .edu-card h3 {
