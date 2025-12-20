@@ -297,6 +297,14 @@ section h2::after {
     gap: 0.5rem;
 }
 
+.edu-card img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
 .edu-card h3 {
     font-size: 1.1rem;
 }
@@ -407,6 +415,7 @@ footer {
     text-align: center;
     /* Centered text */
 }
+
 /* Flip Card Styles */
 .projects-grid {
     display: grid;
@@ -418,8 +427,10 @@ footer {
 .flip-card {
     background-color: transparent;
     width: 100%;
-    height: 400px; /* Fixed height for the flip effect */
-    perspective: 1000px; /* Remove if you don't want the 3D effect */
+    height: 400px;
+    /* Fixed height for the flip effect */
+    perspective: 1000px;
+    /* Remove if you don't want the 3D effect */
 }
 
 .flip-card-inner {
@@ -430,18 +441,20 @@ footer {
     transition: transform 0.8s;
     transform-style: preserve-3d;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
+    /* Safari */
     backface-visibility: hidden;
     border-radius: 12px;
     padding: 2rem;
@@ -457,11 +470,13 @@ footer {
 }
 
 .flip-card-back {
-    background-color: var(--card-bg); /* Or a slightly different shade/gradient */
+    background-color: var(--card-bg);
+    /* Or a slightly different shade/gradient */
     transform: rotateY(180deg);
     text-align: left;
     align-items: flex-start;
-    overflow-y: auto; /* In case content overflows */
+    overflow-y: auto;
+    /* In case content overflows */
     background: linear-gradient(145deg, var(--card-bg), #1c2128);
 }
 
@@ -469,6 +484,7 @@ footer {
 .flip-card-back::-webkit-scrollbar {
     width: 6px;
 }
+
 .flip-card-back::-webkit-scrollbar-thumb {
     background-color: var(--border);
     border-radius: 3px;
@@ -477,7 +493,7 @@ footer {
 .flip-card-front img {
     border-radius: 8px;
     margin-bottom: 1.5rem;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .flip-card-front h3 {
@@ -505,7 +521,8 @@ footer {
 }
 
 .flip-card-back ul {
-    list-style: none; /* Removing default bullets for cleaner look */
+    list-style: none;
+    /* Removing default bullets for cleaner look */
     margin-left: 0;
     margin-bottom: 1.5rem;
     width: 100%;
