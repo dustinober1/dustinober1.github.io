@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Dustin J. Ober</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d1117;
+            --accent: #2f81f7;
+            --text: #1f2937;
+            --text-light: #4b5563;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text);
+            margin: 0;
+            padding: 40px;
+            background: #f9fafb;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-left h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        .header-left p {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin: 5px 0 0;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .clearance-banner {
+            background: #f3f4f6;
+            border-left: 4px solid #ef4444;
+            padding: 10px 15px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #b91c1c;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .entry {
+            margin-bottom: 25px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .entry-subheader {
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .skills-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-group strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        .skill-group p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .no-print {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .action-btn {
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()" class="action-btn">Print CV / Save as PDF</button>
+        <a href="resume.html" class="action-btn" style="background: #374151;">View Resume</a>
+    </div>
+
+    <div class="cv-container">
+        <header>
+            <div class="header-left">
+                <h1>Dustin J. Ober</h1>
+                <p>AI Developer & Technical Instructional Systems Designer</p>
+            </div>
+            <div class="header-right">
+                <div>dustinober@me.com</div>
+                <div>540-793-0177</div>
+                <div>Chantilly, VA</div>
+                <div>linkedin.com/in/dustinober</div>
+                <div style="color: var(--accent); font-weight: 600;">dustinober1.github.io</div>
+            </div>
+        </header>
+
+        <div class="clearance-banner">
+            Security Clearance: Top Secret Clearance with SCI and Poly
+        </div>
+
+        <section>
+            <h2>Professional Profile</h2>
+            <p>
+                A high-performing Technical Instructional Systems Designer and Full Stack Developer with over 20 years
+                of experience spanning military service, federal contracting, and advanced AI development. Expert in
+                bridging the gap between educational strategy and technical implementation, specifically within the
+                defense and intelligence communities. Specialized in NLP, LLM automation (DSPy/LangChain), and
+                data-driven learning analytics.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Proficiencies</h2>
+            <div class="skills-section">
+                <div class="skill-group">
+                    <strong>AI & Data Science</strong>
+                    <p>TensorFlow, PyTorch, DSPy, LangChain, Custom NER, BERT/Transformers, Vector Search (ChromaDB,
+                        Neo4j), Pandas, NumPy, Scikit-Learn.</p>
+                </div>
+                <div class="skill-group">
+                    <strong>Software Engineering</strong>
+                    <p>Python (Advanced), JavaScript/TypeScript, SQL, FastAPI, Docker, Git, CI/CD, RESTful APIs, JWT
+                        Authentication.</p>
+                </div>
+                <div class="skill-group">
+                    <strong>Instructional Design & Strategy</strong>
+                    <p>ADDIE Model, SAM, Articulate 360, Adobe Captivate Specialists, Adult Learning Theory, Job Task
+                        Analysis (JTA), Learning Analytics.</p>
+                </div>
+                <div class="skill-group">
+                    <strong>Leadership & Management</strong>
+                    <p>Project Management Professional (PMP), Agile/Scrum (CSM), Team Leadership, Technical Curriculum
+                        Strategy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Developer</span>
+                    <span>07/2024 – Present</span>
+                </div>
+                <div class="entry-subheader">Leidos - Chantilly, VA</div>
+                <ul>
+                    <li>Engineered custom Named Entity Recognition (NER) models for specialized customer datasets,
+                        exceeding industry benchmarks.</li>
+                    <li>Architected and deployed 30+ machine learning models into production environments using
+                        TensorFlow and DSPy pipelines.</li>
+                    <li>Developed secure, high-concurrency FastAPI microservices with Dockerized deployments.</li>
+                    <li>Leads internal technical training initiatives, including PMP certification prep and AI
+                        workshops.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Instructional Systems Designer</span>
+                    <span>10/2023 – 07/2024</span>
+                </div>
+                <div class="entry-subheader">Peraton - Chantilly, VA</div>
+                <ul>
+                    <li>Directed a team of instructional designers supporting complex intelligence mission training.
+                    </li>
+                    <li>Managed a high-priority course portfolio through the full ADDIE lifecycle.</li>
+                    <li>Improved project delivery timelines by implementing Agile-inspired design sprints.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span>E-Learning Developer</span>
+                    <span>01/2022 – 10/2023</span>
+                </div>
+                <div class="entry-subheader">Leidos - Chantilly, VA</div>
+                <ul>
+                    <li>Pioneered the use of Python for learning analytics, resulting in a 20% increase in training
+                        effectiveness metrics.</li>
+                    <li>Automated cross-platform training data ingestion using custom web scrapers and Python scripts.
+                    </li>
+                    <li>Developed 5 massive-scale web-based training (WBT) modules under aggressive schedules.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Instructional Designer</span>
+                    <span>03/2021 – 12/2021</span>
+                </div>
+                <div class="entry-subheader">Tekmasters - Springfield, VA</div>
+                <ul>
+                    <li>Built interactive e-learning solutions using the full Articulate 360 and Adobe suites.</li>
+                    <li>Conducted deep-dive research into emerging educational technologies for federal adoption.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Training Development Specialist</span>
+                    <span>05/2020 – 03/2021</span>
+                </div>
+                <div class="entry-subheader">Tridea Works - Fredericksburg, VA</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Instructional Systems Specialist</span>
+                    <span>01/2019 – 05/2020</span>
+                </div>
+                <div class="entry-subheader">Drug Enforcement Administration (DEA) - Quantico, VA</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Instructor / Course Developer</span>
+                    <span>03/2004 – 08/2014</span>
+                </div>
+                <div class="entry-subheader">United States Air Force</div>
+                <ul>
+                    <li>Managed technical training for thousands of personnel with 100% database accuracy.</li>
+                    <li>Developed simulation-based curricula for high-stakes operational environments.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education & Academic Credentials</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Graduate Certificate: AI Systems Management</span>
+                    <span>2025</span>
+                </div>
+                <div class="entry-subheader">Strayer University</div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Master of Education (M.Ed.): Instructional Design & Technology</span>
+                </div>
+                <div class="entry-subheader">Liberty University</div>
+            </div>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Bachelor of Science (B.S.): Management / CIS</span>
+                </div>
+                <div class="entry-subheader">Park University</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications & Technical Training</h2>
+            <h3>Primary Industry Credentials</h3>
+            <ul>
+                <li>Project Management Professional (PMP) - PMI</li>
+                <li>DeepLearning.AI TensorFlow Developer</li>
+                <li>Certified Scrum Master (CSM)</li>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>IBM Data Science Professional Certificate</li>
+                <li>Google Data Analytics Professional Certificate</li>
+                <li>Databricks Generative AI Fundamentals</li>
+                <li>Adobe Captivate Specialist</li>
+            </ul>
+
+            <h3>Specialized Technical Nanodegrees</h3>
+            <div class="skills-section" style="margin-top: 10px;">
+                <ul>
+                    <li>Udacity Deep Reinforcement Learning</li>
+                    <li>Udacity Natural Language Processing</li>
+                    <li>Udacity Computer Vision</li>
+                    <li>Udacity Artificial Intelligence</li>
+                    <li>Udacity Deep Learning</li>
+                </ul>
+                <ul>
+                    <li>Udacity AI Product Manager</li>
+                    <li>Udacity AI Programming with Python</li>
+                    <li>Udacity Generative AI</li>
+                    <li>Udacity Business Intelligence Analytics</li>
+                    <li>Stanford Machine Learning</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Affiliations & Interests</h2>
+            <p>
+                <strong>Interests:</strong> Neuro-symbolic AI, LLM fine-tuning, automated intelligent tutoring systems,
+                Olympic Weightlifting, CrossFit.
+            </p>
+        </section>
+    </div>
+
+</body>
+
+</html>
