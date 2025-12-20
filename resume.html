@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Dustin J. Ober</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d1117;
+            --accent: #2f81f7;
+            --text: #1f2937;
+            --text-light: #4b5563;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text);
+            margin: 0;
+            padding: 40px;
+            background: #f9fafb;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-left h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        .header-left p {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin: 5px 0 0;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .clearance-banner {
+            background: #f3f4f6;
+            border-left: 4px solid #ef4444;
+            padding: 10px 15px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #b91c1c;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .job-entry {
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .job-company {
+            color: var(--accent);
+        }
+
+        .job-date {
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        ul {
+            margin: 5px 0 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .skill-item strong {
+            display: block;
+            margin-bottom: 2px;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .skill-item span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .no-print {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            background: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="no-print">
+        <button onclick="window.print()" class="download-btn">Generate PDF / Print Resume</button>
+        <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">(Select 'Save as PDF' in your browser's print
+            dialog)</p>
+    </div>
+
+    <div class="resume-container">
+        <header>
+            <div class="header-left">
+                <h1>Dustin J. Ober</h1>
+                <p>AI Developer & Technical Instructional Systems Designer</p>
+            </div>
+            <div class="header-right">
+                <div>dustinober@me.com</div>
+                <div>540-793-0177</div>
+                <div>Culpeper, VA</div>
+                <div>linkedin.com/in/dustinober</div>
+            </div>
+        </header>
+
+        <div class="clearance-banner">
+            Security Clearance: Top Secret Clearance with SCI and Poly
+        </div>
+
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>
+                Technical Instructional Systems Designer and Full Stack Developer specialized in bridging Educational
+                Strategy and AI Implementation.
+                Extensive experience leveraging Data Science, NLP, and LLMs to optimize training outcomes for defense
+                and intelligence missions.
+                Proven track record in architecting end-to-end AI pipelines and modernizing technical infrastructure.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Developer</span>
+                    <span class="job-date">07/2024 – Present</span>
+                </div>
+                <div class="job-company">Leidos - Ashburn, VA</div>
+                <ul>
+                    <li><strong>Engineered state-of-the-art NLP models:</strong> Designed custom Named Entity
+                        Recognition (NER) models for specialized datasets, achieving high extraction accuracy.</li>
+                    <li><strong>Architected AI pipelines:</strong> Trained and deployed 30+ ML models using TensorFlow
+                        and DSPy for production insights.</li>
+                    <li><strong>Modernized infrastructure:</strong> Built secure FastAPI REST services with JWT and
+                        Dockerized applications for 99.9% consistency.</li>
+                    <li><strong>Project Leadership:</strong> Lead PMP Instructor for 4+ cohorts and author of the PMP
+                        2026 Exam Prep Ebook.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Instructional Systems Designer</span>
+                    <span class="job-date">10/2023 – 07/2024</span>
+                </div>
+                <div class="job-company">Peraton - (Classified Customer Site)</div>
+                <ul>
+                    <li>Directed and mentored a team of instructional designers to achieve course development
+                        objectives.</li>
+                    <li>Managed a portfolio of 8 courses, overseeing end-to-end design and implementation.</li>
+                    <li>Coordinated multiple projects with strict deadlines in a fast-paced environment.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>E-Learning Developer</span>
+                    <span class="job-date">01/2022 – 10/2023</span>
+                </div>
+                <div class="job-company">Leidos - (Classified Customer Site)</div>
+                <ul>
+                    <li>Leveraged Python (Pandas/NumPy) to analyze training trends, improving completion rates by 20%.
+                    </li>
+                    <li>Automated data collection via web-scraping, reducing manual workloads by 15 hours per week.</li>
+                    <li>Developed and deployed 5 comprehensive WBTs within 90 days for organizational missions.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Instructional Designer</span>
+                    <span class="job-date">03/2021 – 12/2021</span>
+                </div>
+                <div class="job-company">Tekmasters - Springfield, VA</div>
+                <ul>
+                    <li>Developed interactive digital learning materials using Articulate 360, Captivate, and Camtasia.
+                    </li>
+                    <li>Created learner-centered curricula tailored to adult education for intelligence environments.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Instructor / Course Developer</span>
+                    <span class="job-date">03/2004 – 08/2014</span>
+                </div>
+                <div class="job-company">United States Air Force</div>
+                <ul>
+                    <li>Authored 52 technical scenarios for firearms training simulators.</li>
+                    <li>Maintained technical databases with 1,000+ entries achieving 100% data accuracy.</li>
+                    <li>Reduced performance report rewrites by 25% through evidence-based curriculum adjustments.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education & Credentials</h2>
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Graduate Certificate: AI Systems Management</span>
+                    <span class="job-date">2025</span>
+                </div>
+                <div class="job-company">Strayer University</div>
+            </div>
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Master of Education: ID & Technology</span>
+                </div>
+                <div class="job-company">Liberty University</div>
+            </div>
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>BS in Management / CIS</span>
+                </div>
+                <div class="job-company">Park University</div>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 10px;">
+                <strong>Key Certifications:</strong> Project Management Professional (PMP), TensorFlow Developer, AWS
+                Certified Cloud Practitioner, IBM Data Science, Google Data Analytics.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <strong>AI & Data</strong>
+                    <span>TensorFlow, PyTorch, DSPy, NLP, Scikit-Learn, Pandas, NumPy, Vector Databases</span>
+                </div>
+                <div class="skill-item">
+                    <strong>Development</strong>
+                    <span>Python, JavaScript, FastAPI, SQL, Docker, Git, RESTful APIs, JWT, Bash</span>
+                </div>
+                <div class="skill-item">
+                    <strong>Strategy</strong>
+                    <span>Instructional Design (ADDIE), Articulate 360, Agile/Scrum, PMP Methodology</span>
+                </div>
+                <div class="skill-item">
+                    <strong>Interests</strong>
+                    <span>Neuro-symbolic AI, LLM Automation, Olympic Weightlifting, CrossFit</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
