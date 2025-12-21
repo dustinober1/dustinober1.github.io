@@ -194,7 +194,6 @@ export default function ProjectsPage() {
                                             alt={`${project.name} Logo`}
                                             width={200}
                                             height={200}
-                                            style={{ objectFit: "contain" }}
                                         />
                                         <h3>{project.name}</h3>
                                         <div className="category">{project.category}</div>

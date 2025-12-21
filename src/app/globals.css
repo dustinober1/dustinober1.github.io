@@ -566,6 +566,11 @@ footer {
     border-radius: 8px;
     margin-bottom: 1.5rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
 }
 
 .flip-card-front h3 {
