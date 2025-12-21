@@ -1,7 +1,7 @@
 services:
-  # Static website service
+  # Next.js application service
   - type: web
-    name: dustinober-portfolio
+    name: dustin-ober-portfolio
     env: docker
     repo: https://github.com/dustinober1/dustinober1.github.io.git
     rootDir: .
@@ -12,4 +12,6 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      - key: PORT
+        value: 3000
     autoDeploy: true

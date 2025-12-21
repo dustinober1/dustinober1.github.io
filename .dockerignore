@@ -2,25 +2,40 @@
 .git
 .gitignore
 
-# Node modules (if any)
+# Dependencies
 node_modules
+.pnp
+.pnp.js
+
+# Build outputs
 .next
+out
+build
+dist
 .swc
 
-# Coverage reports
+# Testing
 coverage
 
 # Documentation
 README.md
+upgrade.md
+*.md
+
+# Legacy
+legacy/
 
 # Docker files
 Dockerfile
 docker-compose.yml
 render.yaml
+nginx.conf
 
 # IDE files
 .vscode
 .idea
+*.swp
+*.swo
 
 # OS files
 .DS_Store
@@ -28,3 +43,10 @@ Thumbs.db
 
 # Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files
+.env
+.env*.local

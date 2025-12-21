@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero Component Snapshot Testing matches snapshot 1`] = `
+<section
+  class="hero"
+  id="about"
+>
+  <h1>
+    Bridging Educational Strategy 
+    <br />
+    & AI Implementation
+  </h1>
+  <p>
+    Technical Instructional Systems Designer and Full Stack Developer specialized in leveraging Data Science and LLMs to optimize training outcomes for defense and intelligence missions.
+  </p>
+  <div
+    class="cta-container"
+  >
+    <a
+      class="cta-primary"
+      href="mailto:dustinober@me.com"
+    >
+      Hire Me
+    </a>
+    <a
+      class="contact-item cta-secondary"
+      href="/resume"
+    >
+      <i
+        class="fas fa-file-alt"
+      />
+       Resume
+    </a>
+    <a
+      class="contact-item cta-secondary"
+      href="/cv"
+    >
+      <i
+        class="fas fa-list-ul"
+      />
+       Full CV
+    </a>
+  </div>
+  <div
+    class="contact-info"
+  >
+    <div
+      class="contact-item"
+    >
+      <i
+        class="fas fa-map-marker-alt"
+      />
+       Chantilly, VA
+    </div>
+    <a
+      class="contact-item"
+      href="mailto:dustinober@me.com"
+    >
+      <i
+        class="fas fa-envelope"
+      />
+       dustinober@me.com
+    </a>
+    <div
+      class="contact-item"
+    >
+      <i
+        class="fas fa-phone"
+      />
+       540-793-0177
+    </div>
+    <a
+      class="contact-item"
+      href="https://www.linkedin.com/in/dober1"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <i
+        class="fab fa-linkedin"
+      />
+       LinkedIn
+    </a>
+    <a
+      class="contact-item"
+      href="https://dustinober1.github.io/"
+    >
+      <i
+        class="fas fa-globe"
+      />
+       Portfolio
+    </a>
+  </div>
+</section>
+`;

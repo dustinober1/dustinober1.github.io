@@ -1,1 +1,120 @@
-# dustinober1.github.io
+# Dustin J. Ober - Professional Portfolio
+
+A modern, professional portfolio website built with **Next.js 16** and **TypeScript**, showcasing AI/ML development expertise and technical instructional design experience.
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js 16 with App Router
+- **Language**: TypeScript
+- **Styling**: CSS with Custom Properties (Design System)
+- **Deployment**: Render (configured)
+- **Fonts**: Inter (Google Fonts)
+- **Icons**: Font Awesome 6
+
+## 📁 Project Structure
+
+```
+├── src/
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── layout.tsx          # Root layout with SEO metadata
+│   │   ├── page.tsx            # Homepage
+│   │   └── globals.css         # Global styles & design system
+│   ├── components/             # Reusable React components
+│   │   ├── Navigation.tsx      # Header with mobile menu
+│   │   ├── Footer.tsx          # Footer component
+│   │   ├── Hero.tsx            # Hero section
+│   │   ├── SkillsSection.tsx   # Technical skills
+│   │   ├── ExpertiseSection.tsx
+│   │   ├── ExperienceSection.tsx
+│   │   ├── TestimonialsSection.tsx
+│   │   ├── InsightsSection.tsx
+│   │   ├── EducationSummarySection.tsx
+│   │   └── ContactSection.tsx
+│   ├── lib/                    # Utilities (future)
+│   └── data/                   # Static data (future)
+├── public/                     # Static assets
+│   ├── images/
+│   ├── logos/
+│   ├── education/
+│   └── Professional_Certifications/
+├── content/                    # Blog posts (future)
+├── legacy/                     # Original static HTML files
+├── render.yaml                 # Render deployment config
+└── package.json
+```
+
+## 🛠 Development
+
+### Prerequisites
+- Node.js 18+
+- npm
+
+### Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## 🎨 Design System
+
+The site uses a cohesive design system with CSS custom properties:
+
+```css
+--bg-color: #0d1117;        /* Dark background */
+--card-bg: rgba(22, 27, 34, 0.7);
+--text-primary: #e6edf3;    /* Primary text */
+--text-secondary: #8b949e;  /* Secondary text */
+--accent: #2f81f7;          /* Accent blue */
+--accent-hover: #58a6ff;
+```
+
+## 🌐 Deployment
+
+The site is configured for deployment on Render. See `render.yaml` for configuration.
+
+### Environment Variables
+
+Set the following in your Render dashboard:
+- `NODE_ENV`: production
+
+## 📋 Migration Status
+
+This project is part of a migration from static HTML to Next.js. See `upgrade.md` for the full migration plan.
+
+### Completed
+- [x] Phase 1: Foundation Setup
+  - [x] Initialize Next.js project with TypeScript
+  - [x] Set up project structure
+  - [x] Configure ESLint
+  - [x] Create Render deployment configuration
+  - [x] Set up Git repository
+
+### In Progress  
+- [ ] Phase 2: Core Components
+  - [x] Create Layout component with navigation and footer
+  - [x] Convert index.html to pages/index.tsx
+  - [x] Create reusable Navigation component
+  - [x] Create Footer component
+  - [ ] Implement responsive hamburger menu (partially done)
+  - [x] Set up global styles
+
+### Upcoming
+- [ ] Phase 3: Page Migration (about, projects, ebooks, education, cv, resume)
+- [ ] Phase 4: Render Deployment
+- [ ] Phase 5: Enhanced Features (contact form, analytics, blog)
+
+## 📝 License
+
+© 2025 Dustin J. Ober. All rights reserved.

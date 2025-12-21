@@ -1,0 +1,178 @@
+.resumeContainer {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.resumeBody {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: #1f2937;
+    margin: 0;
+    padding: 40px;
+    background: #f9fafb;
+    min-height: 100vh;
+}
+
+.resumeHeader {
+    border-bottom: 2px solid #0d1117;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.headerLeft h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #0d1117;
+    letter-spacing: -1px;
+}
+
+.headerLeft p {
+    font-size: 1.1rem;
+    color: #2f81f7;
+    font-weight: 600;
+    margin: 5px 0 0;
+}
+
+.headerRight {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.headerRight div {
+    margin-bottom: 2px;
+}
+
+.portfolioLink {
+    color: #2f81f7;
+    font-weight: 600;
+}
+
+.clearanceBanner {
+    background: #f3f4f6;
+    border-left: 4px solid #ef4444;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #b91c1c;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: #0d1117;
+}
+
+.jobEntry {
+    margin-bottom: 20px;
+}
+
+.jobHeader {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.jobCompany {
+    color: #2f81f7;
+}
+
+.jobDate {
+    color: #4b5563;
+    font-weight: 400;
+}
+
+.jobList {
+    margin: 5px 0 0;
+    padding-left: 20px;
+}
+
+.jobList li {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skillItem strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+    color: #0d1117;
+}
+
+.skillItem span {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.noPrint {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.downloadBtn {
+    background: #2f81f7;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.downloadBtnSecondary {
+    background: #374151;
+}
+
+.helpText {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.certText {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+@media print {
+    .resumeBody {
+        background: white;
+        padding: 0;
+    }
+
+    .resumeContainer {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .noPrint {
+        display: none;
+    }
+}

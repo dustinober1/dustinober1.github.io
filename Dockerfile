@@ -1,17 +1,52 @@
-# Use a lightweight nginx base image for serving static files
-FROM nginx:alpine
+# Stage 1: Install dependencies
+FROM node:20-alpine AS deps
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
 
-# Remove the default nginx configuration
-RUN rm /etc/nginx/conf.d/default.conf
+# Copy package files
+COPY package.json package-lock.json ./
+RUN npm ci --only=production=false
 
-# Copy custom nginx configuration for static site
-COPY nginx.conf /etc/nginx/conf.d/
+# Stage 2: Build the application
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
 
-# Copy all static files to nginx web root
-COPY . /usr/share/nginx/html/
+# Set environment variables for build
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=production
 
-# Expose port 80 for Render
-EXPOSE 80
+# Build the application
+RUN npm run build
 
-# Start nginx when container starts
-CMD ["nginx", "-g", "daemon off;"]
+# Stage 3: Production runner
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Create non-root user for security
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copy necessary files from builder
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+
+# Create cache directory and set permissions BEFORE switching user
+RUN mkdir -p .next/cache && chown -R nextjs:nodejs .next
+
+# Set correct permissions
+USER nextjs
+
+# Expose port
+EXPOSE 3000
+
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+# Start the application
+CMD ["node", "server.js"]
