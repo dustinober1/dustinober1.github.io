@@ -18,8 +18,8 @@
 }
 
 .resumeHeader {
-    background: #1c2128;
-    color: white;
+    background: #1c2128 !important;
+    color: white !important;
     padding: 30px;
     border-radius: 6px;
     margin-bottom: 30px;
@@ -27,6 +27,8 @@
     justify-content: space-between;
     align-items: flex-start;
     border: 1px solid #30363d;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
 }
 
 .headerLeft h1 {

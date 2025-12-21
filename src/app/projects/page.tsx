@@ -120,6 +120,8 @@ export default function ProjectsPage() {
                                     width: "100%",
                                     maxWidth: "250px",
                                     height: "auto",
+                                    aspectRatio: "1/1",
+                                    objectFit: "contain",
                                     borderRadius: "12px",
                                     filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.2))",
                                 }}
