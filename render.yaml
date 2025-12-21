@@ -1,0 +1,15 @@
+services:
+  # Static website service
+  - type: web
+    name: dustinober-portfolio
+    env: docker
+    repo: https://github.com/dustinober1/dustinober1.github.io.git
+    rootDir: .
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
