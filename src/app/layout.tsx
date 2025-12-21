@@ -4,9 +4,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dustinober1.github.io'),
+  metadataBase: new URL('https://aiober.com'),
   title: {
-    default: "Dustin J. Ober | AI Developer & Technical Instructional Designer",
+    default: "Dustin J. Ober | AI Developer & Technical ISD",
     template: "%s | Dustin J. Ober",
   },
   description: "Portfolio of Dustin J. Ober, an AI Developer and Technical Instructional Systems Designer specialized in NLP, LLMs, and Educational Technology.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://dustinober1.github.io/",
+    url: "https://aiober.com/",
     siteName: "Dustin J. Ober Portfolio",
     title: "Dustin J. Ober | AI Developer & Technical Instructional Designer",
     description: "Portfolio of Dustin J. Ober, an AI Developer and Technical Instructional Systems Designer specialized in NLP, LLMs, and Educational Technology.",
@@ -54,7 +54,7 @@ export default function RootLayout({
               "@type": "Person",
               "name": "Dustin J. Ober",
               "jobTitle": "AI Developer & Technical Instructional Designer",
-              "url": "https://dustinober1.github.io/",
+              "url": "https://aiober.com/",
               "sameAs": [
                 "https://www.linkedin.com/in/dober1/"
               ],

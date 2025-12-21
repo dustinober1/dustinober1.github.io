@@ -106,9 +106,15 @@ export default function AboutPage() {
                         Let&apos;s build something impactful together.
                     </p>
                     <Link
-                        href="mailto:dustinober@me.com"
+                        href="/contact"
                         className="view-btn"
-                        style={{ width: "auto", padding: "1rem 3rem", borderRadius: "50px" }}
+                        style={{
+                            width: "fit-content",
+                            padding: "1rem 3rem",
+                            borderRadius: "50px",
+                            display: "inline-block",
+                            margin: "0 auto"
+                        }}
                     >
                         Get in Touch
                     </Link>

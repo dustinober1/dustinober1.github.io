@@ -164,7 +164,7 @@ export default function CVPage() {
                         <div>540-793-0177</div>
                         <div>Chantilly, VA</div>
                         <div>linkedin.com/in/dober1</div>
-                        <div className={styles.portfolioLink}>dustinober1.github.io</div>
+                        <div className={styles.portfolioLink}>aiober.com</div>
                     </div>
                 </header>
 
@@ -175,12 +175,7 @@ export default function CVPage() {
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Professional Profile</h2>
                     <p>
-                        A high-performing Technical Instructional Systems Designer and Full Stack
-                        Developer with over 20 years of experience spanning military service, federal
-                        contracting, and advanced AI development. Expert in bridging the gap between
-                        educational strategy and technical implementation, specifically within the
-                        defense and intelligence communities. Specialized in NLP, LLM automation
-                        (DSPy/LangChain), and data-driven learning analytics.
+                        A high-performing Technical Instructional Systems Designer and Full Stack Developer with over 20 years of experience spanning military service, federal contracting, and advanced AI development. Expert in bridging the gap between educational strategy and technical implementation, specifically within the defense and intelligence communities. Specialized in NLP, LLM automation (DSPy/LangChain), and data-driven learning analytics.
                     </p>
                 </section>
 

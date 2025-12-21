@@ -40,8 +40,8 @@ export default function Hero() {
                 >
                     <i className="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://dustinober1.github.io/" className="contact-item">
-                    <i className="fas fa-globe"></i> Portfolio
+                <a href="https://aiober.com" className="contact-item">
+                    <i className="fas fa-globe"></i> aiober.com
                 </a>
             </div>
         </section>

@@ -124,7 +124,7 @@ export default function ResumePage() {
                         <div>540-793-0177</div>
                         <div>Chantilly, VA</div>
                         <div>linkedin.com/in/dober1</div>
-                        <div className={styles.portfolioLink}>dustinober1.github.io</div>
+                        <div className={styles.portfolioLink}>aiober.com</div>
                     </div>
                 </header>
 
@@ -135,11 +135,7 @@ export default function ResumePage() {
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Summary</h2>
                     <p>
-                        Technical Instructional Systems Designer and Full Stack Developer specialized
-                        in bridging Educational Strategy and AI Implementation. Extensive experience
-                        leveraging Data Science, NLP, and LLMs to optimize training outcomes for
-                        defense and intelligence missions. Proven track record in architecting
-                        end-to-end AI pipelines and modernizing technical infrastructure.
+                        Technical Instructional Systems Designer and Full Stack Developer specialized in bridging Educational Strategy and AI Implementation. Extensive experience leveraging Data Science, NLP, and LLMs to optimize training outcomes for defense and intelligence missions. Proven track record in architecting end-to-end AI pipelines and modernizing technical infrastructure.
                     </p>
                 </section>
 
