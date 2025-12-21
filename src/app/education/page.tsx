@@ -89,7 +89,7 @@ export default function EducationPage() {
             </section>
 
             {/* Education Section */}
-            <section id="education">
+            <section id="education" style={{ padding: "4rem 0" }}>
                 <div className="container">
                     {/* Formal Education */}
                     <h2 style={{ marginBottom: "2rem" }}>
