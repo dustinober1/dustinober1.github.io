@@ -53,10 +53,11 @@ export default function AdminDashboard() {
     };
 
     const logout = async () => {
-        // In a real app we'd hit an API to clear cookie, 
-        // but for now we can just redirect or rely on client-side cleanup if needed.
-        // Ideally we should have a /api/admin/logout endpoint.
-        document.cookie = 'session=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        try {
+            await fetch('/api/admin/logout', { method: 'POST' });
+        } catch (e) {
+            console.error('Logout error', e);
+        }
         router.push('/admin');
     };
 

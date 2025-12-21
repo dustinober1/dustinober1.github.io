@@ -1,13 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { query } from '@/lib/db';
+import { getGuestSession } from '@/lib/auth';
 
 export async function GET(request: NextRequest) {
-    const searchParams = request.nextUrl.searchParams;
-    const userId = searchParams.get('userId');
+    // IDOR FIX: Ignore client-provided userId. Use secure session.
+    const session = await getGuestSession();
 
-    if (!userId) {
-        return NextResponse.json({ error: 'User ID required' }, { status: 400 });
+    if (!session || !session.userId) {
+        // No session means empty stats
+        return NextResponse.json({
+            stats: {
+                totalBooksStarted: 0,
+                booksCompleted: 0,
+                totalTimeRead: 0,
+                streakDays: 0
+            }
+        });
     }
+
+    const userId = session.userId;
 
     try {
         // Get basic stats

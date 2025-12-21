@@ -18,15 +18,15 @@ export async function GET(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
     const session = await getSession();
-    if (!session) {
-        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    if (!session || session.user !== 'admin') {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
     }
 
     const { searchParams } = new URL(request.url);
     const id = searchParams.get('id');
 
-    if (!id) {
-        return NextResponse.json({ error: 'ID required' }, { status: 400 });
+    if (!id || isNaN(Number(id))) {
+        return NextResponse.json({ error: 'Valid ID required' }, { status: 400 });
     }
 
     try {
