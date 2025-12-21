@@ -1,0 +1,14 @@
+# Render Deployment Configuration
+# https://render.com/docs/yaml-spec
+
+services:
+  - type: web
+    name: dustin-ober-portfolio
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
