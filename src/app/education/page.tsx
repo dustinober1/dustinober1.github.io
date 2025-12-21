@@ -92,7 +92,7 @@ export default function EducationPage() {
             <section id="education">
                 <div className="container">
                     {/* Formal Education */}
-                    <h2 style={{ left: 0, transform: "none", marginBottom: "2rem" }}>
+                    <h2 style={{ marginBottom: "2rem" }}>
                         Formal Education
                     </h2>
                     <div className="edu-grid">
@@ -115,8 +115,6 @@ export default function EducationPage() {
                     <h2
                         style={{
                             marginTop: "5rem",
-                            left: 0,
-                            transform: "none",
                             marginBottom: "2rem",
                         }}
                     >
@@ -155,8 +153,6 @@ export default function EducationPage() {
                     >
                         <h2
                             style={{
-                                left: 0,
-                                transform: "none",
                                 marginBottom: "1.5rem",
                                 fontSize: "1.75rem",
                             }}

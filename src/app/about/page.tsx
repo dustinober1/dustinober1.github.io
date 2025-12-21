@@ -25,7 +25,7 @@ export default function AboutPage() {
                         className="about-text"
                         style={{ textAlign: "left", maxWidth: "900px", marginBottom: "4rem" }}
                     >
-                        <h2 style={{ left: 0, transform: "none", marginBottom: "2rem" }}>
+                        <h2 style={{ marginBottom: "2rem" }}>
                             The Intersection of Strategy & Science
                         </h2>
                         <p>
