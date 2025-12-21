@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
+import EbookProgressCard from "@/components/progress/EbookProgressCard";
+import ReadingDashboard from "@/components/progress/ReadingDashboard";
 
 export const metadata: Metadata = {
     title: "Ebooks",
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 const ebooks = [
     {
+        id: "pmp",
         title: "PMP Exam Prep",
         shortTitle: "PMP Exam Prep (2026)",
         category: "Project Management",
@@ -20,6 +21,7 @@ const ebooks = [
         link: "https://dustinober1.github.io/PMP-2026/",
     },
     {
+        id: "ai-id",
         title: "AI-Powered ID",
         shortTitle: "AI-Powered Instructional Design",
         category: "Instructional Design",
@@ -30,6 +32,7 @@ const ebooks = [
         link: "https://dustinober1.github.io/Ebook_AI-Powered_Instructional_Design/",
     },
     {
+        id: "dspy",
         title: "DSPy Guide",
         shortTitle: "DSPy: Programming Models",
         category: "AI Engineering",
@@ -45,7 +48,7 @@ export default function EbooksPage() {
     return (
         <main>
             {/* Hero Section */}
-            <section className="hero" style={{ padding: "6rem 0 3rem" }}>
+            <section className="hero" style={{ padding: "6rem 0 1rem" }}>
                 <div className="container">
                     <h1>Published Ebooks</h1>
                     <p>
@@ -55,43 +58,15 @@ export default function EbooksPage() {
                 </div>
             </section>
 
+            {/* Dashboard Section */}
+            <ReadingDashboard />
+
             {/* Ebooks Grid */}
-            <section id="ebooks">
+            <section id="ebooks" style={{ padding: "1rem 0" }}>
                 <div className="container">
                     <div className="projects-grid">
                         {ebooks.map((ebook) => (
-                            <div key={ebook.title} className="flip-card">
-                                <div className="flip-card-inner">
-                                    <div className="flip-card-front">
-                                        <Image
-                                            src={ebook.logo}
-                                            alt={`${ebook.title} Logo`}
-                                            width={150}
-                                            height={150}
-                                            style={{ objectFit: "contain" }}
-                                        />
-                                        <h3>{ebook.title}</h3>
-                                        <span className="category">{ebook.category}</span>
-                                    </div>
-                                    <div className="flip-card-back">
-                                        <h3>{ebook.shortTitle}</h3>
-                                        <p>{ebook.description}</p>
-                                        <ul>
-                                            {ebook.features.map((feature) => (
-                                                <li key={feature}>{feature}</li>
-                                            ))}
-                                        </ul>
-                                        <Link
-                                            href={ebook.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="view-btn"
-                                        >
-                                            Read Ebook
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
+                            <EbookProgressCard key={ebook.id} ebook={ebook} />
                         ))}
                     </div>
                 </div>

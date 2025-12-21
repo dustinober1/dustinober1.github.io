@@ -10,7 +10,7 @@ const navLinks = [
     { href: "/ebooks", label: "Ebooks" },
     { href: "/education", label: "Education" },
     { href: "/about", label: "About Me" },
-    { href: "/#contact", label: "Contact" },
+    { href: "/contact", label: "Contact" },
 ];
 
 export default function Navigation() {

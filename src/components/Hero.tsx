@@ -13,9 +13,7 @@ export default function Hero() {
             </p>
 
             <div className="cta-container">
-                <Link href="mailto:dustinober@me.com" className="cta-primary">
-                    Hire Me
-                </Link>
+
                 <Link href="/resume" className="contact-item cta-secondary">
                     <i className="fas fa-file-alt"></i> Resume
                 </Link>
