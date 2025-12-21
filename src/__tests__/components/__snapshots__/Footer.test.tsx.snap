@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component Snapshot Testing matches snapshot 1`] = `
+<footer>
+  <div
+    class="container"
+  >
+    <p>
+      © 
+      2024
+       Dustin J. Ober. Built with Next.js.
+    </p>
+  </div>
+</footer>
+`;
