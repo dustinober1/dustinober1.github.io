@@ -2,22 +2,25 @@ import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 
-const SECRET_KEY = process.env.SESSION_SECRET;
-if (!SECRET_KEY) {
-    throw new Error('SESSION_SECRET environment variable is not defined');
+// Lazy load key to prevent build failures when env var is missing
+function getSecretKey() {
+    const SECRET_KEY = process.env.SESSION_SECRET;
+    if (!SECRET_KEY) {
+        throw new Error('SESSION_SECRET environment variable is not defined');
+    }
+    return new TextEncoder().encode(SECRET_KEY);
 }
-const key = new TextEncoder().encode(SECRET_KEY);
 
 export async function encrypt(payload: any) {
     return await new SignJWT(payload)
         .setProtectedHeader({ alg: 'HS256' })
         .setIssuedAt()
         .setExpirationTime('24h')
-        .sign(key);
+        .sign(getSecretKey());
 }
 
 export async function decrypt(input: string): Promise<any> {
-    const { payload } = await jwtVerify(input, key, {
+    const { payload } = await jwtVerify(input, getSecretKey(), {
         algorithms: ['HS256'],
     });
     return payload;
