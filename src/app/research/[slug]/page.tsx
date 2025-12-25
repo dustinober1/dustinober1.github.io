@@ -35,9 +35,9 @@ const whitepaperRegistry: Record<
         title: "The Disconnected Pipeline",
         subtitle: "Solving Dependency Management in Secure Facilities",
         author: "Dustin J. Ober, PMP",
-        pdfPath: null,
+        pdfPath: "/whitepapers/pdf/02-the-disconnected-pipeline.pdf",
         markdownFile: "02_The Disconnected Pipeline.md",
-        status: "coming-soon",
+        status: "available",
     },
     "private-knowledge-retrieval": {
         id: "wp-03",

@@ -33,8 +33,8 @@ const whitepapers = [
         subtitle: "Solving Dependency Management in Secure Facilities",
         abstract:
             'A blueprint for modern software engineering without internet access. Covers "Sneakernet" strategies, local PyPI mirrors, and containerization (Docker/Apptainer) for Zero Trust.',
-        status: "coming-soon" as const,
-        pdfUrl: null,
+        status: "available" as const,
+        pdfUrl: "/whitepapers/pdf/02-the-disconnected-pipeline.pdf",
     },
     {
         id: "wp-03",
