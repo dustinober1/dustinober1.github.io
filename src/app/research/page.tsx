@@ -16,43 +16,47 @@ const seriesInfo = {
 const whitepapers = [
     {
         id: "wp-01",
+        slug: "sovereign-ai-infrastructure",
         type: "Whitepaper #01",
         title: "Sovereign AI Infrastructure",
         subtitle: "Hardware & Architecture for Disconnected Environments",
         abstract:
             "A guide to sizing hardware and architecting networks when cloud APIs are not an option. Focuses on GPU optimization and VRAM constraints for local inference.",
-        status: "available",
-        downloadUrl: "#", // Replace with actual PDF URL when ready
+        status: "available" as const,
+        pdfUrl: "/whitepapers/01-sovereign-ai-infrastructure.pdf",
     },
     {
         id: "wp-02",
+        slug: "disconnected-pipeline",
         type: "Whitepaper #02",
         title: "The Disconnected Pipeline",
         subtitle: "Solving Dependency Management in Secure Facilities",
         abstract:
             'A blueprint for modern software engineering without internet access. Covers "Sneakernet" strategies, local PyPI mirrors, and containerization (Docker/Apptainer) for Zero Trust.',
-        status: "coming-soon",
-        downloadUrl: null,
+        status: "coming-soon" as const,
+        pdfUrl: null,
     },
     {
         id: "wp-03",
+        slug: "private-knowledge-retrieval",
         type: "Whitepaper #03",
         title: "Private Knowledge Retrieval",
         subtitle: "Architecting Local RAG Systems",
         abstract:
             'How to build "Chat with your Data" pipelines using local Vector DBs and embedding models, ensuring 100% data sovereignty with no external egress.',
-        status: "coming-soon",
-        downloadUrl: null,
+        status: "coming-soon" as const,
+        pdfUrl: null,
     },
     {
         id: "wp-04",
+        slug: "verifiable-intelligence",
         type: "Whitepaper #04",
         title: "Verifiable Intelligence",
         subtitle: "DSPy, Governance, and Hallucination Control",
         abstract:
             'Moving from "vibe-based" AI to deterministic, auditable systems. Techniques for citation forcing and verifiable output in compliance-heavy sectors.',
-        status: "coming-soon",
-        downloadUrl: null,
+        status: "coming-soon" as const,
+        pdfUrl: null,
     },
 ];
 
@@ -91,32 +95,59 @@ export default function ResearchPage() {
                                 </div>
 
                                 <div className={styles.cardBody}>
-                                    <h2 className={styles.paperTitle}>{paper.title}</h2>
+                                    {paper.status === "available" ? (
+                                        <Link href={`/research/${paper.slug}`} className={styles.titleLink}>
+                                            <h2 className={styles.paperTitle}>{paper.title}</h2>
+                                        </Link>
+                                    ) : (
+                                        <h2 className={styles.paperTitle}>{paper.title}</h2>
+                                    )}
                                     <h3 className={styles.paperSubtitle}>{paper.subtitle}</h3>
                                     <p className={styles.paperAbstract}>{paper.abstract}</p>
                                 </div>
 
                                 <div className={styles.cardFooter}>
-                                    {paper.status === "available" && paper.downloadUrl ? (
-                                        <Link
-                                            href={paper.downloadUrl}
-                                            className={styles.downloadBtn}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <svg
-                                                className={styles.downloadIcon}
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                strokeWidth="2"
+                                    {paper.status === "available" ? (
+                                        <div className={styles.actionButtons}>
+                                            <Link
+                                                href={`/research/${paper.slug}`}
+                                                className={styles.readBtn}
                                             >
-                                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                                <polyline points="7,10 12,15 17,10" />
-                                                <line x1="12" y1="15" x2="12" y2="3" />
-                                            </svg>
-                                            Download PDF
-                                        </Link>
+                                                <svg
+                                                    className={styles.readIcon}
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    strokeWidth="2"
+                                                >
+                                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                                </svg>
+                                                Read Online
+                                            </Link>
+                                            {paper.pdfUrl && (
+                                                <a
+                                                    href={paper.pdfUrl}
+                                                    className={styles.downloadBtn}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    download
+                                                >
+                                                    <svg
+                                                        className={styles.downloadIcon}
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        strokeWidth="2"
+                                                    >
+                                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                                        <polyline points="7,10 12,15 17,10" />
+                                                        <line x1="12" y1="15" x2="12" y2="3" />
+                                                    </svg>
+                                                    PDF
+                                                </a>
+                                            )}
+                                        </div>
                                     ) : (
                                         <div className={styles.notifyWrapper}>
                                             <span className={styles.notifyText}>

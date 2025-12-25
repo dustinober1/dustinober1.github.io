@@ -232,13 +232,59 @@
     border-top: 1px solid rgba(48, 54, 61, 0.6);
 }
 
+.titleLink {
+    text-decoration: none;
+    display: block;
+}
+
+.titleLink:hover .paperTitle {
+    color: #58a6ff;
+}
+
+.titleLink:hover {
+    text-decoration: none;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.readBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex: 1;
+    padding: 0.875rem 1rem;
+    background: rgba(47, 129, 247, 0.1);
+    border: 1px solid rgba(47, 129, 247, 0.3);
+    color: #58a6ff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.readBtn:hover {
+    background: rgba(47, 129, 247, 0.2);
+    border-color: #58a6ff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.readIcon {
+    width: 16px;
+    height: 16px;
+}
+
 .downloadBtn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.6rem;
-    width: 100%;
-    padding: 0.875rem 1.5rem;
+    gap: 0.5rem;
+    padding: 0.875rem 1.25rem;
     background: linear-gradient(135deg, #238636, #2ea043);
     color: white;
     font-weight: 600;
@@ -258,8 +304,8 @@
 }
 
 .downloadIcon {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 }
 
 .notifyWrapper {

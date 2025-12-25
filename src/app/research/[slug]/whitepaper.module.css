@@ -1,0 +1,322 @@
+/* Whitepaper Detail Page Styling */
+
+.whitepaperMain {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0d1117 0%, #0a0d12 100%);
+}
+
+/* Header */
+.header {
+    padding: 7rem 0 3rem;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.6);
+    background: radial-gradient(ellipse at center top, rgba(47, 129, 247, 0.06) 0%, transparent 50%);
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #8b949e;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.backLink:hover {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.headerMeta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.paperType {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #58a6ff;
+    padding: 0.35rem 0.75rem;
+    background: rgba(47, 129, 247, 0.15);
+    border-radius: 4px;
+}
+
+.seriesLabel {
+    font-size: 0.85rem;
+    color: #6e7681;
+    font-style: italic;
+}
+
+.paperTitle {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #e6edf3;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.paperSubtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 500;
+    color: #8b949e;
+    margin-bottom: 1.5rem;
+}
+
+.authorLine {
+    font-size: 0.95rem;
+    color: #6e7681;
+    margin-bottom: 2rem;
+}
+
+.downloadBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.875rem 1.75rem;
+    background: linear-gradient(135deg, #238636, #2ea043);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
+}
+
+.downloadBtn:hover {
+    background: linear-gradient(135deg, #2ea043, #3fb950);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(35, 134, 54, 0.4);
+    text-decoration: none;
+    color: white;
+}
+
+.downloadIcon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Article Content */
+.article {
+    padding: 4rem 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #c9d1d9;
+}
+
+/* Markdown Rendered Elements */
+.content :global(.wp-h1) {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e6edf3;
+    margin: 2.5rem 0 1rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.content :global(.wp-h2) {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #e6edf3;
+    margin: 2.5rem 0 1rem;
+}
+
+.content :global(.wp-h3) {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #e6edf3;
+    margin: 2rem 0 0.75rem;
+}
+
+.content :global(.wp-h4) {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #58a6ff;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.content :global(.wp-p) {
+    margin-bottom: 1.25rem;
+    color: #c9d1d9;
+}
+
+.content :global(.wp-ul) {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.content :global(.wp-li) {
+    position: relative;
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    color: #c9d1d9;
+}
+
+.content :global(.wp-li)::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #58a6ff;
+    font-weight: bold;
+}
+
+.content :global(.wp-li-num) {
+    margin-bottom: 0.6rem;
+    color: #c9d1d9;
+}
+
+.content :global(.wp-blockquote) {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #58a6ff;
+    background: rgba(47, 129, 247, 0.08);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: #e6edf3;
+}
+
+.content :global(.wp-inline-code) {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.9em;
+    padding: 0.2em 0.4em;
+    background: rgba(110, 118, 129, 0.2);
+    border-radius: 4px;
+    color: #f0883e;
+}
+
+.content :global(.wp-hr) {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(48, 54, 61, 0.8), transparent);
+    margin: 3rem 0;
+}
+
+.content :global(.wp-math) {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(22, 27, 34, 0.9);
+    border: 1px solid rgba(48, 54, 61, 0.6);
+    border-radius: 8px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.95rem;
+    color: #7ee787;
+    overflow-x: auto;
+    text-align: center;
+}
+
+.content strong {
+    color: #e6edf3;
+    font-weight: 600;
+}
+
+.content em {
+    font-style: italic;
+    color: #c9d1d9;
+}
+
+/* Footer CTA */
+.footerCta {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, transparent, rgba(47, 129, 247, 0.04));
+    border-top: 1px solid rgba(48, 54, 61, 0.4);
+}
+
+.ctaContent {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ctaContent h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e6edf3;
+    margin-bottom: 0.75rem;
+}
+
+.ctaContent p {
+    color: #8b949e;
+    margin-bottom: 1.5rem;
+}
+
+.ctaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: rgba(47, 129, 247, 0.1);
+    border: 1px solid rgba(47, 129, 247, 0.3);
+    color: #58a6ff;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+    background: rgba(47, 129, 247, 0.2);
+    border-color: #58a6ff;
+    text-decoration: none;
+}
+
+/* Coming Soon State */
+.comingSoonWrapper {
+    text-align: center;
+    padding: 8rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.comingSoonBadge {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 1.25rem;
+    background: rgba(139, 148, 158, 0.1);
+    border: 1px solid rgba(139, 148, 158, 0.2);
+    border-radius: 4px;
+    margin: 2rem 0;
+}
+
+.comingSoonText {
+    color: #8b949e;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 6rem 0 2rem;
+    }
+
+    .article {
+        padding: 2.5rem 0;
+    }
+
+    .content {
+        font-size: 1rem;
+    }
+
+    .headerMeta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}

@@ -47,7 +47,7 @@ describe('Navigation Component', () => {
 
             expect(screen.getByRole('link', { name: /Home/i })).toBeInTheDocument();
             expect(screen.getByRole('link', { name: /Projects/i })).toBeInTheDocument();
-            expect(screen.getByRole('link', { name: /Ebooks/i })).toBeInTheDocument();
+            expect(screen.getByRole('link', { name: /Research/i })).toBeInTheDocument();
             expect(screen.getByRole('link', { name: /Education/i })).toBeInTheDocument();
             expect(screen.getByRole('link', { name: /About Me/i })).toBeInTheDocument();
             expect(screen.getByRole('link', { name: /Contact/i })).toBeInTheDocument();
