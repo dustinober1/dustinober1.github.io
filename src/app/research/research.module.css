@@ -1,0 +1,366 @@
+/* Research Series - Professional Whitepaper Styling */
+/* Inspired by McKinsey, Leidos, and consulting firm research reports */
+
+.researchMain {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0d1117 0%, #0a0d12 100%);
+}
+
+/* Hero Section */
+.heroSection {
+    padding: 7rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 100%;
+    background: radial-gradient(ellipse at center top, rgba(47, 129, 247, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.seriesBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(47, 129, 247, 0.1);
+    border: 1px solid rgba(47, 129, 247, 0.3);
+    border-radius: 4px;
+    color: #58a6ff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.badgeIcon {
+    font-size: 0.6rem;
+}
+
+.seriesTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #e6edf3;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seriesSubtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #8b949e;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #2f81f7, #58a6ff);
+    margin: 3rem auto 0;
+    border-radius: 2px;
+}
+
+/* Whitepaper Section */
+.whitepaperSection {
+    padding: 2rem 0 5rem;
+}
+
+.whitepaperGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Whitepaper Card */
+.whitepaperCard {
+    position: relative;
+    background: linear-gradient(145deg, rgba(22, 27, 34, 0.9), rgba(13, 17, 23, 0.95));
+    border: 1px solid rgba(48, 54, 61, 0.8);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+}
+
+.whitepaperCard:hover {
+    transform: translateY(-6px);
+    border-color: rgba(47, 129, 247, 0.5);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(47, 129, 247, 0.1);
+}
+
+.cardAccent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2f81f7, #58a6ff, #2f81f7);
+    background-size: 200% 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.whitepaperCard:hover .cardAccent {
+    opacity: 1;
+    animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Card Header */
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.paperType {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6e7681;
+    font-family: 'Inter', monospace;
+}
+
+.statusAvailable {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #3fb950;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.statusDot {
+    width: 6px;
+    height: 6px;
+    background: #3fb950;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.statusComingSoon {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.75rem;
+    background: rgba(139, 148, 158, 0.1);
+    border-radius: 4px;
+}
+
+/* Card Body */
+.cardBody {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.paperTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e6edf3;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.paperSubtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #58a6ff;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+}
+
+.paperAbstract {
+    font-size: 0.95rem;
+    color: #8b949e;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Card Footer */
+.cardFooter {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(48, 54, 61, 0.6);
+}
+
+.downloadBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    background: linear-gradient(135deg, #238636, #2ea043);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
+}
+
+.downloadBtn:hover {
+    background: linear-gradient(135deg, #2ea043, #3fb950);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(35, 134, 54, 0.4);
+    text-decoration: none;
+    color: white;
+}
+
+.downloadIcon {
+    width: 18px;
+    height: 18px;
+}
+
+.notifyWrapper {
+    text-align: center;
+    padding: 0.75rem;
+}
+
+.notifyText {
+    font-size: 0.85rem;
+    color: #6e7681;
+    font-style: italic;
+}
+
+/* About Section */
+.aboutSection {
+    padding: 4rem 0 5rem;
+    background: linear-gradient(180deg, transparent, rgba(47, 129, 247, 0.03));
+}
+
+.aboutContent {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.aboutIcon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(47, 129, 247, 0.1);
+    border: 1px solid rgba(47, 129, 247, 0.2);
+    border-radius: 12px;
+}
+
+.aboutIcon svg {
+    width: 28px;
+    height: 28px;
+    color: #58a6ff;
+}
+
+.aboutTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e6edf3;
+    margin-bottom: 1.25rem;
+}
+
+.aboutTitle::after {
+    display: none;
+}
+
+.aboutText {
+    font-size: 1.05rem;
+    color: #8b949e;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 6rem 0 3rem;
+    }
+
+    .whitepaperGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .whitepaperCard {
+        padding: 1.5rem;
+    }
+
+    .paperTitle {
+        font-size: 1.3rem;
+    }
+
+    .paperSubtitle {
+        font-size: 0.95rem;
+    }
+
+    .aboutSection {
+        padding: 3rem 0 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .seriesTitle {
+        font-size: 2rem;
+    }
+
+    .seriesSubtitle {
+        font-size: 1rem;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}

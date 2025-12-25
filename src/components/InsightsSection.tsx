@@ -41,8 +41,8 @@ export default function InsightsSection() {
                         >
                             <i className="fas fa-file-contract"></i> Case Study →
                         </Link>
-                        <Link href="/ebooks" style={{ color: "var(--accent)", fontWeight: 600 }}>
-                            <i className="fas fa-book"></i> Ebooks →
+                        <Link href="/research" style={{ color: "var(--accent)", fontWeight: 600 }}>
+                            <i className="fas fa-file-alt"></i> Research Series →
                         </Link>
                     </div>
                 </div>
