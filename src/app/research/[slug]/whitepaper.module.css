@@ -226,6 +226,43 @@
     color: #c9d1d9;
 }
 
+.content :global(.wp-link) {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.content :global(.wp-link):hover {
+    color: #79c0ff;
+    border-bottom-color: #79c0ff;
+    text-decoration: none;
+}
+
+/* Special styling for PDF download links at end of document */
+.content :global(.wp-link[href$=".pdf"]) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #238636, #2ea043);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    border-bottom: none;
+    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
+    margin-top: 1rem;
+}
+
+.content :global(.wp-link[href$=".pdf"]):hover {
+    background: linear-gradient(135deg, #2ea043, #3fb950);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(35, 134, 54, 0.4);
+    border-bottom: none;
+}
+
 /* Footer CTA */
 .footerCta {
     padding: 4rem 0;

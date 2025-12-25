@@ -105,4 +105,4 @@ Building a Sovereign AI capability is a systems engineering challenge that marri
 Ober, D. J. (2025). *Sovereign AI Infrastructure: Architecting Intelligent Systems for Disconnected Environments* (Whitepaper No. 01). AIOber Technical Insights.
 
 ---
-**[Download Full PDF]**
+**[Download Full PDF](/whitepapers/01-sovereign-ai-infrastructure.pdf)**

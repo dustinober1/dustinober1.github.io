@@ -116,6 +116,12 @@ function parseMarkdown(markdown: string): string {
     // Inline code
     html = html.replace(/`([^`]+)`/g, '<code class="wp-inline-code">$1</code>');
 
+    // Links [text](url)
+    html = html.replace(
+        /\[([^\]]+)\]\(([^)]+)\)/g,
+        '<a href="$2" class="wp-link" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
+
     // Block quotes
     html = html.replace(
         /^> (.*$)/gim,
