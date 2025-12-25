@@ -23,7 +23,7 @@ const whitepapers = [
         abstract:
             "A guide to sizing hardware and architecting networks when cloud APIs are not an option. Focuses on GPU optimization and VRAM constraints for local inference.",
         status: "available" as const,
-        pdfUrl: "/whitepapers/01-sovereign-ai-infrastructure.pdf",
+        pdfUrl: "/whitepapers/pdf/01-sovereign-ai-infrastructure.pdf",
     },
     {
         id: "wp-02",

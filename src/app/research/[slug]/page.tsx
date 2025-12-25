@@ -25,7 +25,7 @@ const whitepaperRegistry: Record<
         title: "Sovereign AI Infrastructure",
         subtitle: "Hardware & Architecture for Disconnected Environments",
         author: "Dustin J. Ober, PMP",
-        pdfPath: "/whitepapers/01-sovereign-ai-infrastructure.pdf",
+        pdfPath: "/whitepapers/pdf/01-sovereign-ai-infrastructure.pdf",
         markdownFile: "01_Sovereign AI Infrastructure.md",
         status: "available",
     },
