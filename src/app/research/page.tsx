@@ -44,8 +44,8 @@ const whitepapers = [
         subtitle: "Architecting Local RAG Systems",
         abstract:
             'How to build "Chat with your Data" pipelines using local Vector DBs and embedding models, ensuring 100% data sovereignty with no external egress.',
-        status: "coming-soon" as const,
-        pdfUrl: null,
+        status: "available" as const,
+        pdfUrl: "/whitepapers/pdf/03-private-knowledge-retrieval.pdf",
     },
     {
         id: "wp-04",

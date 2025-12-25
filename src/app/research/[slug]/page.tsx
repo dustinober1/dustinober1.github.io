@@ -45,9 +45,9 @@ const whitepaperRegistry: Record<
         title: "Private Knowledge Retrieval",
         subtitle: "Architecting Local RAG Systems",
         author: "Dustin J. Ober, PMP",
-        pdfPath: null,
+        pdfPath: "/whitepapers/pdf/03-private-knowledge-retrieval.pdf",
         markdownFile: "03_Private Knowledge Retrieval.md",
-        status: "coming-soon",
+        status: "available",
     },
     "verifiable-intelligence": {
         id: "wp-04",
