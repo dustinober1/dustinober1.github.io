@@ -135,16 +135,18 @@ const nanodegrees = [
 ];
 
 export default function CVPage() {
-    const handlePrint = () => {
-        window.print();
-    };
+    // handlePrint removed in favor of direct PDF download
 
     return (
         <div className={styles.cvBody}>
             <div className={styles.noPrint}>
-                <button onClick={handlePrint} className={styles.actionBtn}>
-                    Print CV / Save as PDF
-                </button>
+                <a
+                    href="/documents/cv.pdf"
+                    download="Dustin_Ober_CV.pdf"
+                    className={styles.actionBtn}
+                >
+                    Download PDF CV
+                </a>
                 <Link
                     href="/resume"
                     className={`${styles.actionBtn} ${styles.actionBtnSecondary}`}

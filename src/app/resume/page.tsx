@@ -92,25 +92,24 @@ const skills = [
 ];
 
 export default function ResumePage() {
-    const handlePrint = () => {
-        window.print();
-    };
+    // handlePrint removed in favor of direct PDF download
 
     return (
         <div className={styles.resumeBody}>
             <div className={styles.noPrint}>
-                <button onClick={handlePrint} className={styles.downloadBtn}>
-                    Generate PDF / Print Resume
-                </button>
+                <a
+                    href="/documents/resume.pdf"
+                    download="Dustin_Ober_Resume.pdf"
+                    className={styles.downloadBtn}
+                >
+                    Download PDF Resume
+                </a>
                 <Link
                     href="/cv"
                     className={`${styles.downloadBtn} ${styles.downloadBtnSecondary}`}
                 >
                     View Full CV
                 </Link>
-                <p className={styles.helpText}>
-                    (Select &apos;Save as PDF&apos; in your browser&apos;s print dialog)
-                </p>
             </div>
 
             <div className={styles.resumeContainer}>

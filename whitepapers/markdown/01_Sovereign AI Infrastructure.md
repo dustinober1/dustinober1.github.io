@@ -58,9 +58,7 @@ In a disconnected environment, you cannot simply "scale up" an instance class wh
 
 The total VRAM required (M_total) is the sum of three distinct components: the static model weights, the dynamic Key-Value (KV) cache (the "context window"), and the temporary activation buffers.
 
-$$
-M_{total} \approx (P \times B_p) + (C_{ctx} \times L \times H \times B_{kv}) + O_{sys}
-$$
+![VRAM Equation](/images/vram-formula.png "VRAM Calculation Formula")
 
 | Component | Description |
 |-----------|-------------|
