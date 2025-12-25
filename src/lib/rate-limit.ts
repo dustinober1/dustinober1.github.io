@@ -1,19 +1,22 @@
 import Redis from 'ioredis';
 
-// Use environment variable for Redis URL or default to localhost
-const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379';
-
 let redis: Redis | null = null;
 
-try {
-    if (process.env.NODE_ENV === 'production' || process.env.REDIS_URL) {
-        redis = new Redis(REDIS_URL);
+// Only connect to Redis if REDIS_URL is explicitly provided
+// This makes Redis opt-in and allows graceful fallback to in-memory storage
+if (process.env.REDIS_URL) {
+    try {
+        redis = new Redis(process.env.REDIS_URL);
         redis.on('error', (err) => {
             console.error('Redis Client Error', err);
         });
+        redis.on('connect', () => {
+            console.log('Redis client connected successfully');
+        });
+    } catch (error) {
+        console.warn('Failed to initialize Redis client, falling back to in-memory storage.', error);
+        redis = null;
     }
-} catch (error) {
-    console.warn('Failed to initialize Redis client, falling back to in-memory storage.', error);
 }
 
 type RateLimitStore = Map<string, { count: number; lastReset: number }>;
