@@ -116,68 +116,53 @@
 }
 
 /* Markdown Rendered Elements */
-.content :global(.wp-h1) {
+.content h1 {
     font-size: 2rem;
     font-weight: 700;
     color: #e6edf3;
     margin: 2.5rem 0 1rem;
-    border-bottom: 2px solid var(--border);
+    border-bottom: 2px solid var(--border, #30363d);
     padding-bottom: 0.5rem;
 }
 
-.content :global(.wp-h2) {
+.content h2 {
     font-size: 1.6rem;
     font-weight: 700;
     color: #e6edf3;
     margin: 2.5rem 0 1rem;
 }
 
-.content :global(.wp-h3) {
+.content h3 {
     font-size: 1.35rem;
     font-weight: 600;
     color: #e6edf3;
     margin: 2rem 0 0.75rem;
 }
 
-.content :global(.wp-h4) {
+.content h4 {
     font-size: 1.1rem;
     font-weight: 600;
     color: #58a6ff;
     margin: 1.5rem 0 0.5rem;
 }
 
-.content :global(.wp-p) {
+.content p {
     margin-bottom: 1.25rem;
     color: #c9d1d9;
 }
 
-.content :global(.wp-ul) {
+.content ul,
+.content ol {
     margin: 1rem 0 1.5rem;
-    padding-left: 1.5rem;
-    list-style: none;
-}
-
-.content :global(.wp-li) {
-    position: relative;
-    margin-bottom: 0.6rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     color: #c9d1d9;
 }
 
-.content :global(.wp-li)::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #58a6ff;
-    font-weight: bold;
+.content li {
+    margin-bottom: 0.5rem;
 }
 
-.content :global(.wp-li-num) {
-    margin-bottom: 0.6rem;
-    color: #c9d1d9;
-}
-
-.content :global(.wp-blockquote) {
+.content blockquote {
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
     border-left: 4px solid #58a6ff;
@@ -187,8 +172,9 @@
     color: #e6edf3;
 }
 
-.content :global(.wp-inline-code) {
-    font-family: 'SF Mono', 'Fira Code', monospace;
+/* Code Blocks & Inline Code */
+.content code {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
     font-size: 0.9em;
     padding: 0.2em 0.4em;
     background: rgba(110, 118, 129, 0.2);
@@ -196,24 +182,66 @@
     color: #f0883e;
 }
 
-.content :global(.wp-hr) {
+.content pre {
+    background: #161b22;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid #30363d;
+}
+
+.content pre code {
+    background: transparent;
+    padding: 0;
+    color: #c9d1d9;
+    font-size: 0.9rem;
+    white-space: pre;
+}
+
+/* Tables */
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    color: #c9d1d9;
+    font-size: 0.95rem;
+}
+
+.content th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid #30363d;
+    color: #e6edf3;
+    font-weight: 600;
+}
+
+.content td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #21262d;
+}
+
+.content tr:last-child td {
+    border-bottom: none;
+}
+
+.content hr {
     border: none;
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(48, 54, 61, 0.8), transparent);
     margin: 3rem 0;
 }
 
-.content :global(.wp-math) {
+/* Math blocks (if rendered as divs by some other means, or just pre) */
+.content .math-block {
     margin: 1.5rem 0;
     padding: 1.5rem;
     background: rgba(22, 27, 34, 0.9);
     border: 1px solid rgba(48, 54, 61, 0.6);
     border-radius: 8px;
     font-family: 'SF Mono', 'Fira Code', monospace;
-    font-size: 0.95rem;
-    color: #7ee787;
-    overflow-x: auto;
     text-align: center;
+    color: #7ee787;
 }
 
 .content strong {
@@ -226,7 +254,7 @@
     color: #c9d1d9;
 }
 
-.content :global(.wp-link) {
+.content a {
     color: #58a6ff;
     text-decoration: none;
     font-weight: 500;
@@ -234,14 +262,15 @@
     border-bottom: 1px solid transparent;
 }
 
-.content :global(.wp-link):hover {
+.content a:hover {
     color: #79c0ff;
     border-bottom-color: #79c0ff;
     text-decoration: none;
 }
 
 /* Special styling for PDF download links at end of document */
-.content :global(.wp-link[href$=".pdf"]) {
+/* Special styling for PDF download links at end of document if present in markdown */
+.content a[href$=".pdf"] {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -255,7 +284,7 @@
     margin-top: 1rem;
 }
 
-.content :global(.wp-link[href$=".pdf"]):hover {
+.content a[href$=".pdf"]:hover {
     background: linear-gradient(135deg, #2ea043, #3fb950);
     color: white;
     transform: translateY(-2px);

@@ -83,91 +83,16 @@ export async function generateStaticParams() {
     return Object.keys(whitepaperRegistry).map((slug) => ({ slug }));
 }
 
-// Simple markdown to HTML converter (basic implementation)
-function parseMarkdown(markdown: string): string {
-    let html = markdown;
+import { marked } from "marked";
 
-    // Remove the title and first few metadata lines (we render those separately)
-    const lines = html.split("\n");
-    let contentStartIndex = 0;
-    for (let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith("---") && i > 0) {
-            contentStartIndex = i + 1;
-            break;
-        }
-        if (lines[i].startsWith("### ")) {
-            contentStartIndex = i;
-            break;
-        }
-    }
-    html = lines.slice(contentStartIndex).join("\n");
+// Configure marked options
+marked.use({
+    gfm: true,
+    breaks: true,
+});
 
-    // Headers
-    html = html.replace(/^### (.*$)/gim, '<h3 class="wp-h3">$1</h3>');
-    html = html.replace(/^## (.*$)/gim, '<h2 class="wp-h2">$1</h2>');
-    html = html.replace(/^# (.*$)/gim, '<h1 class="wp-h1">$1</h1>');
-    html = html.replace(/^#### (.*$)/gim, '<h4 class="wp-h4">$1</h4>');
-
-    // Bold and italic
-    html = html.replace(/\*\*\*(.*?)\*\*\*/g, "<strong><em>$1</em></strong>");
-    html = html.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-    html = html.replace(/\*(.*?)\*/g, "<em>$1</em>");
-
-    // Inline code
-    html = html.replace(/`([^`]+)`/g, '<code class="wp-inline-code">$1</code>');
-
-    // Links [text](url)
-    html = html.replace(
-        /\[([^\]]+)\]\(([^)]+)\)/g,
-        '<a href="$2" class="wp-link" target="_blank" rel="noopener noreferrer">$1</a>'
-    );
-
-    // Block quotes
-    html = html.replace(
-        /^> (.*$)/gim,
-        '<blockquote class="wp-blockquote">$1</blockquote>'
-    );
-
-    // Horizontal rules
-    html = html.replace(/^---$/gim, '<hr class="wp-hr" />');
-
-    // Unordered lists
-    html = html.replace(/^\* (.*$)/gim, '<li class="wp-li">$1</li>');
-    html = html.replace(
-        /(<li class="wp-li">.*<\/li>\n?)+/g,
-        '<ul class="wp-ul">$&</ul>'
-    );
-
-    // Numbered lists (basic)
-    html = html.replace(/^\d+\.\s+(.*$)/gim, '<li class="wp-li-num">$1</li>');
-
-    // Math blocks (LaTeX-style) - just style them nicely
-    html = html.replace(
-        /\$\$([\s\S]*?)\$\$/g,
-        '<div class="wp-math">$1</div>'
-    );
-
-    // Paragraphs (wrap remaining text blocks)
-    html = html
-        .split("\n\n")
-        .map((block) => {
-            const trimmed = block.trim();
-            if (
-                trimmed &&
-                !trimmed.startsWith("<h") &&
-                !trimmed.startsWith("<ul") &&
-                !trimmed.startsWith("<li") &&
-                !trimmed.startsWith("<blockquote") &&
-                !trimmed.startsWith("<hr") &&
-                !trimmed.startsWith("<div")
-            ) {
-                return `<p class="wp-p">${trimmed}</p>`;
-            }
-            return block;
-        })
-        .join("\n\n");
-
-    return html;
+async function parseMarkdown(markdown: string): Promise<string> {
+    return marked(markdown) as Promise<string>;
 }
 
 export default async function WhitepaperPage({ params }: Props) {
@@ -211,7 +136,15 @@ export default async function WhitepaperPage({ params }: Props) {
             paper.markdownFile
         );
         const markdown = fs.readFileSync(markdownPath, "utf-8");
-        content = parseMarkdown(markdown);
+        // Remove frontmatter if present (lines between ---)
+        let cleanMarkdown = markdown;
+        if (markdown.startsWith("---")) {
+            const parts = markdown.split("---");
+            if (parts.length >= 3) {
+                cleanMarkdown = parts.slice(2).join("---");
+            }
+        }
+        content = await parseMarkdown(cleanMarkdown);
     } catch {
         content = "<p>Content could not be loaded.</p>";
     }
