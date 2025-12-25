@@ -55,8 +55,8 @@ const whitepapers = [
         subtitle: "DSPy, Governance, and Hallucination Control",
         abstract:
             'Moving from "vibe-based" AI to deterministic, auditable systems. Techniques for citation forcing and verifiable output in compliance-heavy sectors.',
-        status: "coming-soon" as const,
-        pdfUrl: null,
+        status: "available" as const,
+        pdfUrl: "/whitepapers/pdf/04-verifiable-intelligence.pdf",
     },
 ];
 

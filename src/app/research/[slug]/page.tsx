@@ -55,9 +55,9 @@ const whitepaperRegistry: Record<
         title: "Verifiable Intelligence",
         subtitle: "DSPy, Governance, and Hallucination Control",
         author: "Dustin J. Ober, PMP",
-        pdfPath: null,
+        pdfPath: "/whitepapers/pdf/04-verifiable-intelligence.pdf",
         markdownFile: "04_Verifiable Intelligence.md",
-        status: "coming-soon",
+        status: "available",
     },
 };
 
