@@ -2,41 +2,25 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { metadataManager, structuredDataEngine } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://aiober.com'),
-  title: {
-    default: "Dustin J. Ober | AI Developer & Technical ISD",
-    template: "%s | Dustin J. Ober",
-  },
-  description: "Portfolio of Dustin J. Ober, an AI Developer and Technical Instructional Systems Designer specialized in NLP, LLMs, and Educational Technology.",
-  keywords: ["AI Developer", "Instructional Design", "Machine Learning", "NLP", "Leidos", "PMP", "Data Science", "Dustin Ober"],
-  authors: [{ name: "Dustin J. Ober" }],
-  creator: "Dustin J. Ober",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://aiober.com/",
-    siteName: "Dustin J. Ober Portfolio",
-    title: "Dustin J. Ober | AI Developer & Technical Instructional Designer",
-    description: "Portfolio of Dustin J. Ober, an AI Developer and Technical Instructional Systems Designer specialized in NLP, LLMs, and Educational Technology.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Dustin J. Ober | AI Developer & Technical Instructional Designer",
-    description: "Portfolio of Dustin J. Ober, an AI Developer and Technical Instructional Systems Designer specialized in NLP, LLMs, and Educational Technology.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export const metadata: Metadata = metadataManager.generate();
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personSchema = structuredDataEngine.generatePerson({
+    name: "Dustin J. Ober",
+    jobTitle: "AI Developer & Technical Instructional Designer",
+    url: "https://aiober.com/",
+    sameAs: [
+      "https://www.linkedin.com/in/dober1/"
+    ],
+    knowsAbout: ["AI Development", "Instructional Design", "Data Science", "Project Management"]
+  });
+
   return (
     <html lang="en">
       <head>
@@ -49,17 +33,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Dustin J. Ober",
-              "jobTitle": "AI Developer & Technical Instructional Designer",
-              "url": "https://aiober.com/",
-              "sameAs": [
-                "https://www.linkedin.com/in/dober1/"
-              ],
-              "knowsAbout": ["AI Development", "Instructional Design", "Data Science", "Project Management"]
-            })
+            __html: structuredDataEngine.serialize(personSchema)
           }}
         />
       </head>

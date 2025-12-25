@@ -43,13 +43,7 @@ describe('Hero Component', () => {
     });
 
     describe('Call to Action Buttons', () => {
-        it('renders the Hire Me button with correct href', () => {
-            render(<Hero />);
-
-            const hireButton = screen.getByRole('link', { name: /Hire Me/i });
-            expect(hireButton).toBeInTheDocument();
-            expect(hireButton).toHaveAttribute('href', 'mailto:dustinober@me.com');
-        });
+        // Hire Me button removed
 
         it('renders the Resume link with correct href', () => {
             render(<Hero />);
@@ -102,7 +96,7 @@ describe('Hero Component', () => {
         it('displays Portfolio link', () => {
             render(<Hero />);
 
-            const portfolioLink = screen.getByRole('link', { name: /Portfolio/i });
+            const portfolioLink = screen.getByRole('link', { name: /aiober.com/i });
             expect(portfolioLink).toBeInTheDocument();
         });
     });

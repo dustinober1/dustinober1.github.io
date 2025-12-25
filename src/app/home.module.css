@@ -1,0 +1,79 @@
+.eatTrustSignals {
+  padding: 3rem 0;
+  background: rgba(47, 129, 247, 0.03);
+  border-top: 1px solid var(--border);
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.trustSignal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.trustSignal:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trustSignal i {
+  font-size: 1.5rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.trustSignal strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.trustSignal p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.verificationLink {
+  text-align: center;
+}
+
+.verificationButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.verificationButton:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .trustGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .trustSignal {
+    padding: 1rem;
+  }
+}

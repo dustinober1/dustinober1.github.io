@@ -52,7 +52,7 @@ const customJestConfig = {
     },
 
     // Ignore patterns
-    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
+    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/', '<rootDir>/src/__tests__/setup.d.ts'],
 
     // Transform ignore patterns
     transformIgnorePatterns: [

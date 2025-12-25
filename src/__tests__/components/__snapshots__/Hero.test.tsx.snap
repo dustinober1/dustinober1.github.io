@@ -17,12 +17,6 @@ exports[`Hero Component Snapshot Testing matches snapshot 1`] = `
     class="cta-container"
   >
     <a
-      class="cta-primary"
-      href="mailto:dustinober@me.com"
-    >
-      Hire Me
-    </a>
-    <a
       class="contact-item cta-secondary"
       href="/resume"
     >
@@ -82,12 +76,12 @@ exports[`Hero Component Snapshot Testing matches snapshot 1`] = `
     </a>
     <a
       class="contact-item"
-      href="https://dustinober1.github.io/"
+      href="https://aiober.com"
     >
       <i
         class="fas fa-globe"
       />
-       Portfolio
+       aiober.com
     </a>
   </div>
 </section>

@@ -76,12 +76,15 @@ describe('Navigation Component', () => {
             expect(projectsLink).toHaveAttribute('href', '/projects');
         });
 
-        it('has correct href for Contact link', () => {
-            render(<Navigation />);
+                it('has correct href for Contact link', () => {
 
-            const contactLink = screen.getByRole('link', { name: /Contact/i });
-            expect(contactLink).toHaveAttribute('href', '/#contact');
-        });
+                    render(<Navigation />);
+
+                    const contactLink = screen.getByRole('link', { name: /Contact/i });
+
+                    expect(contactLink).toHaveAttribute('href', '/contact');
+
+                });
     });
 
     describe('Active State', () => {
