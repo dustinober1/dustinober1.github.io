@@ -3,9 +3,29 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Projects",
+    title: "Technical Projects | Dustin J. Ober - AI & ML Portfolio",
     description:
-        "Explore a showcase of AI-driven projects, custom NLP models, and full-stack applications developed by Dustin J. Ober.",
+        "Explore a showcase of AI-driven projects including custom NER models, multi-agent systems with LangGraph, DSPy optimization, and full-stack applications developed by Dustin J. Ober.",
+    keywords: [
+        "AI projects portfolio",
+        "NLP machine learning projects",
+        "LangGraph multi-agent systems",
+        "DSPy prompt optimization",
+        "TensorFlow projects",
+        "supply chain AI",
+        "RAG pipelines",
+        "computer vision projects",
+    ],
+    openGraph: {
+        title: "Technical Projects | Dustin J. Ober",
+        description:
+            "AI-driven projects including NER models, multi-agent systems, and full-stack applications.",
+        url: "https://aiober.com/projects",
+        type: "website",
+    },
+    alternates: {
+        canonical: "https://aiober.com/projects",
+    },
 };
 
 const projects = [

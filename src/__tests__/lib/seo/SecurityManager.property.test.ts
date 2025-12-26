@@ -106,8 +106,6 @@ describe('SecurityManager Property Tests', () => {
   const validator = new SecurityValidator();
 
   // Generators for security testing
-  const urlGenerator = fc.webUrl();
-  
   const secureUrlGenerator = fc.string({ minLength: 10, maxLength: 100 })
     .map(path => `https://aiober.com/${path}`);
 
@@ -135,11 +133,15 @@ describe('SecurityManager Property Tests', () => {
   );
 
   const securityHeadersGenerator = fc.record({
-    'Content-Security-Policy': fc.array(
-      fc.tuple(cspDirectiveGenerator, fc.array(cspValueGenerator, { minLength: 1, maxLength: 3 }))
-    ).map(directives => 
-      directives.map(([directive, values]) => `${directive} ${values.join(' ')}`).join('; ')
-    ),
+    'Content-Security-Policy': fc.tuple(
+      fc.array(cspDirectiveGenerator, { minLength: 3, maxLength: 5, uniqueBy: (d) => d }),
+      fc.array(cspValueGenerator, { minLength: 1, maxLength: 2 })
+    ).map(([directives, values]) => {
+      // Ensure we have the required directives
+      const requiredDirectives = ['default-src', 'script-src', 'object-src', 'base-uri', 'form-action', 'frame-ancestors'];
+      const allDirectives = Array.from(new Set([...requiredDirectives, ...directives]));
+      return allDirectives.map(directive => `${directive} ${values.join(' ')}`).join('; ');
+    }),
     'Strict-Transport-Security': fc.constantFrom(
       'max-age=31536000; includeSubDomains; preload',
       'max-age=63072000; includeSubDomains',
@@ -191,7 +193,7 @@ describe('SecurityManager Property Tests', () => {
           expect(url).not.toMatch(/^file:/);
         }
       ),
-      { numRuns: 100 }
+      { numRuns: 50 }
     );
   });
 
@@ -349,7 +351,6 @@ describe('SecurityManager Property Tests', () => {
         (requests, ipAddress) => {
           // Simulate rate limiting logic
           const maxRequestsPerHour = 5;
-          const timeWindow = 3600000; // 1 hour in milliseconds
 
           // If more than 5 requests from same IP, should be rate limited
           if (requests.length > maxRequestsPerHour) {

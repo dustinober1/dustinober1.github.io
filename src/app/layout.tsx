@@ -21,6 +21,13 @@ export default function RootLayout({
     knowsAbout: ["AI Development", "Instructional Design", "Data Science", "Project Management"]
   });
 
+  const websiteSchema = structuredDataEngine.generateWebSite({
+    name: "Dustin J. Ober Portfolio",
+    url: "https://aiober.com",
+    description: "Portfolio of Dustin J. Ober, an AI Developer and Technical Instructional Systems Designer.",
+    author: "Dustin J. Ober",
+  });
+
   return (
     <html lang="en">
       <head>
@@ -33,7 +40,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: structuredDataEngine.serialize(personSchema)
+            __html: JSON.stringify([personSchema, websiteSchema])
           }}
         />
       </head>

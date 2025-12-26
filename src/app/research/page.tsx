@@ -1,11 +1,31 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "./research.module.css";
+import { structuredDataEngine } from "@/lib/seo";
 
 export const metadata: Metadata = {
     title: "Research Series | Dustin J. Ober",
     description:
         "The Sovereign AI Handbook: Architecting Intelligent Systems for Disconnected Environments. Technical whitepapers on AI infrastructure, secure pipelines, and data sovereignty.",
+    keywords: [
+        "sovereign AI",
+        "air-gapped AI",
+        "disconnected environments AI",
+        "secure AI infrastructure",
+        "private RAG systems",
+        "zero trust AI",
+        "defense AI whitepapers",
+    ],
+    openGraph: {
+        title: "The Sovereign AI Handbook | Research Series",
+        description:
+            "Technical whitepapers on AI infrastructure for disconnected, secure, and compliance-heavy environments.",
+        url: "https://aiober.com/research",
+        type: "website",
+    },
+    alternates: {
+        canonical: "https://aiober.com/research",
+    },
 };
 
 const seriesInfo = {
@@ -61,8 +81,26 @@ const whitepapers = [
 ];
 
 export default function ResearchPage() {
+    // Generate TechArticle schema for each whitepaper
+    const articleSchemas = whitepapers
+        .filter(paper => paper.status === "available")
+        .map(paper =>
+            structuredDataEngine.generateTechArticle({
+                headline: `${paper.title}: ${paper.subtitle}`,
+                description: paper.abstract,
+                author: "Dustin J. Ober",
+                url: `https://aiober.com/research/${paper.slug}`,
+            })
+        );
     return (
         <main className={styles.researchMain}>
+            {/* TechArticle Structured Data for SEO */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(articleSchemas),
+                }}
+            />
             {/* Hero Section */}
             <section className={styles.heroSection}>
                 <div className="container">

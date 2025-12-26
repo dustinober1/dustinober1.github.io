@@ -1,36 +1,10 @@
-import { SchemaFAQPage } from './types';
-
-export interface VoiceQuery {
-  question: string;
-  answer: string;
-  keywords: string[];
-  longTailVariations: string[];
-  context?: string;
-}
-
-export interface FeaturedSnippet {
-  question: string;
-  answer: string;
-  answerLength: number;
-  format: 'paragraph' | 'list' | 'table';
-  source: string;
-}
-
-export interface VoiceSearchContent {
-  qaFormat: VoiceQuery[];
-  featuredSnippets: FeaturedSnippet[];
-  faqSchema: SchemaFAQPage;
-  naturalLanguagePatterns: string[];
-  conversationalContent: string[];
-}
-
-export interface VoiceOptimizationConfig {
-  maxAnswerLength: number;
-  targetKeywords: string[];
-  conversationalTone: boolean;
-  includeQuestionVariations: boolean;
-  optimizeForLocalSearch: boolean;
-}
+import {
+  SchemaFAQPage,
+  FeaturedSnippet,
+  VoiceQuery,
+  VoiceSearchContent,
+  VoiceOptimizationConfig
+} from './types';
 
 export class VoiceSearchOptimizer {
   private config: VoiceOptimizationConfig;
@@ -52,7 +26,7 @@ export class VoiceSearchOptimizer {
    */
   generateQAContent(content: string, targetKeywords: string[]): VoiceQuery[] {
     const qaContent: VoiceQuery[] = [];
-    
+
     // Common voice search question patterns
     const questionPatterns = [
       'Who is',
@@ -74,7 +48,7 @@ export class VoiceSearchOptimizer {
       questionPatterns.forEach(pattern => {
         const question = this.generateQuestionVariation(pattern, keyword);
         const answer = this.extractRelevantAnswer(content, keyword, question);
-        
+
         if (answer) {
           qaContent.push({
             question,
@@ -97,7 +71,7 @@ export class VoiceSearchOptimizer {
   generateFeaturedSnippets(content: string, queries: VoiceQuery[]): FeaturedSnippet[] {
     return queries.map(query => {
       const optimizedAnswer = this.optimizeAnswerForSnippet(query.answer);
-      
+
       return {
         question: query.question,
         answer: optimizedAnswer,
@@ -105,7 +79,7 @@ export class VoiceSearchOptimizer {
         format: this.determineAnswerFormat(optimizedAnswer),
         source: 'Professional Portfolio'
       };
-    }).filter(snippet => 
+    }).filter(snippet =>
       snippet.answerLength <= this.config.maxAnswerLength &&
       snippet.answer.length > 0
     );
@@ -117,7 +91,7 @@ export class VoiceSearchOptimizer {
    */
   generateLongTailVariations(baseQuestion: string, keyword: string): string[] {
     const variations: string[] = [];
-    
+
     // Location-based variations
     if (this.config.optimizeForLocalSearch) {
       variations.push(
@@ -186,7 +160,7 @@ export class VoiceSearchOptimizer {
     const qaContent = this.generateQAContent(content, targetKeywords);
     const featuredSnippets = this.generateFeaturedSnippets(content, qaContent);
     const faqSchema = this.generateFAQSchema(qaContent);
-    
+
     return {
       qaFormat: qaContent,
       featuredSnippets,
@@ -281,7 +255,7 @@ export class VoiceSearchOptimizer {
   private extractRelevantAnswer(content: string, keyword: string, question: string): string {
     // Simple extraction logic - in a real implementation, this would use NLP
     const sentences = content.split(/[.!?]+/).filter(s => s.trim().length > 0);
-    const relevantSentences = sentences.filter(sentence => 
+    const relevantSentences = sentences.filter(sentence =>
       sentence.toLowerCase().includes(keyword.toLowerCase())
     );
 
@@ -289,7 +263,7 @@ export class VoiceSearchOptimizer {
 
     // Return the first relevant sentence, optimized for voice
     let answer = relevantSentences[0].trim();
-    
+
     // Ensure answer is conversational
     if (this.config.conversationalTone) {
       answer = this.makeConversational(answer, question);
@@ -300,10 +274,10 @@ export class VoiceSearchOptimizer {
 
   private extractContext(content: string, keyword: string): string {
     const sentences = content.split(/[.!?]+/).filter(s => s.trim().length > 0);
-    const keywordSentences = sentences.filter(s => 
+    const keywordSentences = sentences.filter(s =>
       s.toLowerCase().includes(keyword.toLowerCase())
     );
-    
+
     return keywordSentences.slice(0, 2).join('. ').trim();
   }
 
@@ -313,13 +287,13 @@ export class VoiceSearchOptimizer {
     if (words.length > this.config.maxAnswerLength) {
       return words.slice(0, this.config.maxAnswerLength).join(' ') + '...';
     }
-    
+
     // Make sure answer starts with a clear statement
     if (!answer.match(/^(Yes|No|The|A|An|I|We|This|That)/)) {
       // Add context if missing
       return answer;
     }
-    
+
     return answer;
   }
 
@@ -340,20 +314,20 @@ export class VoiceSearchOptimizer {
   private extractKeywords(content: string): string[] {
     // Simple keyword extraction - in production, use more sophisticated NLP
     const commonWords = new Set(['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'is', 'are', 'was', 'were', 'be', 'been', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could', 'should']);
-    
+
     const words = content.toLowerCase()
       .replace(/[^\w\s]/g, ' ')
       .split(/\s+/)
       .filter(word => word.length > 3 && !commonWords.has(word));
-    
+
     // Count frequency and return top keywords
     const frequency: { [key: string]: number } = {};
     words.forEach(word => {
       frequency[word] = (frequency[word] || 0) + 1;
     });
-    
+
     return Object.entries(frequency)
-      .sort(([,a], [,b]) => b - a)
+      .sort(([, a], [, b]) => b - a)
       .slice(0, 10)
       .map(([word]) => word);
   }
