@@ -78,6 +78,17 @@ const whitepapers = [
         status: "available" as const,
         pdfUrl: "/whitepapers/pdf/04-verifiable-intelligence.pdf",
     },
+    {
+        id: "wp-05",
+        slug: "agentic-architectures",
+        type: "Whitepaper #05",
+        title: "Agentic Architectures in Secure Enclaves",
+        subtitle: "Multi-Agent Systems for Zero-Egress Environments",
+        abstract:
+            "A reference architecture for deploying LangGraph-style multi-agent workflows inside air-gapped networks. Covers sandboxed tool execution, human-in-the-loop checkpoints, and encrypted state management.",
+        status: "available" as const,
+        pdfUrl: "/whitepapers/pdf/05-agentic-architectures-secure-enclaves.pdf",
+    },
 ];
 
 export default function ResearchPage() {
