@@ -46,7 +46,7 @@ const experiences = [
     },
     {
         title: "Instructor / Course Developer",
-        date: "03/1999 – 08/2014",
+        date: "06/1999 – 08/2014",
         company: "United States Air Force",
         bullets: [
             "15+ years of distinguished service across multiple technical and leadership roles.",
