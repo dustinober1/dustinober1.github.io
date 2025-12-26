@@ -98,7 +98,7 @@ const whitepapers = [
         abstract:
             "Moving from 'Prompt Engineering' to 'AI Engineering'. A practical guide to using DSPy to build verifiable, metrics-driven educational AI that can be certified for enterprise training.",
         status: "available" as const,
-        pdfUrl: null,
+        pdfUrl: "/whitepapers/pdf/06-beyond-vibes-engineering-reliable-ai-tutors-with-dspy.pdf",
     },
 ];
 

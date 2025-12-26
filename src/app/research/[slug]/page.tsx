@@ -75,7 +75,7 @@ const whitepaperRegistry: Record<
         title: "Beyond \"Vibes\"",
         subtitle: "Engineering Reliable AI Tutors with DSPy",
         author: "Dustin J. Ober, PMP",
-        pdfPath: null,
+        pdfPath: "/whitepapers/pdf/06-beyond-vibes-engineering-reliable-ai-tutors-with-dspy.pdf",
         markdownFile: "06_Beyond Vibes Engineering Reliable AI Tutors with DSPy.md",
         status: "available",
     },
