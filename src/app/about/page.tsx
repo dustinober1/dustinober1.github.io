@@ -45,7 +45,7 @@ const credentials = [
 ];
 
 const stats = [
-  { value: "20+", label: "Years Experience" },
+  { value: "25+", label: "Years Experience" },
   { value: "30+", label: "ML Models Deployed" },
   { value: "4", label: "Published Whitepapers" },
   { value: "PMP", label: "Certified" },

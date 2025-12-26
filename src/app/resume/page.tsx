@@ -46,9 +46,10 @@ const experiences = [
     },
     {
         title: "Instructor / Course Developer",
-        date: "03/2004 – 08/2014",
+        date: "03/1999 – 08/2014",
         company: "United States Air Force",
         bullets: [
+            "15+ years of distinguished service across multiple technical and leadership roles.",
             "Authored 52 technical scenarios for firearms training simulators.",
             "Maintained technical databases with 1,000+ entries achieving 100% data accuracy.",
             "Reduced performance report rewrites by 25% through evidence-based curriculum adjustments.",
