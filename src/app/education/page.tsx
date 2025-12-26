@@ -78,7 +78,7 @@ export default function EducationPage() {
     return (
         <main>
             {/* Hero Section */}
-            <section className="hero" style={{ padding: "6rem 0 3rem" }}>
+            <section className="hero" style={{ padding: "6rem 0 4rem" }}>
                 <div className="container">
                     <h1>Academic Background & Key Credentials</h1>
                     <p>
@@ -89,7 +89,7 @@ export default function EducationPage() {
             </section>
 
             {/* Education Section */}
-            <section id="education" style={{ padding: "4rem 0" }}>
+            <section id="education" style={{ padding: "5rem 0 6rem" }}>
                 <div className="container">
                     {/* Formal Education */}
                     <h2 style={{ marginBottom: "2rem" }}>
@@ -114,8 +114,8 @@ export default function EducationPage() {
                     {/* Key Professional Certifications */}
                     <h2
                         style={{
-                            marginTop: "5rem",
-                            marginBottom: "2rem",
+                            marginTop: "6rem",
+                            marginBottom: "2.5rem",
                         }}
                     >
                         Key Professional Certifications
@@ -144,11 +144,11 @@ export default function EducationPage() {
                     {/* Continuous Learning Section */}
                     <div
                         style={{
-                            marginTop: "5rem",
+                            marginTop: "6rem",
                             background: "var(--card-bg)",
                             border: "1px solid var(--border)",
                             borderRadius: "12px",
-                            padding: "3rem",
+                            padding: "3.5rem",
                         }}
                     >
                         <h2
