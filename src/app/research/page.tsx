@@ -89,6 +89,17 @@ const whitepapers = [
         status: "available" as const,
         pdfUrl: "/whitepapers/pdf/05-agentic-architectures-secure-enclaves.pdf",
     },
+    {
+        id: "wp-06",
+        slug: "dspy-ai-tutors",
+        type: "Whitepaper #06",
+        title: "Beyond \"Vibes\"",
+        subtitle: "Engineering Reliable AI Tutors with DSPy",
+        abstract:
+            "Moving from 'Prompt Engineering' to 'AI Engineering'. A practical guide to using DSPy to build verifiable, metrics-driven educational AI that can be certified for enterprise training.",
+        status: "available" as const,
+        pdfUrl: null,
+    },
 ];
 
 export default function ResearchPage() {

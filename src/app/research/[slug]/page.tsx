@@ -69,6 +69,16 @@ const whitepaperRegistry: Record<
         markdownFile: "05_Agentic Architectures in Secure Enclaves.md",
         status: "available",
     },
+    "dspy-ai-tutors": {
+        id: "wp-06",
+        type: "Whitepaper #06",
+        title: "Beyond \"Vibes\"",
+        subtitle: "Engineering Reliable AI Tutors with DSPy",
+        author: "Dustin J. Ober, PMP",
+        pdfPath: null,
+        markdownFile: "06_Beyond Vibes Engineering Reliable AI Tutors with DSPy.md",
+        status: "available",
+    },
 };
 
 type Props = {
