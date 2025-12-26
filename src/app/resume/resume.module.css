@@ -2,7 +2,7 @@
     max-width: 850px;
     margin: 0 auto;
     background: white;
-    padding: 40px;
+    padding: 25px 30px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -12,7 +12,7 @@
     line-height: 1.4;
     color: #1f2937;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     background: #f9fafb;
     min-height: 100vh;
 }
@@ -20,9 +20,9 @@
 .resumeHeader {
     background: #1c2128;
     color: white;
-    padding: 20px 25px;
+    padding: 15px 20px;
     border-radius: 6px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -61,8 +61,8 @@
 .clearanceBanner {
     background: #fef2f2;
     border-left: 4px solid #ef4444;
-    padding: 8px 12px;
-    margin-bottom: 20px;
+    padding: 6px 12px;
+    margin-bottom: 14px;
     font-weight: 700;
     color: #b91c1c;
     text-transform: uppercase;
@@ -70,17 +70,24 @@
 }
 
 .section {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    padding: 0;
 }
 
 .sectionTitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 4px;
-    margin-bottom: 12px;
+    padding-bottom: 3px;
+    margin: 0 0 10px 0;
     color: #0d1117;
+}
+
+.section p {
+    margin: 0 0 4px 0;
+    font-size: 0.88rem;
+    line-height: 1.4;
 }
 
 .jobEntry {
@@ -107,31 +114,31 @@
 }
 
 .jobList {
-    margin: 4px 0 0;
-    padding-left: 18px;
+    margin: 1px 0 0;
+    padding-left: 14px;
 }
 
 .jobList li {
-    margin-bottom: 3px;
-    font-size: 0.88rem;
-    line-height: 1.4;
+    margin-bottom: 1px;
+    font-size: 0.8rem;
+    line-height: 1.25;
 }
 
 .skillsGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 3px;
 }
 
 .skillItem strong {
     display: block;
-    margin-bottom: 1px;
-    font-size: 0.85rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
     color: #0d1117;
 }
 
 .skillItem span {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #4b5563;
 }
 
@@ -174,8 +181,8 @@
 }
 
 .certText {
-    font-size: 0.88rem;
-    margin-top: 8px;
+    font-size: 0.85rem;
+    margin: 2px 0 0 0;
 }
 
 /* Print Styles - Fix black box and spacing issues */
@@ -233,25 +240,25 @@
     }
 
     .section {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     .sectionTitle {
-        font-size: 1rem;
-        margin-bottom: 10px;
+        font-size: 0.95rem;
+        margin-bottom: 6px;
     }
 
     .jobEntry {
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 
     .jobList li {
-        font-size: 0.85rem;
-        margin-bottom: 2px;
+        font-size: 0.82rem;
+        margin-bottom: 1px;
     }
 
     .skillsGrid {
-        gap: 8px;
+        gap: 5px;
     }
 
     .skillItem strong,

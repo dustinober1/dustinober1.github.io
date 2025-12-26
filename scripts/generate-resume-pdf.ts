@@ -46,10 +46,18 @@ async function generateResumeCV() {
 
         await page.addStyleTag({
             content: `
-                @page { margin: 0.5in; size: letter; }
+                @page { margin: 0.4in; size: letter; }
                 body { -webkit-print-color-adjust: exact; }
                 header, footer, .no-print { display: none !important; }
                 button, a[download] { display: none !important; }
+                /* Force tight spacing for PDF */
+                * { box-sizing: border-box; }
+                .resumeContainer, [class*="resumeContainer"] { padding: 20px !important; }
+                .section, [class*="section"] { margin-bottom: 10px !important; }
+                .jobEntry, [class*="jobEntry"] { margin-bottom: 6px !important; }
+                .sectionTitle, [class*="sectionTitle"] { margin-bottom: 6px !important; }
+                ul, ol { margin: 2px 0 !important; }
+                li { margin-bottom: 1px !important; }
             `
         });
 
