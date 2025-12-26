@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import styles from "./about.module.css";
+import { structuredDataEngine } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "About Dustin J. Ober | Professional Background & Credentials",
@@ -49,6 +50,25 @@ const stats = [
   { value: "30+", label: "ML Models Deployed" },
   { value: "4", label: "Published Whitepapers" },
   { value: "PMP", label: "Certified" },
+];
+
+const faqs = [
+  {
+    question: "How do you implement AI in classified environments?",
+    answer: "I specialize in deploying AI systems within air-gapped, classified networks using sovereign infrastructure patterns. This includes local model hosting, containerized deployments (Docker/Apptainer), and secure dependency management without internet access."
+  },
+  {
+    question: "What is sovereign AI infrastructure?",
+    answer: "Sovereign AI refers to AI systems that operate entirely within controlled boundaries—no cloud dependencies, no data egress. It's essential for defense, intelligence, and regulated industries requiring 100% data sovereignty."
+  },
+  {
+    question: "Do you work with defense contractors?",
+    answer: "Yes, I have extensive experience working with defense and intelligence organizations. I hold a Top Secret clearance with SCI and Polygraph, enabling me to support sensitive mission-critical projects."
+  },
+  {
+    question: "How long does AI training curriculum development take?",
+    answer: "Typical AI training curriculum development ranges from 4-12 weeks depending on scope. I use the ADDIE framework combined with rapid prototyping to deliver comprehensive technical training efficiently."
+  },
 ];
 
 export default function AboutPage() {
@@ -232,6 +252,30 @@ export default function AboutPage() {
                 projects requiring the highest levels of trust and expertise.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className={styles.credentialsSection}>
+        <div className="container">
+          <h2>Frequently Asked Questions</h2>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(structuredDataEngine.generateFAQPage(faqs))
+            }}
+          />
+          <div className={styles.credentialsGrid} style={{ gridTemplateColumns: '1fr' }}>
+            {faqs.map((faq, idx) => (
+              <div key={idx} className={styles.credentialCard} style={{ textAlign: 'left' }}>
+                <h4 style={{ marginBottom: '0.5rem' }}>
+                  <i className="fas fa-question-circle" style={{ marginRight: '0.5rem', color: 'var(--accent)' }}></i>
+                  {faq.question}
+                </h4>
+                <p style={{ color: 'var(--text-secondary)', margin: 0 }}>{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

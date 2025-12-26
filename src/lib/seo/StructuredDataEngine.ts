@@ -115,6 +115,44 @@ export class StructuredDataEngine {
     };
   }
 
+  public generateService(data: {
+    name: string;
+    description: string;
+    provider: string;
+    providerUrl?: string;
+    areaServed?: string | string[];
+    serviceType?: string;
+  }): any {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: data.name,
+      description: data.description,
+      provider: {
+        '@type': 'Person',
+        name: data.provider,
+        url: data.providerUrl || 'https://aiober.com'
+      },
+      areaServed: data.areaServed || 'United States',
+      serviceType: data.serviceType
+    };
+  }
+
+  public generateFAQPage(questions: { question: string; answer: string }[]): any {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: questions.map(q => ({
+        '@type': 'Question',
+        name: q.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: q.answer
+        }
+      }))
+    };
+  }
+
   public serialize(schema: any): string {
     return JSON.stringify(schema);
   }

@@ -17,7 +17,14 @@ export const defaultSEOConfig: SEOConfig = {
     "Leidos",
     "PMP",
     "Data Science",
-    "Dustin Ober"
+    "Dustin Ober",
+    "AI developer instructional design",
+    "NLP engineer defense contractor",
+    "Technical instructional systems designer",
+    "AI training curriculum developer",
+    "DSPy prompt engineering consultant",
+    "sovereign AI infrastructure consulting",
+    "AI implementation for defense contractors"
   ],
   referrer: 'origin-when-cross-origin',
   creator: "Dustin J. Ober",
@@ -42,7 +49,7 @@ export const defaultSEOConfig: SEOConfig = {
     description: "Portfolio of Dustin J. Ober, an AI Developer and Technical Instructional Systems Designer specialized in NLP, LLMs, and Educational Technology.",
     images: [
       {
-        url: 'https://aiober.com/og-image.jpg', // Placeholder, needs actual image
+        url: 'https://aiober.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Dustin J. Ober - AI Developer & Technical ISD',
@@ -55,7 +62,7 @@ export const defaultSEOConfig: SEOConfig = {
     creator: "@dustinober",
     title: "Dustin J. Ober | AI Developer & Technical Instructional Designer",
     description: "Portfolio of Dustin J. Ober, an AI Developer and Technical Instructional Systems Designer specialized in NLP, LLMs, and Educational Technology.",
-    images: ['https://aiober.com/twitter-image.jpg'], // Placeholder
+    images: ['https://aiober.com/twitter-image.png'],
   },
   alternates: {
     canonical: 'https://aiober.com',

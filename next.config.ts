@@ -4,6 +4,11 @@ const nextConfig: NextConfig = {
   // Enable standalone output for Docker deployment
   output: "standalone",
 
+  // Performance optimizations
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@fortawesome/fontawesome-svg-core', '@fortawesome/free-solid-svg-icons', '@fortawesome/free-brands-svg-icons'],
+  },
 
   // Image optimization settings
   images: {

@@ -10,6 +10,9 @@ export const metadata: Metadata = {
         "instructional design consultant",
         "hire AI developer",
         "technical consultant Virginia",
+        "defense AI consultant",
+        "NLP engineer contact",
+        "AI implementation consulting",
     ],
     openGraph: {
         title: "Contact | Dustin J. Ober",

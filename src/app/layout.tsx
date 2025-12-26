@@ -28,6 +28,14 @@ export default function RootLayout({
     author: "Dustin J. Ober",
   });
 
+  const serviceSchema = structuredDataEngine.generateService({
+    name: "AI Implementation Consulting",
+    description: "Expert consulting services for AI implementation in defense, intelligence, and regulated industries. Specializing in sovereign AI infrastructure, NLP systems, and technical training curriculum development.",
+    provider: "Dustin J. Ober",
+    areaServed: "United States",
+    serviceType: "AI Consulting",
+  });
+
   return (
     <html lang="en">
       <head>
@@ -40,7 +48,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([personSchema, websiteSchema])
+            __html: JSON.stringify([personSchema, websiteSchema, serviceSchema])
           }}
         />
       </head>
