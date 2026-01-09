@@ -1,6 +1,6 @@
 .eatTrustSignals {
   padding: 3rem 0;
-  background: rgba(47, 129, 247, 0.03);
+  background: var(--accent-soft);
   border-top: 1px solid var(--border);
 }
 
@@ -24,7 +24,8 @@
 
 .trustSignal:hover {
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--accent);
 }
 
 .trustSignal i {
@@ -64,8 +65,9 @@
 }
 
 .verificationButton:hover {
-  background: #1e40af;
+  background: var(--accent-hover);
   transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 @media (max-width: 768px) {

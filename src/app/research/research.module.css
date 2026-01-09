@@ -3,6 +3,14 @@
 
 .researchMain {
     min-height: 100vh;
+    background: var(--bg-color);
+}
+
+[data-theme="light"] .researchMain {
+    background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
+}
+
+[data-theme="dark"] .researchMain {
     background: linear-gradient(180deg, #0d1117 0%, #0a0d12 100%);
 }
 
@@ -31,10 +39,10 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 1.25rem;
-    background: rgba(47, 129, 247, 0.1);
-    border: 1px solid rgba(47, 129, 247, 0.3);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
     border-radius: 4px;
-    color: #58a6ff;
+    color: var(--accent);
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -49,7 +57,7 @@
 .seriesTitle {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 800;
-    color: #e6edf3;
+    color: var(--text-primary);
     letter-spacing: -0.02em;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -60,7 +68,7 @@
 
 .seriesSubtitle {
     font-size: clamp(1.1rem, 2vw, 1.4rem);
-    color: #8b949e;
+    color: var(--text-secondary);
     font-weight: 400;
     max-width: 700px;
     margin: 0 auto;
@@ -70,7 +78,7 @@
 .divider {
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, #2f81f7, #58a6ff);
+    background: var(--accent);
     margin: 3rem auto 0;
     border-radius: 2px;
 }
@@ -91,8 +99,8 @@
 /* Whitepaper Card */
 .whitepaperCard {
     position: relative;
-    background: linear-gradient(145deg, rgba(22, 27, 34, 0.9), rgba(13, 17, 23, 0.95));
-    border: 1px solid rgba(48, 54, 61, 0.8);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 2rem;
     display: flex;
@@ -103,10 +111,8 @@
 
 .whitepaperCard:hover {
     transform: translateY(-6px);
-    border-color: rgba(47, 129, 247, 0.5);
-    box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(47, 129, 247, 0.1);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
 }
 
 .cardAccent {
@@ -115,8 +121,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #2f81f7, #58a6ff, #2f81f7);
-    background-size: 200% 100%;
+    background: var(--accent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -204,7 +209,7 @@
 .paperTitle {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #e6edf3;
+    color: var(--text-primary);
     line-height: 1.2;
     margin-bottom: 0.5rem;
     letter-spacing: -0.01em;
@@ -213,14 +218,14 @@
 .paperSubtitle {
     font-size: 1rem;
     font-weight: 500;
-    color: #58a6ff;
+    color: var(--accent);
     margin-bottom: 1.25rem;
     line-height: 1.4;
 }
 
 .paperAbstract {
     font-size: 0.95rem;
-    color: #8b949e;
+    color: var(--text-secondary);
     line-height: 1.7;
     margin: 0;
 }
@@ -238,7 +243,7 @@
 }
 
 .titleLink:hover .paperTitle {
-    color: #58a6ff;
+    color: var(--accent);
 }
 
 .titleLink:hover {
@@ -257,9 +262,9 @@
     gap: 0.5rem;
     flex: 1;
     padding: 0.875rem 1rem;
-    background: rgba(47, 129, 247, 0.1);
-    border: 1px solid rgba(47, 129, 247, 0.3);
-    color: #58a6ff;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    color: var(--accent);
     font-weight: 600;
     font-size: 0.9rem;
     border-radius: 8px;
@@ -268,8 +273,9 @@
 }
 
 .readBtn:hover {
-    background: rgba(47, 129, 247, 0.2);
-    border-color: #58a6ff;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
     text-decoration: none;
     transform: translateY(-2px);
 }
@@ -322,7 +328,7 @@
 /* About Section */
 .aboutSection {
     padding: 4rem 0 5rem;
-    background: linear-gradient(180deg, transparent, rgba(47, 129, 247, 0.03));
+    background: var(--accent-soft);
 }
 
 .aboutContent {
@@ -338,21 +344,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(47, 129, 247, 0.1);
-    border: 1px solid rgba(47, 129, 247, 0.2);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
     border-radius: 12px;
 }
 
 .aboutIcon svg {
     width: 28px;
     height: 28px;
-    color: #58a6ff;
+    color: var(--accent);
 }
 
 .aboutTitle {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #e6edf3;
+    color: var(--text-primary);
     margin-bottom: 1.25rem;
 }
 
@@ -362,7 +368,7 @@
 
 .aboutText {
     font-size: 1.05rem;
-    color: #8b949e;
+    color: var(--text-secondary);
     line-height: 1.8;
     margin: 0;
 }

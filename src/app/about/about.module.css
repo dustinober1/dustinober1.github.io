@@ -7,8 +7,16 @@
 /* Hero Section */
 .heroSection {
     padding: 4rem 0;
-    background: radial-gradient(circle at top right, #1f293722, transparent 40%),
-        radial-gradient(circle at bottom left, #2f81f711, transparent 40%);
+}
+
+[data-theme="light"] .heroSection {
+    background: radial-gradient(circle at top right, rgba(84, 105, 212, 0.05), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(84, 105, 212, 0.03), transparent 40%);
+}
+
+[data-theme="dark"] .heroSection {
+    background: radial-gradient(circle at top right, rgba(129, 140, 248, 0.08), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(129, 140, 248, 0.05), transparent 40%);
 }
 
 .heroContent {
@@ -22,10 +30,7 @@
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-    background: linear-gradient(180deg, #fff 0%, #8b949e 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-primary);
 }
 
 .heroTitle {
@@ -132,7 +137,7 @@
 /* Specializations Section */
 .specializationsSection {
     padding: 4rem 0;
-    background: rgba(47, 129, 247, 0.02);
+    background: var(--accent-soft);
 }
 
 .specializationsSection h2 {
@@ -191,7 +196,7 @@
 .roleIcon {
     width: 60px;
     height: 60px;
-    background: rgba(47, 129, 247, 0.1);
+    background: var(--accent-soft);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -253,7 +258,7 @@
 /* Credentials Section */
 .credentialsSection {
     padding: 4rem 0;
-    background: rgba(47, 129, 247, 0.02);
+    background: var(--accent-soft);
 }
 
 .credentialsSection h2 {
@@ -284,7 +289,7 @@
 .credentialIcon {
     width: 50px;
     height: 50px;
-    background: rgba(47, 129, 247, 0.1);
+    background: var(--accent-soft);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -409,7 +414,7 @@
 /* Clearance Section */
 .clearanceSection {
     padding: 4rem 0;
-    background: rgba(47, 129, 247, 0.02);
+    background: var(--accent-soft);
 }
 
 .clearanceCard {
@@ -427,7 +432,7 @@
 .clearanceIcon {
     width: 70px;
     height: 70px;
-    background: rgba(47, 129, 247, 0.1);
+    background: var(--accent-soft);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -465,7 +470,7 @@
 }
 
 .ctaCard {
-    background: linear-gradient(135deg, rgba(47, 129, 247, 0.1) 0%, rgba(47, 129, 247, 0.05) 100%);
+    background: var(--accent-soft);
     border: 1px solid var(--accent);
     border-radius: 16px;
     padding: 3rem;
