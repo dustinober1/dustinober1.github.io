@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import styles from "./education.module.css";
 
 export const metadata: Metadata = {
     title: "Education & Certifications",
@@ -11,17 +11,14 @@ const formalEducation = [
     {
         degree: "Graduate Certificate in AI Systems Management",
         school: "Strayer University (2025)",
-        logo: "/education/Strayer_University.png",
     },
     {
         degree: "Master of Education (M.Ed.) in ID & Technology",
         school: "Liberty University",
-        logo: "/education/Liberty_University.png",
     },
     {
         degree: "BS in Management / CIS",
         school: "Park University",
-        logo: "/education/Park_University.png",
     },
 ];
 
@@ -29,33 +26,26 @@ const certifications = [
     {
         name: "Project Management Professional (PMP)",
         issuer: "Project Management Institute",
-        logo: "/Professional_Certifications/project-management-professional-pmp.png",
     },
     {
         name: "TensorFlow Developer",
         issuer: "DeepLearning.AI",
-        logo: "/Professional_Certifications/Sponsors/dlai-logo-square.png",
     },
     {
         name: "Generative AI Fundamentals",
         issuer: "Databricks",
-        logo: "/Professional_Certifications/fundamentals-badge-generative-lp-black.png",
-        className: "dark-bg-icon",
     },
     {
         name: "Google Data Analytics",
         issuer: "Google Professional Certificate",
-        logo: "/Professional_Certifications/Sponsors/Google.png",
     },
     {
         name: "IBM Data Science",
         issuer: "IBM Professional Certificate",
-        logo: "/Professional_Certifications/Sponsors/IBM.png",
     },
     {
         name: "AWS Certified Cloud Practitioner",
         issuer: "Amazon Web Services",
-        logo: "/Professional_Certifications/aws-certified-cloud-practitioner.png",
     },
 ];
 
@@ -74,11 +64,78 @@ const continuousLearning = {
     ],
 };
 
+// Simple SVG Icons as components
+const GraduationCapIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+        <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+    </svg>
+);
+
+const CertificateIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <circle cx="12" cy="8" r="6" />
+        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+    </svg>
+);
+
+const BookIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+    </svg>
+);
+
+const CheckIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <polyline points="20 6 9 17 4 12" />
+    </svg>
+);
+
 export default function EducationPage() {
     return (
-        <main>
+        <main className={styles.pageWrapper}>
             {/* Hero Section */}
-            <section className="hero" style={{ padding: "6rem 0 4rem" }}>
+            <section className={styles.hero}>
                 <div className="container">
                     <h1>Academic Background & Key Credentials</h1>
                     <p>
@@ -88,118 +145,92 @@ export default function EducationPage() {
                 </div>
             </section>
 
-            {/* Education Section */}
-            <section id="education" style={{ padding: "5rem 0 6rem" }}>
+            {/* Formal Education Section */}
+            <section className={styles.section}>
                 <div className="container">
-                    {/* Formal Education */}
-                    <h2 style={{ marginBottom: "2rem" }}>
-                        Formal Education
-                    </h2>
-                    <div className="edu-grid">
+                    <div className={styles.sectionHeader}>
+                        <h2 className={styles.sectionTitle}>Formal Education</h2>
+                    </div>
+                    <div className={styles.cardGrid}>
                         {formalEducation.map((edu) => (
-                            <div key={edu.degree} className="edu-card">
-                                <Image
-                                    src={edu.logo}
-                                    alt={`${edu.school} Logo`}
-                                    width={100}
-                                    height={100}
-                                    style={{ objectFit: "contain" }}
-                                />
-                                <h3>{edu.degree}</h3>
-                                <div className="edu-school">{edu.school}</div>
+                            <div key={edu.degree} className={styles.card}>
+                                <div className={styles.iconWrapper}>
+                                    <GraduationCapIcon />
+                                </div>
+                                <h3 className={styles.cardTitle}>{edu.degree}</h3>
+                                <span className={styles.cardIssuer}>{edu.school}</span>
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
 
-                    {/* Key Professional Certifications */}
-                    <h2
-                        style={{
-                            marginTop: "6rem",
-                            marginBottom: "2.5rem",
-                        }}
-                    >
-                        Key Professional Certifications
-                    </h2>
-                    <p style={{ color: "var(--text-secondary)", marginBottom: "2rem" }}>
-                        Curated selection of my most impactful industry credentials.
-                    </p>
-
-                    <div className="edu-grid">
-                        {certifications.map((cert) => (
-                            <div key={cert.name} className="edu-card">
-                                <Image
-                                    src={cert.logo}
-                                    alt={`${cert.name} Logo`}
-                                    width={100}
-                                    height={100}
-                                    style={{ objectFit: "contain" }}
-                                    className={cert.className}
-                                />
-                                <h3>{cert.name}</h3>
-                                <div className="edu-school">{cert.issuer}</div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Continuous Learning Section */}
-                    <div
-                        style={{
-                            marginTop: "6rem",
-                            background: "var(--card-bg)",
-                            border: "1px solid var(--border)",
-                            borderRadius: "12px",
-                            padding: "3.5rem",
-                        }}
-                    >
-                        <h2
-                            style={{
-                                marginBottom: "1.5rem",
-                                fontSize: "1.75rem",
-                            }}
-                        >
-                            Continuous Learning & Technical Upskilling
-                        </h2>
-                        <p style={{ color: "var(--text-secondary)", marginBottom: "2rem" }}>
-                            Beyond my core credentials, I maintain an active portfolio of 20+ specialized
-                            technical nanodegrees and certificates focused on emerging technologies.
+            {/* Key Professional Certifications Section */}
+            <section className={styles.section}>
+                <div className="container">
+                    <div className={styles.sectionHeader}>
+                        <h2 className={styles.sectionTitle}>Key Professional Certifications</h2>
+                        <p className={styles.sectionSubtitle}>
+                            Curated selection of my most impactful industry credentials.
                         </p>
+                    </div>
+                    <div className={styles.cardGrid}>
+                        {certifications.map((cert) => (
+                            <div key={cert.name} className={styles.card}>
+                                <div className={styles.iconWrapper}>
+                                    <CertificateIcon />
+                                </div>
+                                <h3 className={styles.cardTitle}>{cert.name}</h3>
+                                <span className={styles.cardIssuer}>{cert.issuer}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-                        <div
-                            className="skills-grid"
-                            style={{ gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}
-                        >
-                            <div>
-                                <h4 style={{ color: "var(--accent)", marginBottom: "1rem" }}>
+            {/* Continuous Learning Section */}
+            <section className={styles.section}>
+                <div className="container">
+                    <div className={styles.learningSection}>
+                        <div className={styles.learningHeader}>
+                            <h2 className={styles.learningTitle}>
+                                Continuous Learning & Technical Upskilling
+                            </h2>
+                            <p className={styles.learningSubtitle}>
+                                Beyond my core credentials, I maintain an active portfolio of 20+ specialized
+                                technical nanodegrees and certificates focused on emerging technologies.
+                            </p>
+                        </div>
+
+                        <div className={styles.learningGrid}>
+                            <div className={styles.learningCategory}>
+                                <h4 className={styles.categoryTitle}>
+                                    <BookIcon />
                                     Data & AI Specialized
                                 </h4>
-                                <ul
-                                    style={{
-                                        color: "var(--text-secondary)",
-                                        listStyle: "none",
-                                        fontSize: "0.9rem",
-                                    }}
-                                >
+                                <ul className={styles.categoryList}>
                                     {continuousLearning.dataAI.map((item) => (
-                                        <li key={item} style={{ marginBottom: "0.5rem" }}>
-                                            <i className="fas fa-check-circle"></i> {item}
+                                        <li key={item}>
+                                            <span className={styles.checkIcon}>
+                                                <CheckIcon />
+                                            </span>
+                                            {item}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
-                            <div>
-                                <h4 style={{ color: "var(--accent)", marginBottom: "1rem" }}>
+                            <div className={styles.learningCategory}>
+                                <h4 className={styles.categoryTitle}>
+                                    <BookIcon />
                                     Technical Strategy
                                 </h4>
-                                <ul
-                                    style={{
-                                        color: "var(--text-secondary)",
-                                        listStyle: "none",
-                                        fontSize: "0.9rem",
-                                    }}
-                                >
+                                <ul className={styles.categoryList}>
                                     {continuousLearning.technicalStrategy.map((item) => (
-                                        <li key={item} style={{ marginBottom: "0.5rem" }}>
-                                            <i className="fas fa-check-circle"></i> {item}
+                                        <li key={item}>
+                                            <span className={styles.checkIcon}>
+                                                <CheckIcon />
+                                            </span>
+                                            {item}
                                         </li>
                                     ))}
                                 </ul>
