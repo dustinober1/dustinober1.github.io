@@ -5,6 +5,18 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-09: Expanded Verifiable Intelligence Whitepaper
+- **File Modified**: `whitepapers/markdown/04_Verifiable Intelligence.md`
+- **Change Summary**: Significantly expanded whitepaper to ~6,000 words (~20 pages with formatting).
+- **New Sections Added**:
+  - **Strategic Context**: The "Vibe Based" Crisis & Sovereign Imperative.
+  - **Regulatory Alignment**: Deep mapping to EU AI Act Art 14 and NIST AI RMF.
+  - **Technical Deep-Dive**: Comprehensive DSPy Tutorial, Code examples for CheckCompliance module, and Optimizers (MIPRO vs Bootstrap).
+  - **Governance Architecture**: "Citation Forcing," "I Don't Know" Guardrails, and Data Provenance Watermarking.
+  - **New Case Study**: "The Sovereign Grant Writer" (Non-profit context).
+  - **Operational Runbooks**: CI/CD for Prompts (GitHub Actions), Prometheus Metrics for drift detection.
+  - **Future Outlook**: Agentic Verification and Neuro-Symbolic integration.
+
 ### 2026-01-09: Expanded Private Knowledge Retrieval Whitepaper
 - **File Modified**: `whitepapers/markdown/03_Private Knowledge Retrieval.md`
 - **Change Summary**: Significantly expanded whitepaper from ~12KB (178 lines) to ~34KB (558 lines).
