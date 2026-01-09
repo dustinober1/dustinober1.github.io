@@ -24,6 +24,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
+    // Only update localStorage and DOM after initial mount
     if (mounted) {
       document.documentElement.setAttribute("data-theme", theme);
       localStorage.setItem("theme", theme);
@@ -34,11 +35,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
-  // Prevent flash of wrong theme by not rendering until mounted
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
+  // Always provide context, even during SSR (prevents "must be used within ThemeProvider" errors)
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
