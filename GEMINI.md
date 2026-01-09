@@ -5,6 +5,20 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-09: Expanded Private Knowledge Retrieval Whitepaper
+- **File Modified**: `whitepapers/markdown/03_Private Knowledge Retrieval.md`
+- **Change Summary**: Significantly expanded the whitepaper from ~5.5KB (167 lines) to ~62KB (493 lines, ~20 pages).
+- **New Sections Added**:
+  - Section 2: Strategic Context & Geopolitical Sovereignty.
+  - Section 5: Advanced Retrieval Patterns (Hybrid search, Reranking, MRL).
+  - Section 6: Agentic RAG & Multi-Turn Architectures (DSPy, ReAct).
+  - Section 8: Zero-Trust Security Hardening (ACLs, sanitization).
+  - Section 10: Implementation Case Studies (Defense Intelligence, Financial Audit).
+  - Section 11: Comprehensive Operational Runbooks & TROUBLESHOOTING.
+  - Section 12: Hardware Sizing & Capacity Planning (VRAM/Compute).
+  - Appendices: 250-item technical glossary and 50-scenario troubleshooting matrix.
+- **Verification**: Verified build rendering and regenerated mirrored PDF via Playwright.
+
 ### 2026-01-09: Fixed Sovereign AI PDF Download & Improved Workflow
 - **Issue**: Expanded 20-page Sovereign AI PDF was in `whitepapers/pdf/` but the website served an older version from `public/whitepapers/pdf/`.
 - **Fix**: Synchronized the expanded PDF to the `public` directory.
