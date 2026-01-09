@@ -35,10 +35,12 @@ If Playwright browsers are not installed, run:
 npx playwright install chromium
 ```
 
-### 4. Verify the PDF was generated
+### 4. Verify the PDF was generated and mirrored
+The script automatically mirrors the PDF to `public/whitepapers/pdf/` for the web server.
 // turbo
 ```bash
 ls -la whitepapers/pdf/
+ls -la public/whitepapers/pdf/
 ```
 
 ### 5. Commit and push changes

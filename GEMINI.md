@@ -5,6 +5,12 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-09: Fixed Sovereign AI PDF Download & Improved Workflow
+- **Issue**: Expanded 20-page Sovereign AI PDF was in `whitepapers/pdf/` but the website served an older version from `public/whitepapers/pdf/`.
+- **Fix**: Synchronized the expanded PDF to the `public` directory.
+- **Workflow Improvement**: Updated `scripts/generate-pdf.ts` to automatically mirror generated PDFs to `public/whitepapers/pdf/`.
+- **Documentation**: Updated `.agent/workflows/regenerate-whitepaper-pdf.md`.
+
 ### 2026-01-09: Expanded Disconnected Pipeline Whitepaper
 - **File Modified**: `whitepapers/markdown/02_The Disconnected Pipeline.md`
 - **Change Summary**: Expanded whitepaper from ~5 pages (303 lines) to ~15 pages (577 lines, 28KB)

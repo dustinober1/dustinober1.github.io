@@ -243,6 +243,8 @@ async function main() {
 
     // Generate output path
     let outputPath: string;
+    let mirrorPath: string | null = null;
+
     if (args.length >= 2) {
         outputPath = args[1];
     } else {
@@ -258,10 +260,25 @@ async function main() {
             outputName = `${stem}.pdf`;
         }
 
+        // Primary destination: whitepapers/pdf/
         outputPath = path.join(path.dirname(markdownPath), '..', 'pdf', outputName);
+
+        // Mirror destination for Next.js public directory
+        mirrorPath = path.join(process.cwd(), 'public', 'whitepapers', 'pdf', outputName);
     }
 
     await generatePdf(markdownPath, outputPath);
+
+    if (mirrorPath) {
+        console.log(`🔄 Mirroring to public directory: ${mirrorPath}`);
+        // Ensure public output directory exists
+        const mirrorDir = path.dirname(mirrorPath);
+        if (!fs.existsSync(mirrorDir)) {
+            fs.mkdirSync(mirrorDir, { recursive: true });
+        }
+        fs.copyFileSync(outputPath, mirrorPath);
+        console.log('✅ Mirror complete.');
+    }
 }
 
 main().catch(console.error);
