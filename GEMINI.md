@@ -5,6 +5,19 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-09: Expanded Disconnected Pipeline Whitepaper
+- **File Modified**: `whitepapers/markdown/02_The Disconnected Pipeline.md`
+- **Change Summary**: Expanded whitepaper from ~5 pages (303 lines) to ~15 pages (577 lines, 28KB)
+- **New Sections Added**:
+  - Strategic Context: "The Connected Assumption" & Sovereign Imperative
+  - Dependency Ecosystem Deep-Dive: Python, NPM, Containers, Models
+  - Nexus Configuration Deep Dive: `nexus.properties` & Storage Sizing
+  - Advanced Containerization with Apptainer (SIF, multi-node scaling)
+  - New Case Studies: "Air-Gapped Manufacturing" and "HIPAA Research Hospital"
+  - Automated Ingest Script: Python "Bundle Builder"
+  - Operational Runbooks & Troubleshooting Guide
+  - Appendices: Glossary, CLI Quick Ref, Air-Gap Policy Template
+
 ### 2026-01-09: Expanded Sovereign AI Infrastructure Whitepaper
 - **File Modified**: `whitepapers/markdown/01_Sovereign AI Infrastructure.md`
 - **Change Summary**: Significantly expanded the whitepaper from ~5 pages (~224 lines, 13KB) to ~20 pages (~1,427 lines, 53KB)
