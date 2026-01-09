@@ -7,6 +7,19 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ### 2026-01-09: Expanded Private Knowledge Retrieval Whitepaper
 - **File Modified**: `whitepapers/markdown/03_Private Knowledge Retrieval.md`
+- **Change Summary**: Significantly expanded whitepaper from ~12KB (178 lines) to ~34KB (558 lines).
+- **New Sections Added**:
+  - **Strategic Context**: "The Connected Assumption" & Sovereign Imperative.
+  - **Technical Deep-Dives**: Bi-Encoders vs Cross-Encoders, MRL, Quantization math, HNSW/DiskANN.
+  - **Architecture**: Python ingestion code, Qdrant/Chroma/Milvus comparison matrix.
+  - **Agentic RAG**: DSPy tutorial with code examples, CRAG architecture.
+  - **Security**: Metadata ACLs JSON example, Vector Inversion defense.
+  - **Expanded Case Studies**: Detailed narratives for Defense, Legal, and Clinical scenarios.
+  - **Operational Runbooks**: Drift detection, detailed Capacity Planning tables.
+  - **Appendices**: Glossary, Sovereign Stack recommendation.
+
+### 2026-01-09: Expanded Private Knowledge Retrieval Whitepaper
+- **File Modified**: `whitepapers/markdown/03_Private Knowledge Retrieval.md`
 - **Change Summary**: Significantly expanded the whitepaper from ~5.5KB (167 lines) to ~62KB (493 lines, ~20 pages).
 - **New Sections Added**:
   - Section 2: Strategic Context & Geopolitical Sovereignty.
