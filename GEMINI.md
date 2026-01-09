@@ -5,6 +5,19 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-09: Expanded Beyond Vibes Engineering Whitepaper
+- **File Modified**: `whitepapers/markdown/06_Beyond Vibes Engineering Reliable AI Tutors with DSPy.md`
+- **Change Summary**: Significantly expanded whitepaper to ~55KB (1,120 lines, ~24 pages).
+- **New Sections Added**:
+  - **Architecture Deep-Dive**: Detailed breakdown of DSPy Signatures, Modules, and Optimizers (BootstrapFewShot, MIPRO).
+  - **Conceptual Framework**: New "4-Layer Hierarchy of Reliability" (Prompt -> Program -> Optimized -> Verified).
+  - **Metrics**: Comprehensive taxonomy of Pedagogical Metrics (Structural, Reference, Semantic) with Python implementation code.
+  - **Advanced Patterns**: Assertions for self-correcting inference, RAG 2.0 (Query Optimization), and Multi-Agent Simulation.
+  - **Operational Runbooks**: Golden Dataset versioning (DVC), CI/CD pipelines for prompts, and Cost/RoI analysis.
+  - **Case Studies**: Detailed narratives for Defense (Air-Gapped), Corporate (Compliance), and University (Adaptive Tutor) scenarios.
+  - **Implementation Guide**: Full "Production-Ready" tutorial with FastAPI serving code.
+- **Verification**: Verified build rendering and regenerated mirrored PDF via Playwright.
+
 ### 2026-01-09: Expanded Agentic Architectures Whitepaper
 - **File Modified**: `whitepapers/markdown/05_Agentic Architectures in Secure Enclaves.md`
 - **Change Summary**: Massive expansion to 425KB PDF (~22 pages). Deep technical dive into sovereign agent patterns.
