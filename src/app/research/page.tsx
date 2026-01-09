@@ -42,7 +42,6 @@ const whitepapers = [
         subtitle: "Hardware & Architecture for Disconnected Environments",
         abstract:
             "A guide to sizing hardware and architecting networks when cloud APIs are not an option. Focuses on GPU optimization and VRAM constraints for local inference.",
-        status: "available" as const,
         pdfUrl: "/whitepapers/pdf/01-sovereign-ai-infrastructure.pdf",
     },
     {
@@ -52,8 +51,7 @@ const whitepapers = [
         title: "The Disconnected Pipeline",
         subtitle: "Solving Dependency Management in Secure Facilities",
         abstract:
-            'A blueprint for modern software engineering without internet access. Covers "Sneakernet" strategies, local PyPI mirrors, and containerization (Docker/Apptainer) for Zero Trust.',
-        status: "available" as const,
+            'A blueprint for modern software engineering without internet access. Covers "Sneakernet" strategies, local PyPI mirrors, and containerization for Zero Trust.',
         pdfUrl: "/whitepapers/pdf/02-the-disconnected-pipeline.pdf",
     },
     {
@@ -64,7 +62,6 @@ const whitepapers = [
         subtitle: "Architecting Local RAG Systems",
         abstract:
             'How to build "Chat with your Data" pipelines using local Vector DBs and embedding models, ensuring 100% data sovereignty with no external egress.',
-        status: "available" as const,
         pdfUrl: "/whitepapers/pdf/03-private-knowledge-retrieval.pdf",
     },
     {
@@ -75,7 +72,6 @@ const whitepapers = [
         subtitle: "DSPy, Governance, and Hallucination Control",
         abstract:
             'Moving from "vibe-based" AI to deterministic, auditable systems. Techniques for citation forcing and verifiable output in compliance-heavy sectors.',
-        status: "available" as const,
         pdfUrl: "/whitepapers/pdf/04-verifiable-intelligence.pdf",
     },
     {
@@ -85,8 +81,7 @@ const whitepapers = [
         title: "Agentic Architectures in Secure Enclaves",
         subtitle: "Multi-Agent Systems for Zero-Egress Environments",
         abstract:
-            "A reference architecture for deploying LangGraph-style multi-agent workflows inside air-gapped networks. Covers sandboxed tool execution, human-in-the-loop checkpoints, and encrypted state management.",
-        status: "available" as const,
+            "A reference architecture for deploying LangGraph-style multi-agent workflows inside air-gapped networks. Covers sandboxed tool execution and encrypted state management.",
         pdfUrl: "/whitepapers/pdf/05-agentic-architectures-secure-enclaves.pdf",
     },
     {
@@ -96,24 +91,44 @@ const whitepapers = [
         title: "Beyond \"Vibes\"",
         subtitle: "Engineering Reliable AI Tutors with DSPy",
         abstract:
-            "Moving from 'Prompt Engineering' to 'AI Engineering'. A practical guide to using DSPy to build verifiable, metrics-driven educational AI that can be certified for enterprise training.",
-        status: "available" as const,
+            "Moving from 'Prompt Engineering' to 'AI Engineering'. A practical guide to building verifiable, metrics-driven educational AI for enterprise training.",
         pdfUrl: "/whitepapers/pdf/06-beyond-vibes-engineering-reliable-ai-tutors-with-dspy.pdf",
     },
 ];
 
+// SVG Icons
+const BookIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+    </svg>
+);
+
+const DownloadIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7,10 12,15 17,10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+);
+
+const AboutIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+);
+
 export default function ResearchPage() {
     // Generate TechArticle schema for each whitepaper
-    const articleSchemas = whitepapers
-        .filter(paper => paper.status === "available")
-        .map(paper =>
-            structuredDataEngine.generateTechArticle({
-                headline: `${paper.title}: ${paper.subtitle}`,
-                description: paper.abstract,
-                author: "Dustin J. Ober",
-                url: `https://aiober.com/research/${paper.slug}`,
-            })
-        );
+    const articleSchemas = whitepapers.map(paper =>
+        structuredDataEngine.generateTechArticle({
+            headline: `${paper.title}: ${paper.subtitle}`,
+            description: paper.abstract,
+            author: "Dustin J. Ober",
+            url: `https://aiober.com/research/${paper.slug}`,
+        })
+    );
+
     return (
         <main className={styles.researchMain}>
             {/* TechArticle Structured Data for SEO */}
@@ -123,6 +138,7 @@ export default function ResearchPage() {
                     __html: JSON.stringify(articleSchemas),
                 }}
             />
+
             {/* Hero Section */}
             <section className={styles.heroSection}>
                 <div className="container">
@@ -144,81 +160,41 @@ export default function ResearchPage() {
                             <article key={paper.id} className={styles.whitepaperCard}>
                                 <div className={styles.cardHeader}>
                                     <span className={styles.paperType}>{paper.type}</span>
-                                    {paper.status === "available" ? (
-                                        <span className={styles.statusAvailable}>
-                                            <span className={styles.statusDot}></span>
-                                            Available
-                                        </span>
-                                    ) : (
-                                        <span className={styles.statusComingSoon}>Coming Soon</span>
-                                    )}
                                 </div>
 
                                 <div className={styles.cardBody}>
-                                    {paper.status === "available" ? (
-                                        <Link href={`/research/${paper.slug}`} className={styles.titleLink}>
-                                            <h2 className={styles.paperTitle}>{paper.title}</h2>
-                                        </Link>
-                                    ) : (
+                                    <Link href={`/research/${paper.slug}`} className={styles.titleLink}>
                                         <h2 className={styles.paperTitle}>{paper.title}</h2>
-                                    )}
+                                    </Link>
                                     <h3 className={styles.paperSubtitle}>{paper.subtitle}</h3>
                                     <p className={styles.paperAbstract}>{paper.abstract}</p>
                                 </div>
 
                                 <div className={styles.cardFooter}>
-                                    {paper.status === "available" ? (
-                                        <div className={styles.actionButtons}>
-                                            <Link
-                                                href={`/research/${paper.slug}`}
-                                                className={styles.readBtn}
-                                            >
-                                                <svg
-                                                    className={styles.readIcon}
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    strokeWidth="2"
-                                                >
-                                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                                                </svg>
-                                                Read Online
-                                            </Link>
-                                            {paper.pdfUrl && (
-                                                <a
-                                                    href={paper.pdfUrl}
-                                                    className={styles.downloadBtn}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    download
-                                                >
-                                                    <svg
-                                                        className={styles.downloadIcon}
-                                                        viewBox="0 0 24 24"
-                                                        fill="none"
-                                                        stroke="currentColor"
-                                                        strokeWidth="2"
-                                                    >
-                                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                                        <polyline points="7,10 12,15 17,10" />
-                                                        <line x1="12" y1="15" x2="12" y2="3" />
-                                                    </svg>
-                                                    PDF
-                                                </a>
-                                            )}
-                                        </div>
-                                    ) : (
-                                        <div className={styles.notifyWrapper}>
-                                            <span className={styles.notifyText}>
-                                                Subscribe for updates
+                                    <div className={styles.actionButtons}>
+                                        <Link
+                                            href={`/research/${paper.slug}`}
+                                            className={styles.readBtn}
+                                        >
+                                            <span className={styles.readIcon}>
+                                                <BookIcon />
                                             </span>
-                                        </div>
-                                    )}
+                                            Read
+                                        </Link>
+                                        <a
+                                            href={paper.pdfUrl}
+                                            className={styles.downloadBtn}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            download
+                                        >
+                                            <span className={styles.downloadIcon}>
+                                                <DownloadIcon />
+                                            </span>
+                                            PDF
+                                        </a>
+                                    </div>
                                 </div>
-
-                                {/* Decorative elements */}
-                                <div className={styles.cardAccent}></div>
                             </article>
                         ))}
                     </div>
@@ -230,9 +206,7 @@ export default function ResearchPage() {
                 <div className="container">
                     <div className={styles.aboutContent}>
                         <div className={styles.aboutIcon}>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
+                            <AboutIcon />
                         </div>
                         <h2 className={styles.aboutTitle}>About This Series</h2>
                         <p className={styles.aboutText}>

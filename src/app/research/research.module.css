@@ -1,240 +1,174 @@
-/* Research Series - Professional Whitepaper Styling */
-/* Inspired by McKinsey, Leidos, and consulting firm research reports */
+/* Research Series - Clean Minimalist Design */
 
 .researchMain {
     min-height: 100vh;
     background: var(--bg-color);
 }
 
-[data-theme="light"] .researchMain {
-    background: linear-gradient(180deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
-}
-
-[data-theme="dark"] .researchMain {
-    background: linear-gradient(180deg, #0d1117 0%, #0a0d12 100%);
-}
-
 /* Hero Section */
 .heroSection {
-    padding: 7rem 0 4rem;
+    padding: 6rem 0 3rem;
     text-align: center;
     position: relative;
-    overflow: hidden;
-}
-
-.heroSection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120%;
-    height: 100%;
-    background: radial-gradient(ellipse at center top, rgba(47, 129, 247, 0.08) 0%, transparent 60%);
-    pointer-events: none;
 }
 
 .seriesBadge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1.25rem;
+    padding: 0.4rem 1rem;
     background: var(--accent-soft);
-    border: 1px solid var(--accent);
-    border-radius: 4px;
+    border-radius: 20px;
     color: var(--accent);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .badgeIcon {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
 }
 
 .seriesTitle {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.02em;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    max-width: 900px;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .seriesSubtitle {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     color: var(--text-secondary);
     font-weight: 400;
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
     line-height: 1.5;
 }
 
 .divider {
-    width: 80px;
+    width: 60px;
     height: 3px;
     background: var(--accent);
-    margin: 3rem auto 0;
+    margin: 2.5rem auto 0;
     border-radius: 2px;
 }
 
 /* Whitepaper Section */
 .whitepaperSection {
-    padding: 2rem 0 5rem;
+    padding: 2rem 0 4rem;
 }
 
 .whitepaperGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 2rem;
-    max-width: 1400px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Whitepaper Card */
+/* Simplified Whitepaper Card */
 .whitepaperCard {
     position: relative;
-    background: var(--card-bg);
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.75rem;
     display: flex;
     flex-direction: column;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s ease;
     overflow: hidden;
 }
 
-.whitepaperCard:hover {
-    transform: translateY(-6px);
-    border-color: var(--accent);
-    box-shadow: var(--shadow-lg);
-}
-
-.cardAccent {
+.whitepaperCard::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 3px;
     background: var(--accent);
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
 }
 
-.whitepaperCard:hover .cardAccent {
-    opacity: 1;
-    animation: shimmer 2s infinite linear;
+.whitepaperCard:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
 }
 
-@keyframes shimmer {
-    0% {
-        background-position: 200% 0;
-    }
-
-    100% {
-        background-position: -200% 0;
-    }
+.whitepaperCard:hover::before {
+    transform: scaleX(1);
 }
 
-/* Card Header */
+/* Card Header - Simplified */
 .cardHeader {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .paperType {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #6e7681;
-    font-family: 'Inter', monospace;
-}
-
-.statusAvailable {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
-    color: #3fb950;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    color: var(--accent);
+    font-family: var(--font-mono);
 }
 
-.statusDot {
-    width: 6px;
-    height: 6px;
-    background: #3fb950;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.4;
-    }
-}
-
-.statusComingSoon {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #8b949e;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.25rem 0.75rem;
-    background: rgba(139, 148, 158, 0.1);
-    border-radius: 4px;
+/* Hide status elements - keeping classes for backwards compatibility */
+.statusAvailable,
+.statusComingSoon,
+.statusDot,
+.cardAccent {
+    display: none;
 }
 
 /* Card Body */
 .cardBody {
     flex: 1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .paperTitle {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 600;
     color: var(--text-primary);
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin-bottom: 0.4rem;
 }
 
 .paperSubtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    color: var(--accent);
-    margin-bottom: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
     line-height: 1.4;
 }
 
 .paperAbstract {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.6;
     margin: 0;
+    opacity: 0.9;
 }
 
-/* Card Footer */
+/* Card Footer - Simplified */
 .cardFooter {
     margin-top: auto;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(48, 54, 61, 0.6);
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
 }
 
 .titleLink {
@@ -259,17 +193,17 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     flex: 1;
-    padding: 0.875rem 1rem;
-    background: var(--accent-soft);
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.85rem;
     border-radius: 8px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .readBtn:hover {
@@ -277,89 +211,86 @@
     border-color: var(--accent);
     color: white;
     text-decoration: none;
-    transform: translateY(-2px);
 }
 
 .readIcon {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
+    opacity: 0.8;
 }
 
 .downloadBtn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    padding: 0.875rem 1.25rem;
-    background: linear-gradient(135deg, #238636, #2ea043);
-    color: white;
-    font-weight: 600;
-    font-size: 0.9rem;
+    gap: 0.4rem;
+    padding: 0.7rem 1rem;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 0.85rem;
     border-radius: 8px;
     text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
+    transition: all 0.2s ease;
 }
 
 .downloadBtn:hover {
-    background: linear-gradient(135deg, #2ea043, #3fb950);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(35, 134, 54, 0.4);
-    text-decoration: none;
+    background: var(--accent);
     color: white;
+    text-decoration: none;
 }
 
 .downloadIcon {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
 }
 
 .notifyWrapper {
     text-align: center;
-    padding: 0.75rem;
+    padding: 0.5rem;
 }
 
 .notifyText {
-    font-size: 0.85rem;
-    color: #6e7681;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
     font-style: italic;
 }
 
-/* About Section */
+/* About Section - Simplified */
 .aboutSection {
-    padding: 4rem 0 5rem;
-    background: var(--accent-soft);
+    padding: 3rem 0 4rem;
+    border-top: 1px solid var(--border);
 }
 
 .aboutContent {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: center;
 }
 
 .aboutIcon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 1.5rem;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--accent-soft);
-    border: 1px solid var(--accent);
     border-radius: 12px;
 }
 
 .aboutIcon svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     color: var(--accent);
 }
 
 .aboutTitle {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .aboutTitle::after {
@@ -367,21 +298,21 @@
 }
 
 .aboutText {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    line-height: 1.8;
+    line-height: 1.7;
     margin: 0;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .heroSection {
-        padding: 6rem 0 3rem;
+        padding: 5rem 0 2.5rem;
     }
 
     .whitepaperGrid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.25rem;
     }
 
     .whitepaperCard {
@@ -389,30 +320,29 @@
     }
 
     .paperTitle {
-        font-size: 1.3rem;
-    }
-
-    .paperSubtitle {
-        font-size: 0.95rem;
+        font-size: 1.15rem;
     }
 
     .aboutSection {
-        padding: 3rem 0 4rem;
+        padding: 2.5rem 0 3rem;
     }
 }
 
 @media (max-width: 480px) {
     .seriesTitle {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .seriesSubtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
-    .cardHeader {
+    .actionButtons {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
+    }
+
+    .readBtn,
+    .downloadBtn {
+        width: 100%;
     }
 }
