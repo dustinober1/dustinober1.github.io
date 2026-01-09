@@ -5,6 +5,21 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-09: Expanded Agentic Architectures Whitepaper
+- **File Modified**: `whitepapers/markdown/05_Agentic Architectures in Secure Enclaves.md`
+- **Change Summary**: Massive expansion to 425KB PDF (~22 pages). Deep technical dive into sovereign agent patterns.
+- **New Sections Added**:
+  - **Strategic Assessment**: The "Connected Assumption" vulnerability and Geopolitical Risks.
+  - **The Sovereign Agent Framework (SAF)**: Full reference architecture (LangGraph + gVisor + SQLite).
+  - **Code Deep Dives**:
+    - **Explicit Graph Routing**: Python/LangGraph code for a deterministic state machine.
+    - **Sandboxed Execution**: `sandbox.Dockerfile` and Python wrapper for gVisor isolation.
+    - **Audit Logging**: SQLite schema for hash-chained immutable logs.
+  - **Threat Modeling**: New chapter on Red Teaming (Data Poisoning, Fork Bombs).
+  - **Hardware Params**: Detailed "Agent Appliance" rack spec (H100/A100 sizing).
+  - **Case Studies**: "ChainReaction" (Supply Chain Risk) and "Clinical Decision Support" (HIPAA).
+- **Verification**: Built and regenerated PDF.
+
 ### 2026-01-09: Expanded Verifiable Intelligence Whitepaper
 - **File Modified**: `whitepapers/markdown/04_Verifiable Intelligence.md`
 - **Change Summary**: Significantly expanded whitepaper to ~6,000 words (~20 pages with formatting).
