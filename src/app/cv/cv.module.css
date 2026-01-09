@@ -1,163 +1,197 @@
+/* CV Page - Serif Editorial Design */
+
 .cvContainer {
     max-width: 900px;
     margin: 0 auto;
-    background: white;
-    padding: 60px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: var(--card);
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
     border-radius: 8px;
+    border: 1px solid var(--border);
 }
 
 .cvBody {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.5;
-    color: #1f2937;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--foreground);
     margin: 0;
-    padding: 40px;
-    background: #f9fafb;
+    padding: 2.5rem;
+    background: var(--background);
     min-height: 100vh;
 }
 
 .cvHeader {
-    background: #1c2128 !important;
-    color: white !important;
-    padding: 30px;
+    background: var(--foreground) !important;
+    color: var(--background) !important;
+    padding: 2rem;
     border-radius: 6px;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border: 1px solid #30363d;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
 }
 
 .headerLeft h1 {
+    font-family: var(--font-display);
     font-size: 2.5rem;
+    font-weight: 400;
     margin: 0;
-    color: white;
-    letter-spacing: -1px;
+    color: var(--background);
+    letter-spacing: -0.02em;
 }
 
 .headerLeft p {
-    font-size: 1.1rem;
-    color: #2f81f7;
-    font-weight: 600;
-    margin: 5px 0 0;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0.375rem 0 0;
 }
 
 .headerRight {
     text-align: right;
     font-size: 0.9rem;
-    color: #8b949e;
+    color: var(--muted-foreground);
 }
 
 .headerRight div {
-    margin-bottom: 2px;
+    margin-bottom: 0.25rem;
 }
 
 .portfolioLink {
-    color: #2f81f7;
-    font-weight: 600;
+    color: var(--accent);
+    font-weight: 500;
 }
 
 .clearanceBanner {
-    background: #f3f4f6;
-    border-left: 4px solid #ef4444;
-    padding: 10px 15px;
-    margin-bottom: 30px;
-    font-weight: 700;
-    color: #b91c1c;
+    background: var(--accent-muted);
+    border-left: 3px solid var(--accent);
+    padding: 0.75rem 1rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    color: var(--accent);
     text-transform: uppercase;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
 }
 
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .sectionTitle {
-    font-size: 1.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
-    color: #0d1117;
+    letter-spacing: 0.15em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
 }
 
 .subTitle {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #2f81f7;
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--foreground);
 }
 
 .entry {
-    margin-bottom: 25px;
+    margin-bottom: 1.75rem;
 }
 
 .entryHeader {
     display: flex;
     justify-content: space-between;
-    font-weight: 700;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin-bottom: 0.375rem;
 }
 
 .entrySubheader {
-    color: #4b5563;
+    color: var(--muted-foreground);
     font-style: italic;
-    margin-bottom: 10px;
+    margin-bottom: 0.75rem;
     font-size: 0.95rem;
 }
 
 .entryList {
-    margin: 10px 0;
-    padding-left: 20px;
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
 }
 
 .entryList li {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     font-size: 0.95rem;
+    color: var(--muted-foreground);
+    line-height: 1.6;
 }
 
 .skillsSection {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 1.5rem;
 }
 
 .skillGroup strong {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.375rem;
+    font-family: var(--font-display);
     font-size: 1rem;
-    color: #0d1117;
+    font-weight: 600;
+    color: var(--foreground);
 }
 
 .skillGroup p {
     font-size: 0.9rem;
-    color: #4b5563;
+    color: var(--muted-foreground);
     margin: 0;
+    line-height: 1.6;
 }
 
 .noPrint {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
 .actionBtn {
-    background: #2f81f7;
-    color: white;
-    padding: 12px 24px;
+    background: var(--accent);
+    color: var(--accent-foreground);
+    padding: 0.875rem 1.75rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: 600;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.9375rem;
     text-decoration: none;
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+    min-height: 44px;
+}
+
+.actionBtn:hover {
+    background: var(--accent-secondary);
+    color: var(--accent-foreground);
+    transform: translateY(-1px);
 }
 
 .actionBtnSecondary {
-    background: #374151;
+    background: transparent;
+    color: var(--foreground);
+    border: 1px solid var(--foreground);
+}
+
+.actionBtnSecondary:hover {
+    background: var(--muted);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 @media print {
@@ -169,6 +203,7 @@
     .cvContainer {
         box-shadow: none;
         padding: 0;
+        border: none;
     }
 
     .noPrint {

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ThemeProvider } from "@/context/ThemeContext";
 import { metadataManager, structuredDataEngine } from "@/lib/seo";
 
 export const metadata: Metadata = metadataManager.generate();
@@ -40,16 +39,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const theme = localStorage.getItem('theme') || 'light';
-                document.documentElement.setAttribute('data-theme', theme);
-              })();
-            `,
-          }}
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -64,11 +53,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <ThemeProvider>
-          <Navigation />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <Navigation />
+        {children}
+        <Footer />
       </body>
     </html>
   );

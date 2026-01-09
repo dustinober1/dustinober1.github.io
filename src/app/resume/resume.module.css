@@ -1,191 +1,218 @@
+/* Resume Page - Serif Editorial Design */
+
 .resumeContainer {
     max-width: 850px;
     margin: 0 auto;
-    background: white;
-    padding: 25px 30px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background: var(--card);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
     border-radius: 8px;
+    border: 1px solid var(--border);
 }
 
 .resumeBody {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.4;
-    color: #1f2937;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--foreground);
     margin: 0;
-    padding: 10px;
-    background: #f9fafb;
+    padding: 2rem;
+    background: var(--background);
     min-height: 100vh;
 }
 
 .resumeHeader {
-    background: #1c2128;
-    color: white;
-    padding: 15px 20px;
+    background: var(--foreground);
+    color: var(--background);
+    padding: 1.5rem 2rem;
     border-radius: 6px;
-    margin-bottom: 14px;
+    margin-bottom: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border: 1px solid #30363d;
 }
 
 .headerLeft h1 {
+    font-family: var(--font-display);
     font-size: 2rem;
+    font-weight: 400;
     margin: 0;
-    color: white;
-    letter-spacing: -0.5px;
+    color: var(--background);
+    letter-spacing: -0.02em;
 }
 
 .headerLeft p {
+    font-family: var(--font-body);
     font-size: 1rem;
-    color: #2f81f7;
-    font-weight: 600;
-    margin: 3px 0 0;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0.25rem 0 0;
 }
 
 .headerRight {
     text-align: right;
     font-size: 0.85rem;
-    color: #8b949e;
+    color: var(--muted-foreground);
 }
 
 .headerRight div {
-    margin-bottom: 1px;
+    margin-bottom: 0.125rem;
 }
 
 .portfolioLink {
-    color: #2f81f7;
-    font-weight: 600;
+    color: var(--accent);
+    font-weight: 500;
 }
 
 .clearanceBanner {
-    background: #fef2f2;
-    border-left: 4px solid #ef4444;
-    padding: 6px 12px;
-    margin-bottom: 14px;
-    font-weight: 700;
-    color: #b91c1c;
+    background: var(--accent-muted);
+    border-left: 3px solid var(--accent);
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    color: var(--accent);
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
 }
 
 .section {
-    margin-bottom: 16px;
+    margin-bottom: 1.5rem;
     padding: 0;
 }
 
 .sectionTitle {
-    font-size: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 3px;
-    margin: 0 0 10px 0;
-    color: #0d1117;
+    letter-spacing: 0.15em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin: 0 0 1rem 0;
+    color: var(--accent);
 }
 
 .section p {
-    margin: 0 0 4px 0;
-    font-size: 0.88rem;
-    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--muted-foreground);
 }
 
 .jobEntry {
-    margin-bottom: 14px;
+    margin-bottom: 1.25rem;
 }
 
 .jobHeader {
     display: flex;
     justify-content: space-between;
-    font-weight: 700;
-    margin-bottom: 2px;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
     font-size: 0.95rem;
 }
 
 .jobCompany {
-    color: #2f81f7;
-    font-size: 0.9rem;
+    font-family: var(--font-display);
+    color: var(--foreground);
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .jobDate {
-    color: #4b5563;
+    font-family: var(--font-mono);
+    color: var(--muted-foreground);
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
 }
 
 .jobList {
-    margin: 1px 0 0;
-    padding-left: 14px;
+    margin: 0.25rem 0 0;
+    padding-left: 1.25rem;
 }
 
 .jobList li {
-    margin-bottom: 1px;
-    font-size: 0.8rem;
-    line-height: 1.25;
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--muted-foreground);
 }
 
 .skillsGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3px;
+    gap: 0.75rem;
 }
 
 .skillItem strong {
     display: block;
-    margin-bottom: 0;
-    font-size: 0.8rem;
-    color: #0d1117;
+    margin-bottom: 0.125rem;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--foreground);
 }
 
 .skillItem span {
     font-size: 0.8rem;
-    color: #4b5563;
+    color: var(--muted-foreground);
 }
 
 .noPrint {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
 .downloadBtn {
-    background: #2f81f7;
-    color: white;
-    padding: 12px 24px;
+    background: var(--accent);
+    color: var(--accent-foreground);
+    padding: 0.875rem 1.75rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: 600;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.9375rem;
     text-decoration: none;
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+    min-height: 44px;
 }
 
 .downloadBtn:hover {
-    background: #1d6fd3;
+    background: var(--accent-secondary);
     text-decoration: none;
-    color: white;
+    color: var(--accent-foreground);
+    transform: translateY(-1px);
 }
 
 .downloadBtnSecondary {
-    background: #374151;
+    background: transparent;
+    color: var(--foreground);
+    border: 1px solid var(--foreground);
 }
 
 .downloadBtnSecondary:hover {
-    background: #1f2937;
+    background: var(--muted);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .helpText {
-    font-size: 0.8rem;
-    color: #666;
-    margin-top: 10px;
+    font-size: 0.8125rem;
+    color: var(--muted-foreground);
+    margin-top: 0.75rem;
 }
 
 .certText {
     font-size: 0.85rem;
-    margin: 2px 0 0 0;
+    margin: 0.25rem 0 0 0;
+    color: var(--muted-foreground);
 }
 
-/* Print Styles - Fix black box and spacing issues */
+/* Print Styles */
 @media print {
     .resumeBody {
         background: white !important;
@@ -198,16 +225,16 @@
         box-shadow: none;
         padding: 0;
         max-width: 100%;
+        border: none;
     }
 
     .resumeHeader {
-        background: #1c2128 !important;
-        color: white !important;
+        background: var(--foreground) !important;
+        color: var(--background) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        padding: 15px 20px;
-        margin-bottom: 15px;
-        border: none;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .headerLeft h1 {
@@ -216,23 +243,15 @@
     }
 
     .headerLeft p {
-        color: #2f81f7 !important;
-    }
-
-    .headerRight {
-        color: #8b949e !important;
-    }
-
-    .portfolioLink {
-        color: #2f81f7 !important;
+        color: var(--accent) !important;
     }
 
     .clearanceBanner {
-        background: #fef2f2 !important;
+        background: var(--accent-muted) !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
-        padding: 6px 10px;
-        margin-bottom: 15px;
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 1rem;
     }
 
     .noPrint {
@@ -240,44 +259,42 @@
     }
 
     .section {
-        margin-bottom: 10px;
+        margin-bottom: 0.75rem;
     }
 
     .sectionTitle {
-        font-size: 0.95rem;
-        margin-bottom: 6px;
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
     }
 
     .jobEntry {
-        margin-bottom: 6px;
+        margin-bottom: 0.5rem;
     }
 
     .jobList li {
-        font-size: 0.82rem;
-        margin-bottom: 1px;
+        font-size: 0.8rem;
+        margin-bottom: 0.125rem;
     }
 
     .skillsGrid {
-        gap: 5px;
+        gap: 0.5rem;
     }
 
     .skillItem strong,
     .skillItem span {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
     }
 
     .certText {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
-    /* Prevent page breaks inside elements */
     .jobEntry,
     .section {
         break-inside: avoid;
     }
 }
 
-/* PDF download specific - ensure no artifacts */
 @page {
     margin: 0.5in;
     size: letter;

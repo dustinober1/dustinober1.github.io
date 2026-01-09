@@ -8,10 +8,19 @@ export default function Hero() {
         <section id="about" className="hero">
             <div className="container">
                 <div className={styles.heroContent}>
-                    <h1 className={styles.heroName}>DUSTIN J. OBER</h1>
+                    {/* Section label with rule lines */}
+                    <div className={styles.sectionLabel}>
+                        <span className={styles.ruleLine}></span>
+                        <span className={styles.labelText}>Portfolio</span>
+                        <span className={styles.ruleLine}></span>
+                    </div>
+
+                    <h1 className={styles.heroName}>Dustin J. Ober</h1>
+                    
                     <p className={styles.heroTitle}>
                         AI Developer & Technical Instructional Designer
                     </p>
+                    
                     <p className={styles.heroSubtitle}>
                         Technical Instructional Systems Designer and Full Stack Developer specialized in
                         leveraging Data Science and LLMs to optimize training outcomes for defense and

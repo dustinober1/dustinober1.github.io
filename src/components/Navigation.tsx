@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
     { href: "/", label: "Home" },
@@ -46,19 +45,16 @@ export default function Navigation() {
                             </li>
                         ))}
                     </ul>
-                    <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-                        <ThemeToggle />
-                        <button
-                            className="menu-toggle"
-                            onClick={toggleMenu}
-                            aria-label="Toggle navigation menu"
-                            aria-expanded={isMenuOpen}
-                        >
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
+                    <button
+                        className="menu-toggle"
+                        onClick={toggleMenu}
+                        aria-label="Toggle navigation menu"
+                        aria-expanded={isMenuOpen}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </nav>
             </div>
         </header>

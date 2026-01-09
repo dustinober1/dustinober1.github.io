@@ -1,31 +1,47 @@
-/* Education Page - Minimalist Design */
+/* Education Page - Serif Editorial Design */
 
 .pageWrapper {
     min-height: 100vh;
+    background: var(--background);
 }
 
 /* Hero Section */
 .hero {
     padding: 6rem 0 4rem;
     text-align: center;
-    background: var(--hero-gradient);
+    background: var(--muted);
     position: relative;
 }
 
+/* Decorative rule */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: var(--accent);
+}
+
 .hero h1 {
+    font-family: var(--font-display);
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 400;
     line-height: 1.1;
     margin-bottom: 1rem;
-    color: var(--text-primary);
-    letter-spacing: -1px;
+    color: var(--foreground);
+    letter-spacing: -0.02em;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.75;
 }
 
 /* Section Styling */
@@ -39,12 +55,14 @@
 }
 
 .sectionTitle {
+    font-family: var(--font-display);
     font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-primary);
+    font-weight: 400;
+    color: var(--foreground);
     margin-bottom: 0.75rem;
     position: relative;
     display: inline-block;
+    letter-spacing: -0.01em;
 }
 
 .sectionTitle::after {
@@ -53,133 +71,134 @@
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
+    width: 40px;
+    height: 1px;
     background: var(--accent);
-    border-radius: 2px;
 }
 
 .sectionSubtitle {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    margin-top: 1rem;
+    font-family: var(--font-body);
+    color: var(--muted-foreground);
+    font-size: 0.9375rem;
+    margin-top: 1.25rem;
 }
 
 /* Card Grid */
 .cardGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* Minimalist Card */
+/* Card */
 .card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
+    background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
 }
 
+/* Card with accent top border on hover */
 .card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 2px;
     background: var(--accent);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-    transform-origin: left;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    border-color: var(--accent);
     box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
 }
 
 .card:hover::before {
-    transform: scaleX(1);
+    opacity: 1;
 }
 
 /* Icon Wrapper */
 .iconWrapper {
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
-    background: var(--accent-soft);
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    background: var(--accent-muted);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.25rem;
     color: var(--accent);
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
+    font-size: 1.25rem;
+    transition: var(--transition);
 }
 
 .card:hover .iconWrapper {
     background: var(--accent);
-    color: white;
-    transform: scale(1.05);
+    color: var(--accent-foreground);
 }
 
 /* Card Content */
 .cardTitle {
-    font-size: 1.1rem;
+    font-family: var(--font-display);
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--foreground);
     margin-bottom: 0.5rem;
     line-height: 1.3;
 }
 
 .cardIssuer {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
     font-style: italic;
 }
 
 /* Continuous Learning Section */
 .learningSection {
-    background: var(--card-bg);
+    background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 3rem;
+    border-radius: 8px;
+    padding: 2.5rem;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .learningHeader {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .learningTitle {
+    font-family: var(--font-display);
     font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
 }
 
 .learningSubtitle {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-family: var(--font-body);
+    color: var(--muted-foreground);
+    font-size: 0.9375rem;
 }
 
 .learningGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
 }
 
 .learningCategory {
@@ -187,8 +206,11 @@
 }
 
 .categoryTitle {
-    font-size: 1rem;
-    font-weight: 600;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 1rem;
     display: flex;
@@ -203,8 +225,9 @@
 }
 
 .categoryList li {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    color: var(--muted-foreground);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--border);
     display: flex;
@@ -218,31 +241,31 @@
 }
 
 .categoryList li:hover {
-    color: var(--text-primary);
+    color: var(--foreground);
 }
 
 .checkIcon {
     color: var(--accent);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     flex-shrink: 0;
 }
 
 /* Animations */
 .card {
-    animation: fadeInUp 0.5s ease-out backwards;
+    animation: fadeInUp 0.4s ease-out backwards;
 }
 
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.15s; }
-.card:nth-child(3) { animation-delay: 0.2s; }
-.card:nth-child(4) { animation-delay: 0.25s; }
-.card:nth-child(5) { animation-delay: 0.3s; }
-.card:nth-child(6) { animation-delay: 0.35s; }
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+.card:nth-child(4) { animation-delay: 0.2s; }
+.card:nth-child(5) { animation-delay: 0.25s; }
+.card:nth-child(6) { animation-delay: 0.3s; }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(12px);
     }
     to {
         opacity: 1;
@@ -257,7 +280,7 @@
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 0 1rem;
     }
 
@@ -283,6 +306,6 @@
     }
 
     .learningGrid {
-        gap: 2rem;
+        gap: 1.5rem;
     }
 }
