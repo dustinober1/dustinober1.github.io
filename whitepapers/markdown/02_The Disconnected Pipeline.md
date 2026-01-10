@@ -572,7 +572,7 @@ He holds a Master of Education in Instructional Design & Technology and is a cer
 **Connect:**
 *   **Web:** [aiober.com](https://aiober.com)
 *   **LinkedIn:** [linkedin.com/in/dustinober](https://www.linkedin.com/in/dustinober)
-*   **Email:** dustinober@me.com
+*   **Email:** dustin@aiober.com
 
 **Suggested Citation:**
 Ober, D. J. (2025). *The Disconnected Pipeline: Solving Dependency Management & Containerization in Secure Facilities* (Whitepaper No. 02). AIOber Technical Insights.

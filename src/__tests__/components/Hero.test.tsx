@@ -65,9 +65,9 @@ describe('Hero Component', () => {
         it('displays the email with correct href', () => {
             render(<Hero />);
 
-            const emailLink = screen.getByRole('link', { name: /dustinober@me.com/i });
+            const emailLink = screen.getByRole('link', { name: /dustin@aiober.com/i });
             expect(emailLink).toBeInTheDocument();
-            expect(emailLink).toHaveAttribute('href', 'mailto:dustinober@me.com');
+            expect(emailLink).toHaveAttribute('href', 'mailto:dustin@aiober.com');
         });
 
         it('displays the phone number', () => {

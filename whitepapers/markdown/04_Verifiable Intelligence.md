@@ -636,7 +636,7 @@ He holds a Master of Education in Instructional Design & Technology and is a cer
 **Connect:**
 *   **Web:** [aiober.com](https://aiober.com)
 *   **LinkedIn:** [linkedin.com/in/dustinober](https://www.linkedin.com/in/dustinober)
-*   **Email:** dustinober@me.com
+*   **Email:** dustin@aiober.com
 
 **Suggested Citation:**
 Ober, D. J. (2026). *Verifiable Intelligence: DSPy, Governance, and Hallucination Control in Sovereign AI Systems* (Whitepaper No. 04). AIOber Technical Insights.

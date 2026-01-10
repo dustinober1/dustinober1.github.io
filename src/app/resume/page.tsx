@@ -113,7 +113,7 @@ export default function ResumePage() {
                         <p>AI Developer & Technical Instructional Systems Designer</p>
                     </div>
                     <div className={styles.headerRight}>
-                        <div>dustinober@me.com</div>
+                        <div>dustin@aiober.com</div>
                         <div>540-793-0177</div>
                         <div>Chantilly, VA</div>
                         <div>linkedin.com/in/dober1</div>

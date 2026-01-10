@@ -60,8 +60,8 @@ export default function Hero() {
                         <div className={styles.contactItem}>
                             <i className="fas fa-map-marker-alt"></i> Chantilly, VA
                         </div>
-                        <a href="mailto:dustinober@me.com" className={styles.contactItem}>
-                            <i className="fas fa-envelope"></i> dustinober@me.com
+                        <a href="mailto:dustin@aiober.com" className={styles.contactItem}>
+                            <i className="fas fa-envelope"></i> dustin@aiober.com
                         </a>
                         <div className={styles.contactItem}>
                             <i className="fas fa-phone"></i> 540-793-0177

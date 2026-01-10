@@ -238,7 +238,7 @@ export const authorBio: AuthorBio = {
 };
 
 export const contactInfo: ContactInfo = {
-  email: "dustinober@me.com",
+  email: "dustin@aiober.com",
   phone: "540-793-0177",
   location: "Chantilly, VA",
   linkedinUrl: "https://www.linkedin.com/in/dober1",

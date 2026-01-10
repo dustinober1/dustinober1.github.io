@@ -33,13 +33,13 @@ test.describe('Homepage', () => {
     });
 
     test('should display contact information', async ({ page }) => {
-        await expect(page.getByText('dustinober@me.com')).toBeVisible();
+        await expect(page.getByText('dustin@aiober.com')).toBeVisible();
         await expect(page.getByText('Chantilly, VA')).toBeVisible();
     });
 
     test('should have working email link', async ({ page }) => {
         const emailLink = page.getByRole('link', { name: /Hire Me/i });
-        await expect(emailLink).toHaveAttribute('href', 'mailto:dustinober@me.com');
+        await expect(emailLink).toHaveAttribute('href', 'mailto:dustin@aiober.com');
     });
 
     test('should display footer', async ({ page }) => {

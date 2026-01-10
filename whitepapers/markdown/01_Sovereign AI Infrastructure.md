@@ -1420,7 +1420,7 @@ He holds a Master of Education in Instructional Design & Technology and is a cer
 
 * **Web:** [aiober.com](https://aiober.com)
 * **LinkedIn:** [linkedin.com/in/dustinober](https://www.linkedin.com/in/dustinober)
-* **Email:** dustinober@me.com
+* **Email:** dustin@aiober.com
 
 ---
 

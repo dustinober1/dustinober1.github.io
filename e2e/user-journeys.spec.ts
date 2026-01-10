@@ -87,7 +87,7 @@ test.describe('External Links', () => {
         await page.goto('/');
 
         const emailLink = page.getByRole('link', { name: /Hire Me/i });
-        await expect(emailLink).toHaveAttribute('href', 'mailto:dustinober@me.com');
+        await expect(emailLink).toHaveAttribute('href', 'mailto:dustin@aiober.com');
     });
 });
 

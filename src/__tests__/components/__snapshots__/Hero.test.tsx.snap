@@ -39,12 +39,12 @@ exports[`Hero Component Snapshot Testing matches snapshot 1`] = `
     </div>
     <a
       class="contact-item"
-      href="mailto:dustinober@me.com"
+      href="mailto:dustin@aiober.com"
     >
       <i
         class="fas fa-envelope"
       />
-       dustinober@me.com
+       dustin@aiober.com
     </a>
     <div
       class="contact-item"
