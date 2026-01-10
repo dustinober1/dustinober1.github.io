@@ -51,9 +51,6 @@ export default function Hero() {
                         <Link href="/resume" className={styles.ctaSecondary}>
                             <i className="fas fa-file-alt"></i> Resume
                         </Link>
-                        <Link href="/cv" className={styles.ctaSecondary}>
-                            <i className="fas fa-list-ul"></i> Full CV
-                        </Link>
                         <Link href="/about" className={styles.ctaPrimary}>
                             <i className="fas fa-user-check"></i> View Credentials
                         </Link>

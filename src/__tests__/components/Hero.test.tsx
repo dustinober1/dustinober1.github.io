@@ -53,13 +53,6 @@ describe('Hero Component', () => {
             expect(resumeLink).toHaveAttribute('href', '/resume');
         });
 
-        it('renders the CV link with correct href', () => {
-            render(<Hero />);
-
-            const cvLink = screen.getByRole('link', { name: /Full CV/i });
-            expect(cvLink).toBeInTheDocument();
-            expect(cvLink).toHaveAttribute('href', '/cv');
-        });
     });
 
     describe('Contact Information', () => {

@@ -29,13 +29,6 @@ export default function Footer() {
                     }}>
                         Resume
                     </Link>
-                    <Link href="/cv" style={{ 
-                        fontSize: '0.8125rem',
-                        color: 'var(--muted-foreground)',
-                        textDecoration: 'none'
-                    }}>
-                        CV
-                    </Link>
                     <Link href="/research" style={{ 
                         fontSize: '0.8125rem',
                         color: 'var(--muted-foreground)',

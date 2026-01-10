@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import styles from "./resume.module.css";
 
 const experiences = [
@@ -105,12 +104,6 @@ export default function ResumePage() {
                 >
                     Download PDF Resume
                 </a>
-                <Link
-                    href="/cv"
-                    className={`${styles.downloadBtn} ${styles.downloadBtnSecondary}`}
-                >
-                    View Full CV
-                </Link>
             </div>
 
             <div className={styles.resumeContainer}>

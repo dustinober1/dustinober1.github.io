@@ -25,15 +25,6 @@ exports[`Hero Component Snapshot Testing matches snapshot 1`] = `
       />
        Resume
     </a>
-    <a
-      class="contact-item cta-secondary"
-      href="/cv"
-    >
-      <i
-        class="fas fa-list-ul"
-      />
-       Full CV
-    </a>
   </div>
   <div
     class="contact-info"
