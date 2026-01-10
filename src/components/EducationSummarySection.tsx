@@ -43,29 +43,35 @@ const certificationCategories = [
 
 export default function EducationSummarySection() {
     return (
-        <section id="education">
-            <div className="container">
-                <h2>Education & Certifications</h2>
-                <div className="edu-grid">
-                    {degrees.map((degree, index) => (
-                        <div key={index} className="edu-card">
-                            <h3>{degree.title}</h3>
-                            <div className="edu-school">{degree.school}</div>
-                        </div>
-                    ))}
+        <>
+            {/* Education Section */}
+            <section id="education">
+                <div className="container">
+                    <h2>Education</h2>
+                    <div className="edu-grid">
+                        {degrees.map((degree, index) => (
+                            <div key={index} className="edu-card">
+                                <h3>{degree.title}</h3>
+                                <div className="edu-school">{degree.school}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
+            </section>
 
-                <div style={{ marginTop: "3rem" }}>
+            {/* Key Certifications Section - Separate from Education */}
+            <section id="certifications" style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
+                <div className="container">
                     <div
                         style={{
                             display: "flex",
                             justifyContent: "space-between",
                             alignItems: "baseline",
-                            marginBottom: "2rem",
+                            marginBottom: "2.5rem",
                         }}
                     >
-                        <h3 style={{ margin: 0 }}>Key Certifications</h3>
-                        <Link href="/education" style={{ fontSize: "0.9rem" }}>
+                        <h2 style={{ margin: 0 }}>Key Certifications</h2>
+                        <Link href="/education" style={{ fontSize: "0.9rem", color: "var(--accent)" }}>
                             View All Certifications →
                         </Link>
                     </div>
@@ -92,7 +98,7 @@ export default function EducationSummarySection() {
 
                     <div
                         style={{
-                            marginTop: "2rem",
+                            marginTop: "2.5rem",
                             background: "var(--card-bg)",
                             border: "1px solid var(--border)",
                             borderRadius: "12px",
@@ -102,13 +108,13 @@ export default function EducationSummarySection() {
                         <h4 style={{ marginBottom: "1rem", color: "var(--accent)" }}>
                             Continuous Learning
                         </h4>
-                        <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>
+                        <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem", margin: 0 }}>
                             Actively maintaining 20+ Udacity Nanodegrees and specialized certifications in NLP,
                             AWS Cloud, and Ethical Hacking to stay at the forefront of technical innovation.
                         </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
     );
 }
