@@ -167,36 +167,35 @@ export default function ProjectsPage() {
             {/* Featured Case Study */}
             <section
                 className="featured-case-study"
-                style={{ padding: "5rem 0", background: "var(--accent-muted)" }}
+                style={{ padding: "6rem 0", background: "var(--accent-muted)" }}
             >
                 <div className="container">
-                    <h2 style={{ marginBottom: "3rem", textAlign: "center" }}>
+                    <h2 style={{ marginBottom: "3.5rem", textAlign: "center" }}>
                         Featured Case Study: ChainReaction
                     </h2>
                     <div
-                        className="job-card"
+                        className="job-card featured-case-study-card"
                         style={{
-                            display: "grid",
-                            gridTemplateColumns: "280px 1fr",
-                            gap: "4rem",
-                            alignItems: "center",
-                            padding: "3.5rem",
+                            padding: "4rem",
+                            maxWidth: "900px",
+                            margin: "0 auto",
                         }}
                     >
-                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center" }}>
-                            <div className="featured-icon-wrapper">
+                        <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+                            <div className="featured-icon-wrapper" style={{ margin: "0 auto" }}>
                                 <NetworkIcon />
                             </div>
                         </div>
                         <div>
-                            <h3 style={{ color: "var(--accent)", marginBottom: "1rem" }}>
+                            <h3 style={{ color: "var(--accent)", marginBottom: "2rem", fontSize: "1.5rem", textAlign: "center" }}>
                                 Architecting Resilient Supply Chains with Multi-Agent AI
                             </h3>
                             <p
                                 style={{
                                     color: "var(--text-secondary)",
-                                    lineHeight: 1.7,
-                                    marginBottom: "1.5rem",
+                                    lineHeight: 1.8,
+                                    marginBottom: "2rem",
+                                    fontSize: "1.05rem",
                                 }}
                             >
                                 <strong>The Challenge:</strong> Global supply chains face increasing volatility
@@ -206,8 +205,9 @@ export default function ProjectsPage() {
                             <p
                                 style={{
                                     color: "var(--text-secondary)",
-                                    lineHeight: 1.7,
-                                    marginBottom: "1.5rem",
+                                    lineHeight: 1.8,
+                                    marginBottom: "2rem",
+                                    fontSize: "1.05rem",
                                 }}
                             >
                                 <strong>The Solution:</strong> Built using <strong>LangGraph</strong> and{" "}
@@ -218,27 +218,30 @@ export default function ProjectsPage() {
                             <p
                                 style={{
                                     color: "var(--text-secondary)",
-                                    lineHeight: 1.7,
-                                    marginBottom: "2rem",
+                                    lineHeight: 1.8,
+                                    marginBottom: "2.5rem",
+                                    fontSize: "1.05rem",
                                 }}
                             >
                                 <strong>The Impact:</strong> Successfully demonstrated a 40% reduction in risk
                                 response time during trials, providing stakeholders with actionable
                                 intelligence before disruptions hit.
                             </p>
-                            <div className="tags" style={{ marginBottom: "2rem" }}>
+                            <div className="tags" style={{ marginBottom: "2.5rem", justifyContent: "center", display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
                                 <span className="tag">LangGraph</span>
                                 <span className="tag">Neo4j</span>
                                 <span className="tag">Python</span>
                                 <span className="tag">Generative AI</span>
                             </div>
-                            <Link
-                                href="/case-study-chain-reaction"
-                                className="view-btn"
-                                style={{ width: "auto", padding: "0.8rem 2rem", borderRadius: "50px" }}
-                            >
-                                Read Full Case Study
-                            </Link>
+                            <div style={{ textAlign: "center" }}>
+                                <Link
+                                    href="/case-study-chain-reaction"
+                                    className="view-btn"
+                                    style={{ width: "auto", padding: "1rem 2.5rem", borderRadius: "50px", display: "inline-block" }}
+                                >
+                                    Read Full Case Study
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

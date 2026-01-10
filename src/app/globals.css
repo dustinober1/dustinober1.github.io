@@ -847,13 +847,15 @@ footer p {
     box-shadow: 0 12px 32px rgba(26, 26, 26, 0.12);
 }
 
+/* Featured Case Study Card */
+.featured-case-study-card {
+    text-align: left;
+}
+
 /* Featured Case Study Responsive */
 @media (max-width: 768px) {
-    .featured-case-study .job-card {
-        grid-template-columns: 1fr !important;
-        gap: 2.5rem !important;
-        padding: 2rem !important;
-        text-align: center;
+    .featured-case-study-card {
+        padding: 2.5rem 1.5rem !important;
     }
     
     .featured-icon-wrapper {
