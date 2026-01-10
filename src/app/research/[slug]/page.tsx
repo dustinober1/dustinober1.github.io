@@ -79,6 +79,16 @@ const whitepaperRegistry: Record<
         markdownFile: "06_Beyond Vibes Engineering Reliable AI Tutors with DSPy.md",
         status: "available",
     },
+    "neuro-symbolic-tutors": {
+        id: "wp-07",
+        type: "Whitepaper #07",
+        title: "The Future of Neuro-Symbolic Tutors",
+        subtitle: "Hyper-Personalized, Verifiable Learning Paths",
+        author: "Dustin J. Ober, PMP",
+        pdfPath: "/whitepapers/pdf/07-the-future-of-neuro-symbolic-tutors.pdf",
+        markdownFile: "07_The Future of Neuro-Symbolic Tutors.md",
+        status: "available",
+    },
 };
 
 type Props = {

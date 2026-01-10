@@ -94,6 +94,16 @@ const whitepapers = [
             "Moving from 'Prompt Engineering' to 'AI Engineering'. A practical guide to building verifiable, metrics-driven educational AI for enterprise training.",
         pdfUrl: "/whitepapers/pdf/06-beyond-vibes-engineering-reliable-ai-tutors-with-dspy.pdf",
     },
+    {
+        id: "wp-07",
+        slug: "neuro-symbolic-tutors",
+        type: "Whitepaper #07",
+        title: "The Future of Neuro-Symbolic Tutors",
+        subtitle: "Hyper-Personalized, Verifiable Learning Paths",
+        abstract:
+            "Exploration of combining deep learning's pattern recognition with symbolic logic to create hyper-personalized, verifiable learning paths.",
+        pdfUrl: "/whitepapers/pdf/07-the-future-of-neuro-symbolic-tutors.pdf",
+    },
 ];
 
 // SVG Icons

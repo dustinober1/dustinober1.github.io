@@ -5,6 +5,17 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-10: Authored Neuro-Symbolic Tutors Whitepaper
+- **File Modified**: `whitepapers/markdown/07_The Future of Neuro-Symbolic Tutors.md` (Created)
+- **Files Updated**: `src/app/research/page.tsx`, `src/app/research/[slug]/page.tsx`
+- **Change Summary**: Created Whitepaper #07, "The Future of Neuro-Symbolic Tutors".
+- **Details**:
+  - Authored ~8 page whitepaper covering the integration of Deep Learning and Symbolic Logic.
+  - Defined architecture for Neuro-Symbolic Tutors (Neural Layer, Symbolic Layer, DSPy Bridge).
+  - Registered new page in Next.js routing and whitepaper list.
+  - Generated and mirrored PDF: `whitepapers/pdf/07-the-future-of-neuro-symbolic-tutors.pdf`.
+
+
 ### 2026-01-09: Expanded Beyond Vibes Engineering Whitepaper
 - **File Modified**: `whitepapers/markdown/06_Beyond Vibes Engineering Reliable AI Tutors with DSPy.md`
 - **Change Summary**: Significantly expanded whitepaper to ~55KB (1,120 lines, ~24 pages).
