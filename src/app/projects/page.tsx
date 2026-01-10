@@ -167,23 +167,23 @@ export default function ProjectsPage() {
             {/* Featured Case Study */}
             <section
                 className="featured-case-study"
-                style={{ padding: "4rem 0", background: "var(--accent-muted)" }}
+                style={{ padding: "5rem 0", background: "var(--accent-muted)" }}
             >
                 <div className="container">
-                    <h2 style={{ marginBottom: "2.5rem", textAlign: "center" }}>
+                    <h2 style={{ marginBottom: "3rem", textAlign: "center" }}>
                         Featured Case Study: ChainReaction
                     </h2>
                     <div
                         className="job-card"
                         style={{
                             display: "grid",
-                            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                            gap: "3rem",
+                            gridTemplateColumns: "280px 1fr",
+                            gap: "4rem",
                             alignItems: "center",
-                            padding: "3rem",
+                            padding: "3.5rem",
                         }}
                     >
-                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center" }}>
+                        <div style={{ textAlign: "center", display: "flex", justifyContent: "center", alignItems: "center" }}>
                             <div className="featured-icon-wrapper">
                                 <NetworkIcon />
                             </div>
