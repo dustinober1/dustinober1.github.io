@@ -8,6 +8,7 @@ const insights = [
       using DSPy assertions to ensure 99% extraction accuracy.`,
         date: "Dec 15, 2025",
         readTime: "5 min read",
+        slug: "scaling-llm-evaluation",
     },
     {
         category: "INSTRUCTIONAL DESIGN",
@@ -16,6 +17,7 @@ const insights = [
       hyper-personalized, verifiable learning paths.`,
         date: "Dec 02, 2025",
         readTime: "8 min read",
+        slug: "neuro-symbolic-tutors",
     },
 ];
 
@@ -48,14 +50,19 @@ export default function InsightsSection() {
                 </div>
                 <div className="edu-grid">
                     {insights.map((insight, index) => (
-                        <div key={index} className="skill-category insight-card">
+                        <Link
+                            key={index}
+                            href={`/research/${insight.slug}`}
+                            className="skill-category insight-card"
+                            style={{ textDecoration: "none", color: "inherit", display: "block" }}
+                        >
                             <div className="insight-category">{insight.category}</div>
                             <h3 className="insight-title">{insight.title}</h3>
                             <p className="insight-excerpt">{insight.excerpt}</p>
                             <div className="insight-meta">
                                 {insight.date} • {insight.readTime}
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
