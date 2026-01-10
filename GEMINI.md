@@ -11,6 +11,7 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 - **Change Summary**: Created Whitepaper #08, "Scaling LLM Evaluation with DSPy".
 - **Details**:
   - Authored case study on moving from manual prompting to DSPy pipelines.
+  - Included two case studies: Clinical Extraction (99% Accuracy) and Multi-Rubric Essay Grading (0.92 Human-Alignment).
   - Highlighted "99% Extraction Accuracy" using DSPy Assertions and MIPROv2.
   - Registered new page in Next.js routing and whitepaper list.
   - Generated and mirrored PDF: `whitepapers/pdf/08-scaling-llm-evaluation-with-dspy.pdf`.

@@ -111,7 +111,7 @@ const whitepapers = [
         title: "Scaling LLM Evaluation with DSPy",
         subtitle: "From Manual Prompting to Optimized Pipelines",
         abstract:
-            "How we transitioned from manual prompt engineering to programmatically optimized pipelines using DSPy assertions to ensure 99% extraction accuracy.",
+            "Case studies on transitioning to DSPy pipelines: Achieving 99% accuracy in clinical extraction and 0.92 human-alignment in subjective essay grading.",
         pdfUrl: "/whitepapers/pdf/08-scaling-llm-evaluation-with-dspy.pdf",
     },
 ];
