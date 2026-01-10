@@ -89,6 +89,16 @@ const whitepaperRegistry: Record<
         markdownFile: "07_The Future of Neuro-Symbolic Tutors.md",
         status: "available",
     },
+    "scaling-llm-evaluation": {
+        id: "wp-08",
+        type: "Whitepaper #08",
+        title: "Scaling LLM Evaluation with DSPy",
+        subtitle: "From Manual Prompting to Optimized Pipelines",
+        author: "Dustin J. Ober, PMP",
+        pdfPath: "/whitepapers/pdf/08-scaling-llm-evaluation-with-dspy.pdf",
+        markdownFile: "08_Scaling LLM Evaluation with DSPy.md",
+        status: "available",
+    },
 };
 
 type Props = {

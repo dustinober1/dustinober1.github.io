@@ -5,6 +5,16 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-10: Authored Scaling LLM Evaluation Whitepaper
+- **File Modified**: `whitepapers/markdown/08_Scaling LLM Evaluation with DSPy.md` (Created)
+- **Files Updated**: `src/app/research/page.tsx`, `src/app/research/[slug]/page.tsx`
+- **Change Summary**: Created Whitepaper #08, "Scaling LLM Evaluation with DSPy".
+- **Details**:
+  - Authored case study on moving from manual prompting to DSPy pipelines.
+  - Highlighted "99% Extraction Accuracy" using DSPy Assertions and MIPROv2.
+  - Registered new page in Next.js routing and whitepaper list.
+  - Generated and mirrored PDF: `whitepapers/pdf/08-scaling-llm-evaluation-with-dspy.pdf`.
+
 ### 2026-01-10: Authored Neuro-Symbolic Tutors Whitepaper
 - **File Modified**: `whitepapers/markdown/07_The Future of Neuro-Symbolic Tutors.md` (Created)
 - **Files Updated**: `src/app/research/page.tsx`, `src/app/research/[slug]/page.tsx`

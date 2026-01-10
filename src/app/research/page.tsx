@@ -104,6 +104,16 @@ const whitepapers = [
             "Exploration of combining deep learning's pattern recognition with symbolic logic to create hyper-personalized, verifiable learning paths.",
         pdfUrl: "/whitepapers/pdf/07-the-future-of-neuro-symbolic-tutors.pdf",
     },
+    {
+        id: "wp-08",
+        slug: "scaling-llm-evaluation",
+        type: "Whitepaper #08",
+        title: "Scaling LLM Evaluation with DSPy",
+        subtitle: "From Manual Prompting to Optimized Pipelines",
+        abstract:
+            "How we transitioned from manual prompt engineering to programmatically optimized pipelines using DSPy assertions to ensure 99% extraction accuracy.",
+        pdfUrl: "/whitepapers/pdf/08-scaling-llm-evaluation-with-dspy.pdf",
+    },
 ];
 
 // SVG Icons
