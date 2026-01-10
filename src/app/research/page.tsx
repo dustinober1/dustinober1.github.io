@@ -82,7 +82,7 @@ const whitepapers = [
         subtitle: "Multi-Agent Systems for Zero-Egress Environments",
         abstract:
             "A reference architecture for deploying LangGraph-style multi-agent workflows inside air-gapped networks. Covers sandboxed tool execution and encrypted state management.",
-        pdfUrl: "/whitepapers/pdf/05-agentic-architectures-secure-enclaves.pdf",
+        pdfUrl: "/whitepapers/pdf/05-agentic-architectures-in-secure-enclaves.pdf",
     },
     {
         id: "wp-06",

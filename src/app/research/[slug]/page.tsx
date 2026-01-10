@@ -65,7 +65,7 @@ const whitepaperRegistry: Record<
         title: "Agentic Architectures in Secure Enclaves",
         subtitle: "Multi-Agent Systems for Zero-Egress Environments",
         author: "Dustin J. Ober, PMP",
-        pdfPath: "/whitepapers/pdf/05-agentic-architectures-secure-enclaves.pdf",
+        pdfPath: "/whitepapers/pdf/05-agentic-architectures-in-secure-enclaves.pdf",
         markdownFile: "05_Agentic Architectures in Secure Enclaves.md",
         status: "available",
     },
