@@ -5,7 +5,19 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
-### 2026-01-16: Launched Kaggle Competitions Whitepaper Series
+### 2026-01-16: Launched Kaggle Competitions Page
+- **Goal**: Create a dedicated space for data science process writeups, distinct from the Sovereign AI research.
+- **Files Modified**:
+  - `src/app/competitions/page.tsx` (NEW) - Created dedicated listing page for Kaggle series.
+  - `src/components/Navigation.tsx` - Added "Competitions" to main navbar.
+  - `src/app/research/page.tsx` - Reverted to single-column layout focusing on Sovereign AI.
+  - `src/app/research/[slug]/page.tsx` - Implemented dynamic "Back" button logic.
+- **Key Changes**:
+  - Moved Kaggle content to `/competitions`.
+  - Restored clean, focused layout for `/research`.
+  - Validated build success.
+
+### 2026-01-16: Added Performance Review Highlights
 - **Goal**: Establish a new research series focused on process-driven data science experiments.
 - **Files Modified**:
   - `src/app/research/page.tsx` - Updated to support multiple series sections (Sovereign AI + Kaggle).

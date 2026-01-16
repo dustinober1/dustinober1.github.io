@@ -169,8 +169,8 @@ export default async function WhitepaperPage({ params }: Props) {
                             This whitepaper is currently in development. Subscribe to be notified
                             when it becomes available.
                         </p>
-                        <Link href="/research" className={styles.backLink}>
-                            ← Back to Research Series
+                        <Link href={paper.series === "Kaggle Competitions" ? "/competitions" : "/research"} className={styles.backLink}>
+                            {paper.series === "Kaggle Competitions" ? "← Back to Competitions" : "← Back to Research Series"}
                         </Link>
                     </div>
                 </div>
@@ -201,13 +201,17 @@ export default async function WhitepaperPage({ params }: Props) {
         content = "<p>Content could not be loaded.</p>";
     }
 
+    // Determine back link and text based on series
+    const backLink = paper.series === "Kaggle Competitions" ? "/competitions" : "/research";
+    const backText = paper.series === "Kaggle Competitions" ? "← Back to Competitions" : "← Back to Research Series";
+
     return (
         <main className={styles.whitepaperMain}>
             {/* Header */}
             <header className={styles.header}>
                 <div className="container">
-                    <Link href="/research" className={styles.backLink}>
-                        ← Back to Research Series
+                    <Link href={backLink} className={styles.backLink}>
+                        {backText}
                     </Link>
                     <div className={styles.headerMeta}>
                         <span className={styles.paperType}>{paper.type}</span>
@@ -258,9 +262,9 @@ export default async function WhitepaperPage({ params }: Props) {
                 <div className="container">
                     <div className={styles.ctaContent}>
                         <h3>Continue Reading</h3>
-                        <p>Explore more whitepapers in The Sovereign AI Handbook series.</p>
-                        <Link href="/research" className={styles.ctaBtn}>
-                            View All Research →
+                        <p>Explore more in this series.</p>
+                        <Link href={backLink} className={styles.ctaBtn}>
+                            {backText.replace("← ", "")} →
                         </Link>
                     </div>
                 </div>

@@ -33,11 +33,6 @@ const seriesInfo = {
     subtitle: "Architecting Intelligent Systems for Disconnected Environments",
 };
 
-const kaggleSeriesInfo = {
-    title: "Kaggle Competitions",
-    subtitle: "Process-First Experiments in Data Science",
-};
-
 const sovereignWhitepapers = [
     {
         id: "wp-01",
@@ -125,19 +120,6 @@ const sovereignWhitepapers = [
     },
 ];
 
-const kaggleWhitepapers = [
-    {
-        id: "kc-01",
-        slug: "kaggle-hedge-fund",
-        type: "Case Study #01",
-        title: "Hypothesis-Driven Time Series Forecasting",
-        subtitle: "Process Over Results in Low-SNR Competitions",
-        abstract:
-            "A case study on the Hedge Fund Time Series Forecasting competition. How robust objectives, shrinkage calibration, and one-change-at-a-time experimentation beat kitchen-sink feature engineering.",
-        pdfUrl: null, // Will be generated later
-    },
-];
-
 // SVG Icons
 const BookIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -162,8 +144,7 @@ const AboutIcon = () => (
 
 export default function ResearchPage() {
     // Generate TechArticle schema for all whitepapers
-    const allPapers = [...sovereignWhitepapers, ...kaggleWhitepapers];
-    const articleSchemas = allPapers.map(paper =>
+    const articleSchemas = sovereignWhitepapers.map(paper =>
         structuredDataEngine.generateTechArticle({
             headline: `${paper.title}: ${paper.subtitle}`,
             description: paper.abstract,
@@ -185,10 +166,6 @@ export default function ResearchPage() {
             {/* Hero Section */}
             <section className={styles.heroSection}>
                 <div className="container">
-                    <div className={styles.seriesBadge}>
-                        <span className={styles.badgeIcon}>◆</span>
-                        Research Series
-                    </div>
                     <h1 className={styles.seriesTitle}>{seriesInfo.title}</h1>
                     <p className={styles.seriesSubtitle}>{seriesInfo.subtitle}</p>
                     <div className={styles.divider}></div>
@@ -198,7 +175,6 @@ export default function ResearchPage() {
             {/* Sovereign AI Series */}
             <section className={styles.whitepaperSection}>
                 <div className="container">
-                    <h2 className={styles.seriesSectionTitle}>The Sovereign AI Handbook</h2>
                     <div className={styles.whitepaperGrid}>
                         {sovereignWhitepapers.map((paper) => (
                             <article key={paper.id} className={styles.whitepaperCard}>
@@ -237,69 +213,6 @@ export default function ResearchPage() {
                                             </span>
                                             PDF
                                         </a>
-                                    </div>
-                                </div>
-                            </article>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Kaggle Competitions Series */}
-            <section className={styles.whitepaperSection}>
-                <div className="container">
-                    <div className={styles.divider} style={{ margin: "0 auto 3rem" }}></div>
-                    <div className={styles.seriesBadge} style={{ background: "var(--accent)", color: "var(--background)" }}>
-                        <span className={styles.badgeIcon}>◆</span>
-                        New Series
-                    </div>
-                    <h2 className={styles.seriesTitle}>{kaggleSeriesInfo.title}</h2>
-                    <p className={styles.seriesSubtitle}>{kaggleSeriesInfo.subtitle}</p>
-
-                    <div className={styles.whitepaperGrid} style={{ marginTop: "3rem" }}>
-                        {kaggleWhitepapers.map((paper) => (
-                            <article key={paper.id} className={styles.whitepaperCard}>
-                                <div className={styles.cardHeader}>
-                                    <span className={styles.paperType}>{paper.type}</span>
-                                </div>
-
-                                <div className={styles.cardBody}>
-                                    <Link href={`/research/${paper.slug}`} className={styles.titleLink}>
-                                        <h2 className={styles.paperTitle}>{paper.title}</h2>
-                                    </Link>
-                                    <h3 className={styles.paperSubtitle}>{paper.subtitle}</h3>
-                                    <p className={styles.paperAbstract}>{paper.abstract}</p>
-                                </div>
-
-                                <div className={styles.cardFooter}>
-                                    <div className={styles.actionButtons}>
-                                        <Link
-                                            href={`/research/${paper.slug}`}
-                                            className={styles.readBtn}
-                                        >
-                                            <span className={styles.readIcon}>
-                                                <BookIcon />
-                                            </span>
-                                            Read
-                                        </Link>
-                                        {paper.pdfUrl ? (
-                                            <a
-                                                href={paper.pdfUrl}
-                                                className={styles.downloadBtn}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                download
-                                            >
-                                                <span className={styles.downloadIcon}>
-                                                    <DownloadIcon />
-                                                </span>
-                                                PDF
-                                            </a>
-                                        ) : (
-                                            <div className={styles.downloadBtn} style={{ opacity: 0.5, cursor: "not-allowed", background: "var(--muted)" }}>
-                                                Coming Soon
-                                            </div>
-                                        )}
                                     </div>
                                 </div>
                             </article>
