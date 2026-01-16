@@ -157,9 +157,9 @@ export default function ResumePage() {
                         </div>
                     ))}
                     <p className={styles.certText}>
-                        <strong>Certifications:</strong> Project Management Professional (PMP),
-                        TensorFlow Developer, AWS Cloud Practitioner, IBM Data Science,
-                        Google Data Analytics.
+                        <strong>Certifications:</strong> Project Management Professional (PMP) •
+                        9 Udacity Nanodegrees (Deep Learning, NLP, Computer Vision, GenAI, Reinforcement Learning) •
+                        Databricks Generative AI & Lakehouse • AWS Cloud Practitioner
                     </p>
                 </section>
 
