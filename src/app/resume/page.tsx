@@ -20,8 +20,8 @@ const experiences = [
         company: "Peraton & Leidos - Chantilly, VA",
         bullets: [
             "Directed team of instructional designers using Agile methodologies for course development pipelines.",
-            "Leveraged Python (Pandas/NumPy) to analyze training trends, improving completion rates by 20%.",
-            "Automated data collection via web-scraping, reducing manual workloads by 15 hours/week.",
+            "Automated reporting pipeline reducing generation time by 97% (from 1 week to 30 minutes).",
+            "Created searchable Section 508/WCAG accessibility database adopted across NCTC.",
             "Developed and deployed 5 comprehensive WBTs within 90 days for classified mission requirements.",
         ],
     },
@@ -79,6 +79,10 @@ const skills = [
     {
         category: "Leadership",
         items: "PMP Methodology, Agile/Scrum, Technical Training, ADDIE, Team Leadership",
+    },
+    {
+        category: "Accessibility",
+        items: "Section 508 Compliance, WCAG 2.1, Government Standards, A11y Testing",
     },
 ];
 

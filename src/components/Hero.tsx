@@ -16,11 +16,11 @@ export default function Hero() {
                     </div>
 
                     <h1 className={styles.heroName}>Dustin J. Ober</h1>
-                    
+
                     <p className={styles.heroTitle}>
                         Data Scientist & ML Engineer
                     </p>
-                    
+
                     <p className={styles.heroSubtitle}>
                         Data Scientist specializing in NLP, Machine Learning, and Production ML Systems.
                         30+ models deployed for defense and intelligence applications.
@@ -39,6 +39,10 @@ export default function Hero() {
                         <div className={styles.credentialItem}>
                             <i className="fas fa-brain"></i>
                             <span>30+ ML Models Deployed</span>
+                        </div>
+                        <div className={styles.credentialItem}>
+                            <i className="fas fa-bolt"></i>
+                            <span>97% Process Automation</span>
                         </div>
                         <div className={styles.credentialItem}>
                             <i className="fas fa-shield-alt"></i>

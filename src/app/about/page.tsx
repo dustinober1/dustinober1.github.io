@@ -34,6 +34,7 @@ const specializations = [
   "DSPy & Prompt Optimization",
   "NLP & Named Entity Recognition",
   "Sovereign AI Architecture",
+  "Section 508 & Accessibility",
   "Instructional Design (ADDIE)",
 ];
 
@@ -48,7 +49,7 @@ const credentials = [
 const stats = [
   { value: "20+", label: "Years Experience" },
   { value: "30+", label: "ML Models Deployed" },
-  { value: "8", label: "Published Whitepapers" },
+  { value: "97%", label: "Process Automation" },
   { value: "PMP", label: "Certified" },
 ];
 

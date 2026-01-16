@@ -77,7 +77,8 @@ const careerArcs: CareerArc[] = [
                 date: "2022 – 2023",
                 highlights: [
                     { bold: "Data-Driven Optimization:", text: "Leveraged Python (Pandas/NumPy) to analyze training trends, leading to 20% improvement in completion rates." },
-                    { bold: "Process Automation:", text: "Automated data collection via web-scraping, reducing manual work by ~15 hours/week." },
+                    { bold: "97% Automation:", text: "Built automated data pipeline reducing report generation from 1 week to 30 minutes." },
+                    { bold: "Accessibility Leadership:", text: "Created searchable Section 508/WCAG database adopted organization-wide by NCTC." },
                     { bold: "Rapid Delivery:", text: "Developed and deployed 5 comprehensive WBTs within 90 days." },
                 ],
             },

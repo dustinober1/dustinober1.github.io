@@ -27,6 +27,16 @@ const skillCategories = [
         tags: ["Docker", "Git", "CI/CD", "Jupyter", "RESTful APIs", "MLflow", "Agile/Scrum"],
     },
     {
+        title: "Accessibility & Compliance",
+        icon: "fas fa-universal-access",
+        tags: [
+            "Section 508",
+            "WCAG 2.1",
+            "Government Standards",
+            "A11y Testing",
+        ],
+    },
+    {
         title: "Instructional Design",
         icon: "fas fa-chalkboard-teacher",
         tags: [

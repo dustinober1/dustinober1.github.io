@@ -5,6 +5,19 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-16: Added Performance Review Highlights
+- **Goal**: Integrate "Exceptional Performance" review metrics to reinforce technical credibility.
+- **Files Modified**:
+  - `src/components/Hero.tsx` - Added "97% Process Automation" credential badge
+  - `src/components/SkillsSection.tsx` - Added "Accessibility & Compliance" skill category
+  - `src/components/ExperienceSection.tsx` - Added NCTC achievements (accessibility DB, automation)
+  - `src/app/about/page.tsx` - Added 97% stat, Section 508 specialization
+  - `src/app/resume/page.tsx` - Enhanced bullets with specific metrics, added accessibility skills
+- **Key Additions**:
+  - "97% Process Automation" badge (reduced reporting from 1 week to 30 minutes)
+  - Section 508/WCAG accessibility expertise
+  - NCTC accessibility database achievement
+
 ### 2026-01-16: Added Professional Certifications Section
 - **Goal**: Showcase technical credentials to reinforce "Data Scientist & ML Engineer" brand.
 - **Files Created**:
