@@ -5,6 +5,19 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-16: Added Professional Certifications Section
+- **Goal**: Showcase technical credentials to reinforce "Data Scientist & ML Engineer" brand.
+- **Files Created**:
+  - `src/components/CertificationsSection.tsx` - Component displaying 14 certifications in 3 categories
+  - `src/components/CertificationsSection.module.css` - Styling matching TechStackSection pattern
+- **Files Modified**:
+  - `src/app/page.tsx` - Integrated CertificationsSection after EducationSummarySection
+- **Categories**:
+  - AI & Machine Learning (9 Udacity Nanodegrees)
+  - Data & Cloud Platforms (Databricks, AWS, Business Analytics)
+  - Project Management (PMP)
+
+
 ### 2026-01-16: Portfolio Repositioning for Data Science Focus
 - **Goal**: Address recruiter feedback about "not technical enough" and "job hopping" concerns.
 - **Files Modified**:

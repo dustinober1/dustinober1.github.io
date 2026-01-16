@@ -7,6 +7,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import InsightsSection from "@/components/InsightsSection";
 import EducationSummarySection from "@/components/EducationSummarySection";
+import CertificationsSection from "@/components/CertificationsSection";
 import { eatManager, structuredDataEngine } from "@/lib/seo";
 import { eatData } from "@/lib/seo/eatData";
 import styles from './home.module.css';
@@ -48,6 +49,7 @@ export default function Home() {
       <TestimonialsSection />
       <InsightsSection />
       <EducationSummarySection />
+      <CertificationsSection />
 
       {/* E-A-T Trust Signals Footer */}
       <section className={styles.eatTrustSignals}>
