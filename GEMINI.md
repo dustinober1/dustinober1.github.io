@@ -5,6 +5,13 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-16: Refactored Footer Layout
+- **Goal**: Improve footer organization and readability.
+- **Files Modified**: `src/components/Footer.tsx`.
+- **Key Changes**:
+  - Refactored footer links into 3 columns: General, Work, and Credentials.
+  - Implemented responsive CSS Grid layout.
+
 ### 2026-01-16: Updated Footer with Comprehensive Navigation
 - **Goal**: Align footer links with main navigation for better site-wide access.
 - **Files Modified**: `src/components/Footer.tsx`.
