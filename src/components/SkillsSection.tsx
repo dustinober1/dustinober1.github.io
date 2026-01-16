@@ -1,11 +1,6 @@
 const skillCategories = [
     {
-        title: "Languages & Frameworks",
-        icon: "fas fa-code",
-        tags: ["Python", "JavaScript", "SQL", "FastAPI", "DSPy", "HTML/CSS", "Bash Scripting"],
-    },
-    {
-        title: "Data Science & AI",
+        title: "Data Science & ML",
         icon: "fas fa-brain",
         tags: [
             "NLP (Custom NER)",
@@ -14,26 +9,30 @@ const skillCategories = [
             "PyTorch",
             "Pandas",
             "NumPy",
-            "Matplotlib",
             "Scikit-Learn",
-            "Data Cleaning & ETL",
-            "LangChain",
+            "Feature Engineering",
+            "Model Evaluation",
+            "A/B Testing",
+            "Statistical Analysis",
         ],
     },
     {
-        title: "DevOps & Tools",
+        title: "Languages & Frameworks",
+        icon: "fas fa-code",
+        tags: ["Python", "JavaScript", "SQL", "FastAPI", "DSPy", "LangChain", "Bash"],
+    },
+    {
+        title: "ML Ops & DevOps",
         icon: "fas fa-cogs",
-        tags: ["Docker", "Git", "Jupyter Notebooks", "RESTful APIs", "JWT", "Agile/Scrum"],
+        tags: ["Docker", "Git", "CI/CD", "Jupyter", "RESTful APIs", "MLflow", "Agile/Scrum"],
     },
     {
         title: "Instructional Design",
         icon: "fas fa-chalkboard-teacher",
         tags: [
             "ADDIE Model",
-            "Articulate 360",
-            "Adobe Captivate",
-            "Camtasia",
-            "Adult Learning Principles",
+            "Technical Writing",
+            "Adult Learning",
         ],
     },
 ];

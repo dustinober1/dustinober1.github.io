@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./ExperienceSection.module.css";
 
 interface HighlightItem {
     text: string;
@@ -9,148 +10,188 @@ interface HighlightItem {
     };
 }
 
-interface ExperienceItem {
-    title: string;
-    company: string;
-    date: string;
-    highlights: HighlightItem[];
+interface CareerArc {
+    arcTitle: string;
+    arcDescription: string;
+    period: string;
+    roles: {
+        title: string;
+        company: string;
+        date: string;
+        highlights: HighlightItem[];
+    }[];
 }
 
-const experiences: ExperienceItem[] = [
+const careerArcs: CareerArc[] = [
     {
-        title: "Developer",
-        company: "Leidos - Chantilly, VA",
-        date: "07/2024 – Present",
-        highlights: [
+        arcTitle: "ML Engineering & AI Development",
+        arcDescription: "Production ML systems and NLP models for defense applications",
+        period: "2024 – Present",
+        roles: [
             {
-                bold: "Engineered state-of-the-art NLP models:",
-                text: "Designed custom Named Entity Recognition (NER) models for specialized customer datasets, achieving extraction accuracy exceeding industry standard benchmarks.",
+                title: "ML Engineer / Data Scientist",
+                company: "Leidos",
+                date: "2024 – Present",
+                highlights: [
+                    {
+                        bold: "Custom NER Models:",
+                        text: "Designed and deployed Named Entity Recognition models for specialized intelligence datasets, achieving extraction accuracy exceeding industry benchmarks.",
+                    },
+                    {
+                        bold: "Production ML Pipelines:",
+                        text: "Trained and deployed 30+ ML models using TensorFlow and DSPy, streamlining data extraction from enterprise systems into production insights.",
+                    },
+                    {
+                        bold: "ML Infrastructure:",
+                        text: "Built secure FastAPI REST services with JWT authentication and Dockerized deployments ensuring 99.9% consistency across environments.",
+                    },
+                    {
+                        bold: "Technical Leadership:",
+                        text: "Lead PMP Instructor for 4+ cohorts",
+                        link: {
+                            href: "https://dustinober1.github.io/PMP-2026/",
+                            label: "PMP 2026 Exam Prep Ebook",
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        arcTitle: "Data-Driven Instructional Systems",
+        arcDescription: "Applied data science to optimize training outcomes across defense programs",
+        period: "2019 – 2024",
+        roles: [
+            {
+                title: "Technical Lead",
+                company: "Peraton",
+                date: "2023 – 2024",
+                highlights: [
+                    { text: "Directed team of three designers, applying Agile methodologies to course development pipelines." },
+                    { text: "Managed portfolio of 8 technical courses, leveraging analytics to optimize learning outcomes." },
+                ],
             },
             {
-                bold: "Architected end-to-end AI pipelines:",
-                text: "Trained and deployed 30+ ML models using TensorFlow and DSPy, streamlining data extraction from SharePoint/Oracle into production-ready insights.",
+                title: "Data Analyst / E-Learning Developer",
+                company: "Leidos",
+                date: "2022 – 2023",
+                highlights: [
+                    { bold: "Data-Driven Optimization:", text: "Leveraged Python (Pandas/NumPy) to analyze training trends, leading to 20% improvement in completion rates." },
+                    { bold: "Process Automation:", text: "Automated data collection via web-scraping, reducing manual work by ~15 hours/week." },
+                    { bold: "Rapid Delivery:", text: "Developed and deployed 5 comprehensive WBTs within 90 days." },
+                ],
             },
             {
-                bold: "Modernized technical infrastructure:",
-                text: "Built secure FastAPI REST services with JWT authentication and Dockerized applications to ensure 99.9% deployment consistency across environments.",
+                title: "Instructional Designer",
+                company: "Tekmasters",
+                date: "2021",
+                highlights: [
+                    { text: "Designed interactive digital learning materials using eLearning authoring tools." },
+                ],
             },
             {
-                bold: "Project Leadership:",
-                text: "Serves as Lead PMP Instructor for 4+ cohorts",
-                link: {
-                    href: "https://dustinober1.github.io/PMP-2026/",
-                    label: "PMP 2026 Exam Prep Ebook",
-                },
+                title: "Training Specialist",
+                company: "Tridea Works",
+                date: "2020 – 2021",
+                highlights: [
+                    { text: "Led curriculum development for NDCAC tools, geolocation, and CLOUD ACT training." },
+                ],
+            },
+            {
+                title: "Instructional Systems Specialist",
+                company: "DEA",
+                date: "2019 – 2020",
+                highlights: [
+                    { bold: "Curriculum Innovation:", text: "Led development of Cyber Drug Investigator Course, identifying 290+ critical tasks via Job Task Analysis." },
+                ],
             },
         ],
     },
     {
-        title: "Instructional Systems Designer",
-        company: "Peraton - Chantilly, VA",
-        date: "10/2023 – 07/2024",
-        highlights: [
-            { text: "Directed and mentored a team of three instructional designers, fostering a collaborative environment to achieve course development objectives." },
-            { text: "Managed a portfolio of 8 courses, overseeing design, development, and implementation to align with organizational goals." },
-            { text: "Leveraged project management skills to coordinate multiple projects, prioritize tasks, and meet deadlines in a fast-paced environment." },
-        ],
-    },
-    {
-        title: "E-Learning Developer",
-        company: "Leidos - Chantilly, VA",
-        date: "01/2022 – 10/2023",
-        highlights: [
-            { bold: "Data-Driven Instructional Design:", text: "Leveraged Python (Pandas/NumPy) to analyze training trends, leading to a 20% improvement in WBT completion rates." },
-            { bold: "Process Automation:", text: "Automated training data collection via web-scraping, reducing manual data entry work by ~15 hours per week." },
-            { bold: "Rapid Content Delivery:", text: "Developed and deployed 5 comprehensive WBTs within 90 days, meeting aggressive organizational mission timelines." },
-        ],
-    },
-    {
-        title: "Instructional Designer",
-        company: "Tekmasters - Springfield, VA",
-        date: "03/2021 – 12/2021",
-        highlights: [
-            { text: "Designed and developed interactive digital learning materials using eLearning authoring tools (Adobe Captivate, Articulate 360, Camtasia)." },
-            { text: "Utilized expertise in adult education practices to create engaging, learner-centered curricula tailored to adult learners." },
-            { text: "Conducted research across academic, industrial, and government organizations to identify and implement innovative learning solutions." },
-        ],
-    },
-    {
-        title: "Training Development Specialist",
-        company: "Tridea Works - Fredericksburg, VA",
-        date: "05/2020 – 03/2021",
-        highlights: [
-            { text: "Led the development of instructional curriculum for topics including NDCAC tools, geolocation, and CLOUD ACT." },
-            { text: "Established remote learning opportunities using Adobe Connect and Microsoft Teams to facilitate live classes and collaborative learning." },
-        ],
-    },
-    {
-        title: "Instructional Systems Specialist",
-        company: "DEA - Quantico, VA",
-        date: "01/2019 – 05/2020",
-        highlights: [
-            { bold: "Curriculum Innovation:", text: "Led development of the Cyber Drug Investigator Course, identifying 290+ critical tasks via Job Task Analysis (JTA) with SMEs." },
-            { bold: "Project Management:", text: "Coordinated cross-functional teams to deliver a comprehensive training suite, including presentations, labs, and performance-based testing." },
-        ],
-    },
-    {
-        title: "Owner",
-        company: "Kentucky Senior Benefits - Lexington, KY",
-        date: "08/2014 – 12/2019",
-        highlights: [
-            { text: "Identified client needs and analyzed financial data to propose tailored solutions, directly impacting client retention and satisfaction." },
-            { text: "Designed and delivered compliance-approved presentations and technical scripts for seminars ranging from 12-120 attendees." },
-        ],
-    },
-    {
-        title: "Instructor / Course Developer",
-        company: "United States Air Force",
-        date: "03/2004 – 08/2014",
-        highlights: [
-            { text: "Maintained a technical training database with 1,000+ entries, achieving 100% data accuracy for tracking personnel proficiency." },
-            { text: "Authored 52 technical scenarios for firearms training simulators, integrating hardware and software requirements into the curriculum." },
-            { text: "Conducted evaluations and analyzed student performance data, reducing performance report rewrites by 25% through evidence-based curriculum adjustments." },
+        arcTitle: "Earlier Career",
+        arcDescription: "Military instruction and technical training foundations",
+        period: "2004 – 2019",
+        roles: [
+            {
+                title: "Instructor / Course Developer",
+                company: "United States Air Force",
+                date: "2004 – 2014",
+                highlights: [
+                    { text: "Maintained technical training database with 1,000+ entries at 100% accuracy." },
+                    { text: "Authored 52 technical scenarios for firearms training simulators." },
+                ],
+            },
         ],
     },
 ];
 
 export default function ExperienceSection() {
     return (
-        <section id="experience">
+        <section id="experience" className={styles.experienceSection}>
             <div className="container">
                 <h2>Professional Experience</h2>
-                <div className="timeline">
-                    {experiences.map((job, index) => (
-                        <div key={index} className="job-card">
-                            <div className="job-header">
-                                <div>
-                                    <div className="job-title">{job.title}</div>
-                                    <div className="company">{job.company}</div>
+
+                {/* Career Journey Context */}
+                <div className={styles.careerContext}>
+                    <p className={styles.journeyNarrative}>
+                        My career represents an intentional progression from <strong>military technical instruction</strong> →
+                        <strong> data-driven instructional design</strong> → <strong>full-stack ML engineering</strong>.
+                        Each phase built capabilities in the next: understanding how people learn informed how I design
+                        AI systems that teach and explain.
+                    </p>
+                    <p className={styles.contractNote}>
+                        <i className="fas fa-info-circle"></i>
+                        Contract-based roles supporting classified defense and intelligence missions.
+                        Project transitions reflect mission requirements, not job changes.
+                    </p>
+                </div>
+
+                <div className={styles.arcsContainer}>
+                    {careerArcs.map((arc, arcIndex) => (
+                        <div key={arcIndex} className={styles.careerArc}>
+                            <div className={styles.arcHeader}>
+                                <div className={styles.arcTitleBlock}>
+                                    <h3 className={styles.arcTitle}>{arc.arcTitle}</h3>
+                                    <p className={styles.arcDescription}>{arc.arcDescription}</p>
                                 </div>
-                                <div className="date">{job.date}</div>
+                                <span className={styles.arcPeriod}>{arc.period}</span>
                             </div>
-                            <div className="job-details">
-                                <ul>
-                                    {job.highlights.map((highlight, hIndex) => (
-                                        <li key={hIndex}>
-                                            {highlight.bold && <strong>{highlight.bold} </strong>}
-                                            {highlight.text}
-                                            {highlight.link && (
-                                                <>
-                                                    {" "}
-                                                    <Link
-                                                        href={highlight.link.href}
-                                                        style={{ color: "var(--accent)" }}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        {highlight.link.label}
-                                                    </Link>
-                                                    {" with high community engagement."}
-                                                </>
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
+
+                            <div className={styles.rolesTimeline}>
+                                {arc.roles.map((role, roleIndex) => (
+                                    <div key={roleIndex} className={styles.roleCard}>
+                                        <div className={styles.roleHeader}>
+                                            <div>
+                                                <div className={styles.roleTitle}>{role.title}</div>
+                                                <div className={styles.company}>{role.company}</div>
+                                            </div>
+                                            <div className={styles.date}>{role.date}</div>
+                                        </div>
+                                        <div className={styles.roleDetails}>
+                                            <ul>
+                                                {role.highlights.map((highlight, hIndex) => (
+                                                    <li key={hIndex}>
+                                                        {highlight.bold && <strong>{highlight.bold} </strong>}
+                                                        {highlight.text}
+                                                        {highlight.link && (
+                                                            <>
+                                                                {" "}
+                                                                <Link
+                                                                    href={highlight.link.href}
+                                                                    style={{ color: "var(--accent)" }}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                >
+                                                                    {highlight.link.label}
+                                                                </Link>
+                                                            </>
+                                                        )}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     ))}

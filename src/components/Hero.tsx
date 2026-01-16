@@ -18,13 +18,12 @@ export default function Hero() {
                     <h1 className={styles.heroName}>Dustin J. Ober</h1>
                     
                     <p className={styles.heroTitle}>
-                        AI Developer & Technical Instructional Designer
+                        Data Scientist & ML Engineer
                     </p>
                     
                     <p className={styles.heroSubtitle}>
-                        Technical Instructional Systems Designer and Full Stack Developer specialized in
-                        leveraging Data Science and LLMs to optimize training outcomes for defense and
-                        intelligence missions.
+                        Data Scientist specializing in NLP, Machine Learning, and Production ML Systems.
+                        30+ models deployed for defense and intelligence applications.
                     </p>
 
                     {/* E-A-T Credibility Indicators */}
@@ -38,8 +37,8 @@ export default function Hero() {
                             <span>M.Ed. Instructional Design</span>
                         </div>
                         <div className={styles.credentialItem}>
-                            <i className="fas fa-robot"></i>
-                            <span>AI Systems Management</span>
+                            <i className="fas fa-brain"></i>
+                            <span>30+ ML Models Deployed</span>
                         </div>
                         <div className={styles.credentialItem}>
                             <i className="fas fa-shield-alt"></i>

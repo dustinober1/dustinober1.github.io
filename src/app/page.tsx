@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
+import TechStackSection from "@/components/TechStackSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
 import ExperienceSection from "@/components/ExperienceSection";
@@ -14,7 +15,7 @@ export default function Home() {
   // Generate E-A-T structured data for the homepage
   const eatSignals = eatManager.generateEATSignals(eatData);
   const eatStructuredData = eatManager.generateEATStructuredData(eatSignals);
-  
+
   // Generate Person schema with E-A-T enhancements
   const personSchema = structuredDataEngine.generatePerson({
     name: eatData.authorBio.name,
@@ -40,13 +41,14 @@ export default function Home() {
       />
 
       <Hero />
+      <TechStackSection />
       <SkillsSection />
       <ExpertiseSection />
       <ExperienceSection />
       <TestimonialsSection />
       <InsightsSection />
       <EducationSummarySection />
-      
+
       {/* E-A-T Trust Signals Footer */}
       <section className={styles.eatTrustSignals}>
         <div className="container">

@@ -5,6 +5,27 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-16: Portfolio Repositioning for Data Science Focus
+- **Goal**: Address recruiter feedback about "not technical enough" and "job hopping" concerns.
+- **Files Modified**:
+  - `src/components/Hero.tsx` - Updated title to "Data Scientist & ML Engineer"
+  - `src/components/TechStackSection.tsx` (NEW) - Prominent tech stack display
+  - `src/components/TechStackSection.module.css` (NEW) - Styling for tech stack
+  - `src/components/SkillsSection.tsx` - Reordered to lead with Data Science & ML
+  - `src/components/ExperienceSection.tsx` - Complete overhaul with career arcs
+  - `src/components/ExperienceSection.module.css` (NEW) - Styling for career arcs
+  - `src/app/page.tsx` - Integrated TechStackSection
+  - `src/app/about/page.tsx` - Updated title/stats to match new branding
+- **Key Changes**:
+  - Hero: "Data Scientist & ML Engineer" title, "30+ ML Models Deployed" badge
+  - New TechStackSection with 6 categories (Data Science Core, Deep Learning, NLP/LLMs, etc.)
+  - Skills reordered: Data Science & ML now first, Instructional Design last
+  - Experience grouped into "Career Arcs" instead of individual jobs
+  - Added career journey narrative explaining intentional progression
+  - Added contract disclaimer for defense work
+  - Dates changed to year-only format
+
+
 ### 2026-01-10: Authored Scaling LLM Evaluation Whitepaper
 - **File Modified**: `whitepapers/markdown/08_Scaling LLM Evaluation with DSPy.md` (Created)
 - **Files Updated**: `src/app/research/page.tsx`, `src/app/research/[slug]/page.tsx`

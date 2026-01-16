@@ -46,9 +46,9 @@ const credentials = [
 ];
 
 const stats = [
-  { value: "25+", label: "Years Experience" },
+  { value: "20+", label: "Years Experience" },
   { value: "30+", label: "ML Models Deployed" },
-  { value: "4", label: "Published Whitepapers" },
+  { value: "8", label: "Published Whitepapers" },
   { value: "PMP", label: "Certified" },
 ];
 
@@ -81,17 +81,16 @@ export default function AboutPage() {
             <div className={styles.heroText}>
               <h1>Dustin J. Ober</h1>
               <p className={styles.heroTitle}>
-                AI Developer & Technical Instructional Systems Designer
+                Data Scientist & ML Engineer
               </p>
               <p className={styles.heroLocation}>
                 <i className="fas fa-map-marker-alt"></i>
                 Chantilly, VA
               </p>
               <p className={styles.heroBio}>
-                Technical Instructional Systems Designer and Full Stack Developer
-                specialized in bridging Educational Strategy and AI Implementation.
-                Extensive experience leveraging Data Science, NLP, and LLMs to
-                optimize training outcomes for defense and intelligence missions.
+                Data Scientist specializing in NLP, Machine Learning, and Production ML Systems.
+                30+ models deployed for defense and intelligence applications, bridging
+                educational strategy with AI implementation.
               </p>
               <div className={styles.heroCta}>
                 <Link href="/contact" className={styles.ctaPrimary}>
