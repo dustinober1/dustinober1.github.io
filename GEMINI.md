@@ -5,6 +5,18 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-16: Added 'Deep Past Challenge' Whitepaper
+- **Goal**: Expand Competitions series with a case study on Low-Resource NMT.
+- **Files Created**:
+  - `whitepapers/markdown/K02_Translating_the_Deep_Past.md` - Analysis of data expansion and multi-level training.
+  - `whitepapers/pdf/K02-translating-the-deep-past.pdf` - Generated professional PDF.
+- **Files Modified**:
+  - `src/app/competitions/page.tsx` - Added to the competition list.
+  - `src/app/research/[slug]/page.tsx` - Registered in the whitepaper registry.
+- **Key Insights**:
+  - Detailing the 400% dataset expansion via scraping.
+  - Explaining the curriculum learning approach (Sentence -> Document).
+
 ### 2026-01-16: Launched Kaggle Competitions Page
 - **Goal**: Create a dedicated space for data science process writeups, distinct from the Sovereign AI research.
 - **Files Modified**:

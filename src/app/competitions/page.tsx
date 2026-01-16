@@ -33,7 +33,17 @@ const kaggleWhitepapers = [
         subtitle: "Process Over Results in Low-SNR Competitions",
         abstract:
             "A case study on the Hedge Fund Time Series Forecasting competition. How robust objectives, shrinkage calibration, and one-change-at-a-time experimentation beat kitchen-sink feature engineering.",
-        pdfUrl: null, // Will be generated later
+        pdfUrl: "/whitepapers/pdf/K01-hypothesis-driven-time-series-forecasting.pdf",
+    },
+    {
+        id: "kc-02",
+        slug: "kaggle-deep-past",
+        type: "Case Study #02",
+        title: "The Deep Past Challenge",
+        subtitle: "Translating Akkadian with Found Data",
+        abstract:
+            "Resurrecting a dead language with Data Science. How we expanded the training dataset by 400% through 'Data Archaeology' and used curriculum learning to handle ancient tablets.",
+        pdfUrl: "/whitepapers/pdf/K02-translating-the-deep-past.pdf",
     },
 ];
 

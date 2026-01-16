@@ -249,12 +249,12 @@ async function main() {
         outputPath = args[1];
     } else {
         const stem = path.basename(markdownPath, '.md');
-        const match = stem.match(/^(\d+)_(.+)$/);
+        const match = stem.match(/^([A-Z0-9]+)_(.+)$/);
 
         let outputName: string;
         if (match) {
             const num = match[1];
-            const name = match[2].replace(/\s+/g, '-').toLowerCase();
+            const name = match[2].replace(/[\s_]+/g, '-').toLowerCase();
             outputName = `${num}-${name}.pdf`;
         } else {
             outputName = `${stem}.pdf`;
