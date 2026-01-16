@@ -176,7 +176,7 @@ export default function EducationPage() {
                             <h3 style={{
                                 fontSize: "1.1rem",
                                 color: "var(--accent)",
-                                marginBottom: "1.5rem",
+                                marginBottom: "2rem",
                                 fontWeight: 600
                             }}>
                                 {category.title}
