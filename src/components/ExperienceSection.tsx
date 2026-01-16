@@ -34,6 +34,10 @@ const careerArcs: CareerArc[] = [
                 date: "2024 – Present",
                 highlights: [
                     {
+                        bold: "Customer Recognition:",
+                        text: "Praised by customer for innovative AI applications and problem-solving solutions.",
+                    },
+                    {
                         bold: "Custom NER Models:",
                         text: "Designed and deployed Named Entity Recognition models for specialized intelligence datasets, achieving extraction accuracy exceeding industry benchmarks.",
                     },
