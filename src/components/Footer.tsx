@@ -7,8 +7,8 @@ export default function Footer() {
         <footer>
             <div className="container">
                 {/* Decorative rule with gold accent is handled in globals.css ::before */}
-                <p style={{ 
-                    fontFamily: 'var(--font-display)', 
+                <p style={{
+                    fontFamily: 'var(--font-display)',
                     fontSize: '1rem',
                     marginBottom: '1rem',
                     color: 'var(--foreground)'
@@ -22,21 +22,56 @@ export default function Footer() {
                     marginBottom: '1.5rem',
                     flexWrap: 'wrap'
                 }}>
-                    <Link href="/resume" style={{ 
+                    <Link href="/" style={{
                         fontSize: '0.8125rem',
                         color: 'var(--muted-foreground)',
                         textDecoration: 'none'
                     }}>
-                        Resume
+                        Home
                     </Link>
-                    <Link href="/research" style={{ 
+                    <Link href="/projects" style={{
+                        fontSize: '0.8125rem',
+                        color: 'var(--muted-foreground)',
+                        textDecoration: 'none'
+                    }}>
+                        Projects
+                    </Link>
+                    <Link href="/research" style={{
                         fontSize: '0.8125rem',
                         color: 'var(--muted-foreground)',
                         textDecoration: 'none'
                     }}>
                         Research
                     </Link>
-                    <Link href="/contact" style={{ 
+                    <Link href="/competitions" style={{
+                        fontSize: '0.8125rem',
+                        color: 'var(--muted-foreground)',
+                        textDecoration: 'none'
+                    }}>
+                        Competitions
+                    </Link>
+                    <Link href="/education" style={{
+                        fontSize: '0.8125rem',
+                        color: 'var(--muted-foreground)',
+                        textDecoration: 'none'
+                    }}>
+                        Education
+                    </Link>
+                    <Link href="/about" style={{
+                        fontSize: '0.8125rem',
+                        color: 'var(--muted-foreground)',
+                        textDecoration: 'none'
+                    }}>
+                        About
+                    </Link>
+                    <Link href="/resume" style={{
+                        fontSize: '0.8125rem',
+                        color: 'var(--muted-foreground)',
+                        textDecoration: 'none'
+                    }}>
+                        Resume
+                    </Link>
+                    <Link href="/contact" style={{
                         fontSize: '0.8125rem',
                         color: 'var(--muted-foreground)',
                         textDecoration: 'none'

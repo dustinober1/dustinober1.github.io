@@ -5,6 +5,11 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-16: Updated Footer with Comprehensive Navigation
+- **Goal**: Align footer links with main navigation for better site-wide access.
+- **Files Modified**: `src/components/Footer.tsx`.
+- **Key Changes**: Added links to Home, Projects, Competitions, Education, About, and Resume.
+
 ### 2026-01-16: Added 'Deep Past Challenge' Whitepaper
 - **Goal**: Expand Competitions series with a case study on Low-Resource NMT.
 - **Files Created**:
