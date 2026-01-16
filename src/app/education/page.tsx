@@ -22,47 +22,44 @@ const formalEducation = [
     },
 ];
 
-const certifications = [
+const certificationCategories = [
     {
-        name: "Project Management Professional (PMP)",
-        issuer: "Project Management Institute",
+        title: "AI & Machine Learning",
+        certifications: [
+            { name: "Deep Learning", issuer: "Udacity Nanodegree" },
+            { name: "Natural Language Processing", issuer: "Udacity Nanodegree" },
+            { name: "Computer Vision", issuer: "Udacity Nanodegree" },
+            { name: "Generative AI", issuer: "Udacity Nanodegree" },
+            { name: "Artificial Intelligence", issuer: "Udacity Nanodegree" },
+            { name: "Deep Reinforcement Learning", issuer: "Udacity Nanodegree" },
+            { name: "Intro to Machine Learning (PyTorch)", issuer: "Udacity Nanodegree" },
+            { name: "AI Programming with Python", issuer: "Udacity Nanodegree" },
+            { name: "AI Product Manager", issuer: "Udacity Nanodegree" },
+        ]
     },
     {
-        name: "TensorFlow Developer",
-        issuer: "DeepLearning.AI",
+        title: "Data & Cloud Platforms",
+        certifications: [
+            { name: "Generative AI Fundamentals", issuer: "Databricks" },
+            { name: "Lakehouse Platform Essentials", issuer: "Databricks" },
+            { name: "Cloud Practitioner (Foundational)", issuer: "AWS" },
+            { name: "Business Analytics", issuer: "Udacity Nanodegree" },
+        ]
     },
     {
-        name: "Generative AI Fundamentals",
-        issuer: "Databricks",
+        title: "Project Management",
+        certifications: [
+            { name: "Project Management Professional (PMP)", issuer: "PMI" },
+        ]
     },
     {
-        name: "Google Data Analytics",
-        issuer: "Google Professional Certificate",
-    },
-    {
-        name: "IBM Data Science",
-        issuer: "IBM Professional Certificate",
-    },
-    {
-        name: "AWS Certified Cloud Practitioner",
-        issuer: "Amazon Web Services",
-    },
+        title: "Programming",
+        certifications: [
+            { name: "Introduction to Programming", issuer: "Udacity Nanodegree" },
+            { name: "Intermediate Python", issuer: "Udacity Nanodegree" },
+        ]
+    }
 ];
-
-const continuousLearning = {
-    dataAI: [
-        "Udacity Deep Reinforcement Learning",
-        "Udacity Natural Language Processing",
-        "Udacity Computer Vision",
-        "Stanford Machine Learning",
-    ],
-    technicalStrategy: [
-        "Certified Scrum Master (CSM)",
-        "Ethical Hacker Certification",
-        "Kirkpatrick Bronze Certification",
-        "Adobe Captivate Specialist",
-    ],
-};
 
 // Simple SVG Icons as components
 const GraduationCapIcon = () => (
@@ -165,78 +162,38 @@ export default function EducationPage() {
                 </div>
             </section>
 
-            {/* Key Professional Certifications Section */}
+            {/* Professional Certifications Section */}
             <section className={styles.section}>
                 <div className="container">
                     <div className={styles.sectionHeader}>
-                        <h2 className={styles.sectionTitle}>Key Professional Certifications</h2>
+                        <h2 className={styles.sectionTitle}>Professional Certifications</h2>
                         <p className={styles.sectionSubtitle}>
-                            Curated selection of my most impactful industry credentials.
+                            16 industry-recognized credentials across AI, ML, Cloud, and Project Management
                         </p>
                     </div>
-                    <div className={styles.cardGrid}>
-                        {certifications.map((cert) => (
-                            <div key={cert.name} className={styles.card}>
-                                <div className={styles.iconWrapper}>
-                                    <CertificateIcon />
-                                </div>
-                                <h3 className={styles.cardTitle}>{cert.name}</h3>
-                                <span className={styles.cardIssuer}>{cert.issuer}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Continuous Learning Section */}
-            <section className={styles.section}>
-                <div className="container">
-                    <div className={styles.learningSection}>
-                        <div className={styles.learningHeader}>
-                            <h2 className={styles.learningTitle}>
-                                Continuous Learning & Technical Upskilling
-                            </h2>
-                            <p className={styles.learningSubtitle}>
-                                Beyond my core credentials, I maintain an active portfolio of 20+ specialized
-                                technical nanodegrees and certificates focused on emerging technologies.
-                            </p>
-                        </div>
-
-                        <div className={styles.learningGrid}>
-                            <div className={styles.learningCategory}>
-                                <h4 className={styles.categoryTitle}>
-                                    <BookIcon />
-                                    Data & AI Specialized
-                                </h4>
-                                <ul className={styles.categoryList}>
-                                    {continuousLearning.dataAI.map((item) => (
-                                        <li key={item}>
-                                            <span className={styles.checkIcon}>
-                                                <CheckIcon />
-                                            </span>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className={styles.learningCategory}>
-                                <h4 className={styles.categoryTitle}>
-                                    <BookIcon />
-                                    Technical Strategy
-                                </h4>
-                                <ul className={styles.categoryList}>
-                                    {continuousLearning.technicalStrategy.map((item) => (
-                                        <li key={item}>
-                                            <span className={styles.checkIcon}>
-                                                <CheckIcon />
-                                            </span>
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
+                    {certificationCategories.map((category) => (
+                        <div key={category.title} style={{ marginBottom: "2.5rem" }}>
+                            <h3 style={{
+                                fontSize: "1.1rem",
+                                color: "var(--accent)",
+                                marginBottom: "1rem",
+                                fontWeight: 600
+                            }}>
+                                {category.title}
+                            </h3>
+                            <div className={styles.cardGrid}>
+                                {category.certifications.map((cert) => (
+                                    <div key={cert.name} className={styles.card}>
+                                        <div className={styles.iconWrapper}>
+                                            <CertificateIcon />
+                                        </div>
+                                        <h3 className={styles.cardTitle}>{cert.name}</h3>
+                                        <span className={styles.cardIssuer}>{cert.issuer}</span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </section>
         </main>
