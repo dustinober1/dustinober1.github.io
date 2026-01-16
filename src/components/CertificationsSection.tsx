@@ -35,6 +35,7 @@ const certificationCategories: CertificationCategory[] = [
             { name: "Lakehouse Platform Essentials", issuer: "Databricks" },
             { name: "Cloud Practitioner (Foundational)", issuer: "AWS" },
             { name: "Business Analytics", issuer: "Udacity Nanodegree" },
+            { name: "Statistics for Data Analysis", issuer: "Udacity Nanodegree" },
         ]
     },
     {

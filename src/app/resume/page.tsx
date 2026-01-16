@@ -164,7 +164,7 @@ export default function ResumePage() {
                     <p className={styles.certText}>
                         <strong>Certifications:</strong> Project Management Professional (PMP) •
                         9 Udacity Nanodegrees (Deep Learning, NLP, Computer Vision, GenAI, Reinforcement Learning) •
-                        Databricks Generative AI & Lakehouse • AWS Cloud Practitioner
+                        Databricks Generative AI & Lakehouse • AWS Cloud Practitioner • Statistics for Data Analysis
                     </p>
                 </section>
 

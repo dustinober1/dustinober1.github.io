@@ -5,6 +5,17 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-16: Launched Kaggle Competitions Whitepaper Series
+- **Goal**: Establish a new research series focused on process-driven data science experiments.
+- **Files Modified**:
+  - `src/app/research/page.tsx` - Updated to support multiple series sections (Sovereign AI + Kaggle).
+  - `src/app/research/[slug]/page.tsx` - Added dynamic series labeling and registered new whitepaper.
+  - `whitepapers/markdown/K01_Hypothesis-Driven Time Series Forecasting.md` (Created) - First whitepaper in the series.
+- **Key Changes**:
+  - Split research page into "Sovereign AI Handbook" and "Kaggle Competitions" sections.
+  - Published "Hypothesis-Driven Time Series Forecasting", a process writeup of the Hedge Fund competition.
+  - Implemented dynamic series metadata in the whitepaper reader.
+
 ### 2026-01-16: Added Performance Review Highlights
 - **Goal**: Integrate "Exceptional Performance" review metrics to reinforce technical credibility.
 - **Files Modified**:
@@ -30,7 +41,7 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
   - `src/app/education/page.tsx` - Updated with 16 accurate certifications in 4 categories
 - **Categories**:
   - AI & Machine Learning (9 Udacity Nanodegrees)
-  - Data & Cloud Platforms (Databricks, AWS, Business Analytics)
+  - Data & Cloud Platforms (Databricks, AWS, Business Analytics, Statistics)
   - Project Management (PMP)
 
 

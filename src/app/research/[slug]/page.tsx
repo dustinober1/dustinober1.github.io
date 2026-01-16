@@ -17,6 +17,7 @@ const whitepaperRegistry: Record<
         pdfPath: string | null;
         markdownFile: string;
         status: "available" | "coming-soon";
+        series?: string;
     }
 > = {
     "sovereign-ai-infrastructure": {
@@ -99,6 +100,17 @@ const whitepaperRegistry: Record<
         markdownFile: "08_Scaling LLM Evaluation with DSPy.md",
         status: "available",
     },
+    "kaggle-hedge-fund": {
+        id: "kc-01",
+        type: "Case Study #01",
+        title: "Hypothesis-Driven Time Series Forecasting",
+        subtitle: "Process Over Results in Low-SNR Competitions",
+        author: "Dustin J. Ober, PMP",
+        pdfPath: null,
+        markdownFile: "K01_Hypothesis-Driven Time Series Forecasting.md",
+        status: "available",
+        series: "Kaggle Competitions",
+    },
 };
 
 type Props = {
@@ -115,7 +127,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
         title: `${paper.title} | Research Series`,
-        description: `${paper.subtitle} - Part of The Sovereign AI Handbook by ${paper.author}`,
+        description: `${paper.subtitle} - Part of ${paper.series || "The Sovereign AI Handbook"} by ${paper.author}`,
     };
 }
 
@@ -199,7 +211,7 @@ export default async function WhitepaperPage({ params }: Props) {
                     </Link>
                     <div className={styles.headerMeta}>
                         <span className={styles.paperType}>{paper.type}</span>
-                        <span className={styles.seriesLabel}>The Sovereign AI Handbook</span>
+                        <span className={styles.seriesLabel}>{paper.series || "The Sovereign AI Handbook"}</span>
                     </div>
                     <h1 className={styles.paperTitle}>{paper.title}</h1>
                     <h2 className={styles.paperSubtitle}>{paper.subtitle}</h2>
