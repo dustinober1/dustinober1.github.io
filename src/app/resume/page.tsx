@@ -8,7 +8,7 @@ const experiences = [
         date: "2024 – Present",
         company: "Leidos - Chantilly, VA",
         bullets: [
-            "Recognized by customer for innovative AI applications and problem-solving solutions.",
+            "Received Letter of Appreciation from customer for leading AI implementation into workflows and processes.",
             "Designed and deployed custom NER models for specialized intelligence datasets, achieving extraction accuracy exceeding industry benchmarks.",
             "Trained and deployed 30+ ML models using TensorFlow and DSPy, streamlining data extraction into production-ready insights.",
             "Built secure FastAPI REST services with JWT authentication and Dockerized applications ensuring 99.9% deployment consistency.",

@@ -34,8 +34,8 @@ const careerArcs: CareerArc[] = [
                 date: "2024 – Present",
                 highlights: [
                     {
-                        bold: "Customer Recognition:",
-                        text: "Praised by customer for innovative AI applications and problem-solving solutions.",
+                        bold: "Letter of Appreciation:",
+                        text: "Received formal customer recognition for leading AI implementation into workflows, products, and processes.",
                     },
                     {
                         bold: "Custom NER Models:",
