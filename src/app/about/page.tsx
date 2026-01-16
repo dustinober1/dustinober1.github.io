@@ -139,26 +139,25 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3>Current Position</h3>
-                <p className={styles.roleTitle}>Developer</p>
+                <p className={styles.roleTitle}>ML Engineer / Data Scientist</p>
                 <p className={styles.roleCompany}>Leidos - Chantilly, VA</p>
               </div>
             </div>
             <ul className={styles.roleHighlights}>
               <li>
-                Engineered state-of-the-art NLP models: Designed custom Named
-                Entity Recognition (NER) models for specialized datasets
+                <strong>97% Automation:</strong> Built data pipelines reducing report generation from 1 week to 30 minutes
               </li>
               <li>
-                Architected AI pipelines: Trained and deployed 30+ ML models using
-                TensorFlow and DSPy for production insights
+                <strong>Custom NER Models:</strong> Designed Named Entity Recognition models for specialized intelligence datasets
               </li>
               <li>
-                Modernized infrastructure: Built secure FastAPI REST services with
-                JWT and Dockerized applications
+                <strong>Production ML:</strong> Trained and deployed 30+ ML models using TensorFlow and DSPy
               </li>
               <li>
-                Project Leadership: Lead PMP Instructor for 4+ cohorts and author
-                of The Sovereign AI Handbook series
+                <strong>Accessibility Leadership:</strong> Created Section 508/WCAG database adopted organization-wide
+              </li>
+              <li>
+                <strong>ML Infrastructure:</strong> Built secure FastAPI REST services with JWT and Dockerized applications
               </li>
             </ul>
           </div>
