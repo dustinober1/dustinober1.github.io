@@ -14,6 +14,7 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
   - `src/app/page.tsx` - Integrated CertificationsSection after EducationSummarySection
   - `src/components/EducationSummarySection.tsx` - Removed duplicate "Key Certifications" section
   - `src/app/resume/page.tsx` - Updated certifications to accurate list
+  - `src/app/education/page.tsx` - Updated with 16 accurate certifications in 4 categories
 - **Categories**:
   - AI & Machine Learning (9 Udacity Nanodegrees)
   - Data & Cloud Platforms (Databricks, AWS, Business Analytics)
