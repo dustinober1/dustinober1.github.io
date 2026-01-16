@@ -181,7 +181,7 @@ export default function EducationPage() {
                             }}>
                                 {category.title}
                             </h3>
-                            <div className={styles.cardGrid}>
+                            <div className={styles.cardGrid} style={{ paddingTop: "0.5rem" }}>
                                 {category.certifications.map((cert) => (
                                     <div key={cert.name} className={styles.card}>
                                         <div className={styles.iconWrapper}>
