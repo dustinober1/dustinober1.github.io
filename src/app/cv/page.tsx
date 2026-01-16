@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./resume.module.css";
+import styles from "../resume/resume.module.css";
 
 const experiences = [
     {
@@ -57,11 +57,66 @@ const education = [
     {
         degree: "Master of Education: Instructional Design & Technology",
         school: "Liberty University",
+        year: "2018",
     },
     {
         degree: "BS in Management / Computer Information Systems",
         school: "Park University",
+        year: "2014",
     },
+];
+
+const sovereignWhitepapers = [
+    {
+        title: "Sovereign AI Infrastructure",
+        subtitle: "Hardware & Architecture for Disconnected Environments",
+    },
+    {
+        title: "The Disconnected Pipeline",
+        subtitle: "Solving Dependency Management in Secure Facilities",
+    },
+    {
+        title: "Private Knowledge Retrieval",
+        subtitle: "Architecting Local RAG Systems",
+    },
+    {
+        title: "Verifiable Intelligence",
+        subtitle: "DSPy, Governance, and Hallucination Control",
+    },
+    {
+        title: "Agentic Architectures in Secure Enclaves",
+        subtitle: "Multi-Agent Systems for Zero-Egress Environments",
+    },
+    {
+        title: "Beyond \"Vibes\"",
+        subtitle: "Engineering Reliable AI Tutors with DSPy",
+    },
+    {
+        title: "The Future of Neuro-Symbolic Tutors",
+        subtitle: "Hyper-Personalized, Verifiable Learning Paths",
+    },
+    {
+        title: "Scaling LLM Evaluation with DSPy",
+        subtitle: "From Manual Prompting to Optimized Pipelines",
+    },
+];
+
+const certifications = [
+    "Project Management Professional (PMP) - PMI",
+    "Deep Learning Nanodegree - Udacity",
+    "Natural Language Processing Nanodegree - Udacity",
+    "Computer Vision Nanodegree - Udacity",
+    "Generative AI Nanodegree - Udacity",
+    "Artificial Intelligence Nanodegree - Udacity",
+    "Deep Reinforcement Learning Nanodegree - Udacity",
+    "Intro to Machine Learning (PyTorch) - Udacity",
+    "AI Programming with Python - Udacity",
+    "AI Product Manager - Udacity",
+    "Generative AI Fundamentals - Databricks",
+    "Lakehouse Platform Essentials - Databricks",
+    "AWS Cloud Practitioner (Foundational) - AWS",
+    "Business Analytics Nanodegree - Udacity",
+    "Statistics for Data Analysis - Udacity",
 ];
 
 const skills = [
@@ -87,24 +142,17 @@ const skills = [
     },
 ];
 
-export default function ResumePage() {
+export default function CVPage() {
     return (
         <div className={styles.resumeBody}>
             <div className={styles.noPrint}>
                 <div className={styles.buttonGroup}>
                     <a
-                        href="/documents/resume.pdf"
-                        download="Dustin_Ober_Resume.pdf"
+                        href="/documents/cv.pdf"
+                        download="Dustin_Ober_CV.pdf"
                         className={styles.downloadBtn}
                     >
-                        Download Resume (2-Pg)
-                    </a>
-                    <a
-                        href="/cv"
-                        className={`${styles.downloadBtn} ${styles.downloadBtnSecondary}`}
-                        target="_blank"
-                    >
-                        View Full CV and Publications
+                        Download Full CV Includes Publications
                     </a>
                 </div>
             </div>
@@ -135,6 +183,7 @@ export default function ResumePage() {
                         30+ models deployed for defense and intelligence applications. Extensive experience
                         architecting end-to-end AI pipelines, custom NER systems, and secure ML infrastructure.
                         PMP-certified technical leader bridging data science with mission-critical training outcomes.
+                        Author of "The Sovereign AI Handbook" series on disconnected AI architectures.
                     </p>
                 </section>
 
@@ -160,7 +209,23 @@ export default function ResumePage() {
                 </section>
 
                 <section className={styles.section}>
-                    <h2 className={styles.sectionTitle}>Education & Credentials</h2>
+                    <h2 className={styles.sectionTitle}>Publications & Research</h2>
+                    <div style={{ marginBottom: "1rem" }}>
+                        <p style={{ fontStyle: "italic", fontSize: "0.9rem", color: "var(--muted-foreground)", marginBottom: "0.5rem" }}>
+                            The Sovereign AI Handbook Series
+                        </p>
+                        <ul className={styles.jobList}>
+                            {sovereignWhitepapers.map((paper, idx) => (
+                                <li key={idx}>
+                                    <strong>{paper.title}</strong>: {paper.subtitle}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2 className={styles.sectionTitle}>Education</h2>
                     {education.map((edu, idx) => (
                         <div key={idx} className={styles.jobEntry}>
                             <div className={styles.jobHeader}>
@@ -170,11 +235,15 @@ export default function ResumePage() {
                             <div className={styles.jobCompany}>{edu.school}</div>
                         </div>
                     ))}
-                    <p className={styles.certText}>
-                        <strong>Certifications:</strong> Project Management Professional (PMP) •
-                        9 Udacity Nanodegrees (Deep Learning, NLP, Computer Vision, GenAI, Reinforcement Learning) •
-                        Databricks Generative AI & Lakehouse • AWS Cloud Practitioner • Statistics for Data Analysis
-                    </p>
+                </section>
+
+                <section className={styles.section}>
+                    <h2 className={styles.sectionTitle}>Certifications</h2>
+                    <ul className={styles.jobList} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem" }}>
+                        {certifications.map((cert, idx) => (
+                            <li key={idx} style={{ breakInside: "avoid" }}>{cert}</li>
+                        ))}
+                    </ul>
                 </section>
 
                 <section className={styles.section}>

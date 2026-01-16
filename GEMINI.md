@@ -5,6 +5,25 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-16: Refactored Footer to CSS Modules
+- **Goal**: Fix layout issues (mashed links) caused by inline styles and improve maintainability.
+- **Files Modified**: 
+  - `src/components/Footer.tsx` - Converted from inline styles to CSS Modules.
+  - `src/components/Footer.module.css` (NEW) - Added dedicated styles for grid layout and responsiveness.
+- **Key Changes**:
+  - Implemented robust CSS Grid layout for footer columns.
+  - Resolved "mashed links" visual defect.
+  - Ensured consistent spacing and styling across all pages.
+
+### 2026-01-16: Added CV Download Option
+- **Goal**: Provide international clients with a full Curriculum Vitae option.
+- **Files Modified**:
+  - `src/app/resume/page.tsx` - Added secondary download button for `cv.pdf`.
+  - `src/app/resume/resume.module.css` - Added `.buttonGroup` for responsive button layout.
+- **Key Changes**:
+  - Implemented dual-button layout: "Download Resume (1-Pg)" vs "Download Full CV".
+  - Used existing `cv.pdf` asset.
+
 ### 2026-01-16: Refactored Footer Layout
 - **Goal**: Improve footer organization and readability.
 - **Files Modified**: `src/components/Footer.tsx`.
