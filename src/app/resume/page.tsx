@@ -19,10 +19,10 @@ const experiences = [
         date: "2022 – 2024",
         company: "Peraton & Leidos - Chantilly, VA",
         bullets: [
+            "Nominated for Schoolhouse Training Award for 4-week core-skills course matching agency certification standards.",
             "Directed team of instructional designers using Agile methodologies for course development pipelines.",
             "Automated reporting pipeline reducing generation time by 97% (from 1 week to 30 minutes).",
             "Created searchable Section 508/WCAG accessibility database adopted across NCTC.",
-            "Developed and deployed 5 comprehensive WBTs within 90 days for classified mission requirements.",
         ],
     },
     {

@@ -67,6 +67,7 @@ const careerArcs: CareerArc[] = [
                 company: "Peraton",
                 date: "2023 – 2024",
                 highlights: [
+                    { bold: "Award Nomination:", text: "Nominated for Schoolhouse Training Award for 4-week core-skills course matching agency certification standards." },
                     { text: "Directed team of three designers, applying Agile methodologies to course development pipelines." },
                     { text: "Managed portfolio of 8 technical courses, leveraging analytics to optimize learning outcomes." },
                 ],
