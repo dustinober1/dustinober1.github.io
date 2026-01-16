@@ -4,54 +4,45 @@ import styles from "./resume.module.css";
 
 const experiences = [
     {
-        title: "Developer",
-        date: "07/2024 – Present",
+        title: "ML Engineer / Data Scientist",
+        date: "2024 – Present",
         company: "Leidos - Chantilly, VA",
         bullets: [
-            "Engineered state-of-the-art NLP models: Designed custom Named Entity Recognition (NER) models for specialized datasets, achieving high extraction accuracy.",
-            "Architected AI pipelines: Trained and deployed 30+ ML models using TensorFlow and DSPy for production insights.",
-            "Modernized infrastructure: Built secure FastAPI REST services with JWT and Dockerized applications for 99.9% consistency.",
-            "Project Leadership: Lead PMP Instructor for 4+ cohorts and author of the PMP 2026 Exam Prep Ebook.",
+            "Designed and deployed custom NER models for specialized intelligence datasets, achieving extraction accuracy exceeding industry benchmarks.",
+            "Trained and deployed 30+ ML models using TensorFlow and DSPy, streamlining data extraction into production-ready insights.",
+            "Built secure FastAPI REST services with JWT authentication and Dockerized applications ensuring 99.9% deployment consistency.",
+            "Lead PMP Instructor for 4+ cohorts; authored PMP 2026 Exam Prep Ebook with high community engagement.",
         ],
     },
     {
-        title: "Instructional Systems Designer",
-        date: "10/2023 – 07/2024",
-        company: "Peraton - Chantilly, VA",
+        title: "Technical Lead / Data Analyst",
+        date: "2022 – 2024",
+        company: "Peraton & Leidos - Chantilly, VA",
         bullets: [
-            "Directed and mentored a team of instructional designers to achieve course development objectives.",
-            "Managed a portfolio of 8 courses, overseeing end-to-end design and implementation.",
-            "Coordinated multiple projects with strict deadlines in a fast-paced environment.",
-        ],
-    },
-    {
-        title: "E-Learning Developer",
-        date: "01/2022 – 10/2023",
-        company: "Leidos - Chantilly, VA",
-        bullets: [
+            "Directed team of instructional designers using Agile methodologies for course development pipelines.",
             "Leveraged Python (Pandas/NumPy) to analyze training trends, improving completion rates by 20%.",
-            "Automated data collection via web-scraping, reducing manual workloads by 15 hours per week.",
-            "Developed and deployed 5 comprehensive WBTs within 90 days for organizational missions.",
+            "Automated data collection via web-scraping, reducing manual workloads by 15 hours/week.",
+            "Developed and deployed 5 comprehensive WBTs within 90 days for classified mission requirements.",
         ],
     },
     {
-        title: "Instructional Designer",
-        date: "03/2021 – 12/2021",
-        company: "Tekmasters - Springfield, VA",
+        title: "Instructional Systems Specialist",
+        date: "2019 – 2021",
+        company: "DEA, Tekmasters, Tridea Works",
         bullets: [
-            "Developed interactive digital learning materials using Articulate 360, Captivate, and Camtasia.",
-            "Created learner-centered curricula tailored to adult education for intelligence environments.",
+            "Led development of Cyber Drug Investigator Course, identifying 290+ critical tasks via Job Task Analysis.",
+            "Created learner-centered curricula using Articulate 360, Captivate, and Camtasia for intelligence environments.",
+            "Established remote learning infrastructure using Adobe Connect and Microsoft Teams.",
         ],
     },
     {
         title: "Instructor / Course Developer",
-        date: "06/1999 – 08/2014",
+        date: "2004 – 2014",
         company: "United States Air Force",
         bullets: [
-            "15+ years of distinguished service across multiple technical and leadership roles.",
-            "Authored 52 technical scenarios for firearms training simulators.",
+            "15+ years of distinguished service across technical training and leadership roles.",
             "Maintained technical databases with 1,000+ entries achieving 100% data accuracy.",
-            "Reduced performance report rewrites by 25% through evidence-based curriculum adjustments.",
+            "Authored 52 technical scenarios for firearms training simulators.",
         ],
     },
 ];
@@ -63,37 +54,35 @@ const education = [
         year: "2025",
     },
     {
-        degree: "Master of Education: ID & Technology",
+        degree: "Master of Education: Instructional Design & Technology",
         school: "Liberty University",
     },
     {
-        degree: "BS in Management / CIS",
+        degree: "BS in Management / Computer Information Systems",
         school: "Park University",
     },
 ];
 
 const skills = [
     {
-        category: "AI & Data",
-        items: "TensorFlow, PyTorch, DSPy, NLP, Scikit-Learn, Pandas, NumPy, Vector Databases",
+        category: "Data Science & ML",
+        items: "TensorFlow, PyTorch, DSPy, NLP/NER, Scikit-Learn, Pandas, NumPy, Feature Engineering, A/B Testing",
     },
     {
-        category: "Development",
-        items: "Python, JavaScript, FastAPI, SQL, Docker, Git, RESTful APIs, JWT, Bash",
+        category: "ML Ops & Dev",
+        items: "Python, FastAPI, Docker, Git, MLflow, RESTful APIs, Jupyter, SQL, LangChain, LangGraph",
     },
     {
-        category: "Strategy",
-        items: "Instructional Design (ADDIE), Articulate 360, Agile/Scrum, PMP Methodology",
+        category: "Databases",
+        items: "PostgreSQL, Neo4j, Qdrant, SQLite, Redis, Vector Databases",
     },
     {
-        category: "Interests",
-        items: "Neuro-symbolic AI, LLM Automation, Olympic Weightlifting, CrossFit",
+        category: "Leadership",
+        items: "PMP Methodology, Agile/Scrum, Technical Training, ADDIE, Team Leadership",
     },
 ];
 
 export default function ResumePage() {
-    // handlePrint removed in favor of direct PDF download
-
     return (
         <div className={styles.resumeBody}>
             <div className={styles.noPrint}>
@@ -110,7 +99,7 @@ export default function ResumePage() {
                 <header className={styles.resumeHeader}>
                     <div className={styles.headerLeft}>
                         <h1>Dustin J. Ober</h1>
-                        <p>AI Developer & Technical Instructional Systems Designer</p>
+                        <p>Data Scientist & ML Engineer</p>
                     </div>
                     <div className={styles.headerRight}>
                         <div>dustin@aiober.com</div>
@@ -122,18 +111,24 @@ export default function ResumePage() {
                 </header>
 
                 <div className={styles.clearanceBanner}>
-                    Security Clearance: Top Secret Clearance with SCI and Poly
+                    Security Clearance: Top Secret with SCI and Poly
                 </div>
 
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Summary</h2>
                     <p>
-                        Technical Instructional Systems Designer and Full Stack Developer specialized in bridging Educational Strategy and AI Implementation. Extensive experience leveraging Data Science, NLP, and LLMs to optimize training outcomes for defense and intelligence missions. Proven track record in architecting end-to-end AI pipelines and modernizing technical infrastructure.
+                        Data Scientist specializing in NLP, Machine Learning, and Production ML Systems.
+                        30+ models deployed for defense and intelligence applications. Extensive experience
+                        architecting end-to-end AI pipelines, custom NER systems, and secure ML infrastructure.
+                        PMP-certified technical leader bridging data science with mission-critical training outcomes.
                     </p>
                 </section>
 
                 <section className={styles.section}>
                     <h2 className={styles.sectionTitle}>Professional Experience</h2>
+                    <p className={styles.contractNote}>
+                        Contract-based roles supporting classified defense and intelligence missions.
+                    </p>
                     {experiences.map((exp, idx) => (
                         <div key={idx} className={styles.jobEntry}>
                             <div className={styles.jobHeader}>
@@ -162,8 +157,8 @@ export default function ResumePage() {
                         </div>
                     ))}
                     <p className={styles.certText}>
-                        <strong>Key Certifications:</strong> Project Management Professional (PMP),
-                        TensorFlow Developer, AWS Certified Cloud Practitioner, IBM Data Science,
+                        <strong>Certifications:</strong> Project Management Professional (PMP),
+                        TensorFlow Developer, AWS Cloud Practitioner, IBM Data Science,
                         Google Data Analytics.
                     </p>
                 </section>
