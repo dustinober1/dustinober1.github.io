@@ -5,6 +5,16 @@ Personal portfolio website for Dustin J. Ober, featuring research whitepapers, p
 
 ## Recent Changes
 
+### 2026-01-17: Refactored Projects Page to Match Competitions Style
+- **Goal**: Create visual consistency between `/projects` and `/competitions` pages.
+- **Files Modified**:
+  - `src/app/projects/page.tsx` - Complete refactor to use `research.module.css`.
+- **Key Changes**:
+  - Replaced flip-card design with card-based layout matching competitions page.
+  - Removed inline styles in favor of CSS Modules.
+  - Added structured data (TechArticle schema) for SEO.
+  - Simplified project data structure with consistent fields (id, type, title, subtitle, abstract, link).
+
 ### 2026-01-16: Refactored Footer to CSS Modules
 - **Goal**: Fix layout issues (mashed links) caused by inline styles and improve maintainability.
 - **Files Modified**: 

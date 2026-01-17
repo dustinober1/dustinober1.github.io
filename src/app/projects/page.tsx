@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import styles from "../research/research.module.css";
+import { structuredDataEngine } from "@/lib/seo";
 
 export const metadata: Metadata = {
     title: "Technical Projects | Dustin J. Ober - AI & ML Portfolio",
@@ -27,263 +29,162 @@ export const metadata: Metadata = {
     },
 };
 
-// SVG Icon Components
-const CalendarIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="4" width="18" height="18" rx="2" />
-        <line x1="16" y1="2" x2="16" y2="6" />
-        <line x1="8" y1="2" x2="8" y2="6" />
-        <line x1="3" y1="10" x2="21" y2="10" />
-        <rect x="7" y="14" width="3" height="3" rx="0.5" />
-        <rect x="14" y="14" width="3" height="3" rx="0.5" />
-    </svg>
-);
-
-const NetworkIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="5" r="3" />
-        <circle cx="5" cy="19" r="3" />
-        <circle cx="19" cy="19" r="3" />
-        <line x1="12" y1="8" x2="5" y2="16" />
-        <line x1="12" y1="8" x2="19" y2="16" />
-        <line x1="5" y1="19" x2="19" y2="19" />
-    </svg>
-);
-
-const BrainIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 4.5a2.5 2.5 0 0 0-4.96-.46 2.5 2.5 0 0 0-1.98 3 2.5 2.5 0 0 0-1.32 4.24 3 3 0 0 0 .34 5.58 2.5 2.5 0 0 0 2.96 3.08A2.5 2.5 0 0 0 12 19.5" />
-        <path d="M12 4.5a2.5 2.5 0 0 1 4.96-.46 2.5 2.5 0 0 1 1.98 3 2.5 2.5 0 0 1 1.32 4.24 3 3 0 0 1-.34 5.58 2.5 2.5 0 0 1-2.96 3.08A2.5 2.5 0 0 1 12 19.5" />
-        <path d="M12 4.5v15" />
-    </svg>
-);
-
-const TerminalIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="4" width="18" height="16" rx="2" />
-        <polyline points="7,9 10,12 7,15" />
-        <line x1="13" y1="15" x2="17" y2="15" />
-    </svg>
-);
-
-const PulseIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 12h4l3-9 4 18 3-9h4" />
-    </svg>
-);
-
-const DocumentImageIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14,2 14,8 20,8" />
-        <circle cx="10" cy="13" r="2" />
-        <path d="M20 17l-1.5-1.5a2 2 0 0 0-3 0L6 17" />
-    </svg>
-);
+const projectsSeriesInfo = {
+    title: "Technical Projects",
+    subtitle: "Engineering Solutions with Measurable Impact",
+};
 
 const projects = [
     {
-        name: "EduSched",
-        category: "Constraint-Based Optimization",
-        icon: <CalendarIcon />,
-        problem:
-            "Educational institutions struggle with multi-constraint scheduling (rooms, instructors, student requirements).",
-        solution:
-            "A hybrid heuristic + Google OR-Tools solver that generates optimal schedules in seconds.",
-        impact: "Reduced administrative scheduling time by ~80% in pilot tests.",
+        id: "proj-01",
+        type: "Constraint-Based Optimization",
+        title: "EduSched",
+        subtitle: "Intelligent Educational Scheduling",
+        abstract:
+            "A hybrid heuristic + Google OR-Tools solver that generates optimal multi-constraint schedules in seconds. Reduced administrative scheduling time by ~80% in pilot tests.",
         link: "https://github.com/dustinober1/edusched-scheduler",
     },
     {
-        name: "ChainReaction",
-        category: "Graph AI Risk Monitoring",
-        icon: <NetworkIcon />,
-        problem: "Global supply chains are vulnerable to rapid, unforeseen geopolitical shifts.",
-        solution:
-            "Multi-agent system (LangGraph) that maps news to supply chain graphs via Neo4j.",
-        impact: "Real-time risk detection allows for 40% faster contingency planning.",
+        id: "proj-02",
+        type: "Graph AI Risk Monitoring",
+        title: "ChainReaction",
+        subtitle: "Supply Chain Intelligence Platform",
+        abstract:
+            "Multi-agent system (LangGraph) that maps global news to supply chain graphs via Neo4j using NER. Real-time risk detection allows for 40% faster contingency planning.",
         link: "https://github.com/dustinober1/ChainReaction",
     },
     {
-        name: "Prompt Trainer",
-        category: "LLM Optimization (DSPy)",
-        icon: <BrainIcon />,
-        problem:
-            "AI-generated feedback often lacks consistency and doesn't align with human rubrics.",
-        solution:
-            "Human-in-the-loop system that uses DSPy to programmatically optimize prompts based on user feedback.",
-        impact:
-            "Increased AI grading alignment with human instructors from 65% to 92% over 50 iterations.",
+        id: "proj-03",
+        type: "LLM Optimization (DSPy)",
+        title: "Prompt Trainer",
+        subtitle: "Human-in-the-Loop Prompt Engineering",
+        abstract:
+            "Uses DSPy to programmatically optimize prompts based on user feedback. Increased AI grading alignment with human instructors from 65% to 92% over 50 iterations.",
         link: "https://github.com/dustinober1/Prompt_Trainer",
     },
     {
-        name: "Vibe Coder",
-        category: "AI Productivity Tools",
-        icon: <TerminalIcon />,
-        problem: "Switching between IDE and AI chat interfaces breaks developer flow state.",
-        solution:
-            "A provider-independent CLI assistant with 40+ specialized commands for refactoring and testing.",
-        impact:
-            'Benchmarked a 30% reduction in typical "chat-to-code" cognitive context switching overhead.',
+        id: "proj-04",
+        type: "AI Productivity Tools",
+        title: "Vibe Coder",
+        subtitle: "Provider-Independent CLI Assistant",
+        abstract:
+            "A CLI assistant with 40+ specialized commands for refactoring and testing. Benchmarked a 30% reduction in typical \"chat-to-code\" cognitive context switching overhead.",
         link: "https://github.com/dustinober1/cli",
     },
     {
-        name: "Tech-Pulse",
-        category: "Sentiment & Trend Analytics",
-        icon: <PulseIcon />,
-        problem:
-            "Information overload makes it difficult to track market sentiment and emerging tech trends.",
-        solution:
-            "Real-time Streamlit dashboard using BERTopic for grouping and VADER for sentiment scoring.",
-        impact: "Provides actionable daily intelligence summaries in < 5 minutes of review.",
+        id: "proj-05",
+        type: "Sentiment & Trend Analytics",
+        title: "Tech-Pulse",
+        subtitle: "Real-Time Market Intelligence",
+        abstract:
+            "Streamlit dashboard using BERTopic for grouping and VADER for sentiment scoring. Provides actionable daily intelligence summaries in < 5 minutes of review.",
         link: "https://github.com/dustinober1/tech-pulse",
     },
     {
-        name: "ImageMD",
-        category: "Vision-Language AI",
-        icon: <DocumentImageIcon />,
-        problem:
-            "Extracting structured data from complex PDFs with tables and formulas is notoriously difficult.",
-        solution:
-            "Pipeline using vision transformers to convert document screenshots directly into clean Markdown.",
-        impact: "High-fidelity extraction of academic papers for ingestion into RAG pipelines.",
+        id: "proj-06",
+        type: "Vision-Language AI",
+        title: "ImageMD",
+        subtitle: "Document-to-Markdown Extraction",
+        abstract:
+            "Pipeline using vision transformers to convert document screenshots directly into clean Markdown. High-fidelity extraction of academic papers for ingestion into RAG pipelines.",
         link: "https://github.com/dustinober1/imagemd",
     },
 ];
 
-export default function ProjectsPage() {
-    return (
-        <main>
-            {/* Hero Section */}
-            <section className="hero" style={{ padding: "6rem 0 3rem" }}>
-                <div className="container">
-                    <h1>Technical Projects</h1>
-                    <p>
-                        A showcase of engineering solutions, AI models, and data pipelines focusing on
-                        measurable impact.
-                    </p>
-                </div>
-            </section>
+// SVG Icons
+const GithubIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+    </svg>
+);
 
-            {/* Featured Case Study */}
-            <section
-                className="featured-case-study"
-                style={{ padding: "6rem 0", background: "var(--accent-muted)" }}
-            >
+const AboutIcon = () => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+    </svg>
+);
+
+export default function ProjectsPage() {
+    // Generate SoftwareSourceCode schema for each project
+    const projectSchemas = projects.map(project =>
+        structuredDataEngine.generateTechArticle({
+            headline: `${project.title}: ${project.subtitle}`,
+            description: project.abstract,
+            author: "Dustin J. Ober",
+            url: project.link,
+        })
+    );
+
+    return (
+        <main className={styles.researchMain}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(projectSchemas),
+                }}
+            />
+
+            {/* Hero Section */}
+            <section className={styles.heroSection}>
                 <div className="container">
-                    <h2 style={{ marginBottom: "3.5rem", textAlign: "center" }}>
-                        Featured Case Study: ChainReaction
-                    </h2>
-                    <div
-                        className="job-card featured-case-study-card"
-                        style={{
-                            padding: "4rem",
-                            maxWidth: "900px",
-                            margin: "0 auto",
-                        }}
-                    >
-                        <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-                            <div className="featured-icon-wrapper" style={{ margin: "0 auto" }}>
-                                <NetworkIcon />
-                            </div>
-                        </div>
-                        <div>
-                            <h3 style={{ color: "var(--accent)", marginBottom: "2rem", fontSize: "1.5rem", textAlign: "center" }}>
-                                Architecting Resilient Supply Chains with Multi-Agent AI
-                            </h3>
-                            <p
-                                style={{
-                                    color: "var(--text-secondary)",
-                                    lineHeight: 1.8,
-                                    marginBottom: "2rem",
-                                    fontSize: "1.05rem",
-                                }}
-                            >
-                                <strong>The Challenge:</strong> Global supply chains face increasing volatility
-                                from geopolitical shifts. Traditional risk monitoring is reactive, often
-                                missing the &quot;first domino&quot; in a sequence of events.
-                            </p>
-                            <p
-                                style={{
-                                    color: "var(--text-secondary)",
-                                    lineHeight: 1.8,
-                                    marginBottom: "2rem",
-                                    fontSize: "1.05rem",
-                                }}
-                            >
-                                <strong>The Solution:</strong> Built using <strong>LangGraph</strong> and{" "}
-                                <strong>Neo4j</strong>, ChainReaction is a multi-agent system that autonomously
-                                bridges the gap between global news and specific supply chain nodes using{" "}
-                                <strong>Named Entity Recognition (NER)</strong>.
-                            </p>
-                            <p
-                                style={{
-                                    color: "var(--text-secondary)",
-                                    lineHeight: 1.8,
-                                    marginBottom: "2.5rem",
-                                    fontSize: "1.05rem",
-                                }}
-                            >
-                                <strong>The Impact:</strong> Successfully demonstrated a 40% reduction in risk
-                                response time during trials, providing stakeholders with actionable
-                                intelligence before disruptions hit.
-                            </p>
-                            <div className="tags" style={{ marginBottom: "2.5rem", justifyContent: "center", display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-                                <span className="tag">LangGraph</span>
-                                <span className="tag">Neo4j</span>
-                                <span className="tag">Python</span>
-                                <span className="tag">Generative AI</span>
-                            </div>
-                            <div style={{ textAlign: "center" }}>
-                                <Link
-                                    href="/case-study-chain-reaction"
-                                    className="view-btn"
-                                    style={{ width: "auto", padding: "1rem 2.5rem", borderRadius: "50px", display: "inline-block" }}
-                                >
-                                    Read Full Case Study
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+                    <h1 className={styles.seriesTitle}>{projectsSeriesInfo.title}</h1>
+                    <p className={styles.seriesSubtitle}>
+                        {projectsSeriesInfo.subtitle}
+                    </p>
+                    <div className={styles.divider}></div>
                 </div>
             </section>
 
             {/* Projects Grid */}
-            <section id="projects-list">
+            <section className={styles.whitepaperSection}>
                 <div className="container">
-                    <div className="projects-grid">
+                    <div className={styles.whitepaperGrid}>
                         {projects.map((project) => (
-                            <div key={project.name} className="flip-card">
-                                <div className="flip-card-inner">
-                                    <div className="flip-card-front">
-                                        <div className="project-icon-wrapper">
-                                            {project.icon}
-                                        </div>
-                                        <h3>{project.name}</h3>
-                                        <div className="category">{project.category}</div>
-                                    </div>
-                                    <div className="flip-card-back">
-                                        <h3>{project.name}</h3>
-                                        <p>
-                                            <strong>Problem:</strong> {project.problem}
-                                        </p>
-                                        <p>
-                                            <strong>Solution:</strong> {project.solution}
-                                        </p>
-                                        <p>
-                                            <strong>Impact:</strong> {project.impact}
-                                        </p>
+                            <article key={project.id} className={styles.whitepaperCard}>
+                                <div className={styles.cardHeader}>
+                                    <span className={styles.paperType}>{project.type}</span>
+                                </div>
+
+                                <div className={styles.cardBody}>
+                                    <Link href={project.link} target="_blank" rel="noopener noreferrer" className={styles.titleLink}>
+                                        <h2 className={styles.paperTitle}>{project.title}</h2>
+                                    </Link>
+                                    <h3 className={styles.paperSubtitle}>{project.subtitle}</h3>
+                                    <p className={styles.paperAbstract}>{project.abstract}</p>
+                                </div>
+
+                                <div className={styles.cardFooter}>
+                                    <div className={styles.actionButtons}>
                                         <Link
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="view-btn"
+                                            className={styles.downloadBtn}
                                         >
-                                            View Repository <i className="fas fa-arrow-right"></i>
+                                            <span className={styles.downloadIcon}>
+                                                <GithubIcon />
+                                            </span>
+                                            View Code
                                         </Link>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* About Section */}
+            <section className={styles.aboutSection}>
+                <div className="container">
+                    <div className={styles.aboutContent}>
+                        <div className={styles.aboutIcon}>
+                            <AboutIcon />
+                        </div>
+                        <h2 className={styles.aboutTitle}>Open Source Portfolio</h2>
+                        <p className={styles.aboutText}>
+                            These projects represent my hands-on engineering work across AI/ML, optimization, and full-stack development. Each project follows a Problem → Solution → Impact framework, demonstrating measurable outcomes and production-ready architecture patterns.
+                        </p>
                     </div>
                 </div>
             </section>
